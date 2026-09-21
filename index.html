@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AIの地図｜電気がAIになるまでの流れ（試作版）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2EF; --surface:#FFFFFF; --band:#E3E9E6; --ink:#1E2A33; --muted:#5E6B73; --line:#C4CECB;
+  --jp:#B83227; --ov:#2C4A7A; --ev:#B9820C; --comp:#8B979C; --hl:#1E2A33;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141B20; --surface:#1C252B; --band:#19232A; --ink:#E6ECEA; --muted:#9AA7AD; --line:#34424B;
+    --jp:#E26A5F; --ov:#86A3D8; --ev:#E3B347; --comp:#76838A; --hl:#E6ECEA;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141B20; --surface:#1C252B; --band:#19232A; --ink:#E6ECEA; --muted:#9AA7AD; --line:#34424B;
+  --jp:#E26A5F; --ov:#86A3D8; --ev:#E3B347; --comp:#76838A; --hl:#E6ECEA;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.7;font-size:15px}
+header{max-width:1320px;margin:0 auto;padding:28px 20px 8px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:12px 32px}
+h1{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;font-weight:800;font-size:clamp(34px,5vw,54px);line-height:1.1;margin:0;letter-spacing:.02em}
+.lead{margin:0;color:var(--muted);max-width:34em}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--muted);margin-left:4px;vertical-align:middle}
+.changes{max-width:1320px;margin:12px auto 0;padding:0 20px}
+.changes-inner{display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0}
+.changes h2{font-size:14px;margin:0 8px 0 0;font-weight:700}
+.chg{background:none;border:1px solid var(--line);color:var(--ink);font:inherit;font-size:13px;border-radius:999px;padding:4px 12px;cursor:pointer}
+.chg:hover,.chg:focus-visible{border-color:var(--ink)}
+.sample{font-size:12px;color:var(--muted)}
+main{max-width:1320px;margin:0 auto;padding:16px 20px 24px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px}
+.mapwrap{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow-x:auto;position:relative}
+svg{display:block;width:100%;min-width:860px;height:auto}
+.chips{display:none;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.chip{background:var(--surface);border:1px solid var(--line);color:var(--ink);font:inherit;font-size:13px;border-radius:999px;padding:4px 12px;cursor:pointer}
+aside{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;align-self:start;position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px)}
+aside h2{font-family:"Shippori Mincho B1",serif;font-size:24px;margin:0 0 4px;line-height:1.3}
+aside h3{font-size:14px;margin:18px 0 6px}
+aside p{margin:0 0 8px}
+.meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+.conn{list-style:none;margin:0;padding:0}
+.conn li{margin:0 0 6px}
+.conn button{background:none;border:0;padding:0;color:var(--ink);font:inherit;text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.conn button:hover{text-decoration-color:var(--ink)}
+.conf{font-size:12px;color:var(--muted);margin-left:4px}
+.legend{font-size:13px;color:var(--muted)}
+.legend div{display:flex;align-items:center;gap:8px;margin:4px 0}
+.legend svg{min-width:0;width:44px;height:14px;display:inline-block}
+.cta{display:block;margin-top:16px;padding:10px 12px;border:1px solid var(--ink);border-radius:8px;color:var(--ink);text-decoration:none;font-weight:700;font-size:14px}
+.cta small{display:block;font-weight:400;color:var(--muted)}
+.reset{background:none;border:0;color:var(--muted);font:inherit;font-size:13px;cursor:pointer;padding:0;margin-top:10px;text-decoration:underline}
+footer{max-width:1320px;margin:0 auto;padding:8px 20px 32px;color:var(--muted);font-size:12.5px}
+footer p{margin:4px 0;max-width:80em}
+/* svg styles */
+.colband{fill:var(--band)}
+.colhead{font-size:15px;font-weight:700;fill:var(--ink)}
+.colsub{font-size:11.5px;fill:var(--muted)}
+.flow{stroke:var(--muted);stroke-width:1}
+.node circle{stroke:var(--surface);stroke-width:2;cursor:pointer;transition:opacity .15s}
+.node.private circle{fill:var(--surface)!important;stroke-width:2.5}
+.node text{font-size:12.5px;fill:var(--ink);text-anchor:middle;pointer-events:none;font-weight:500}
+.node:focus{outline:none}
+.node:focus-visible circle{stroke:var(--ink);stroke-width:3}
+.edge{fill:none;stroke-width:1.6;opacity:.55;cursor:pointer;transition:opacity .15s}
+.edge.supply{stroke:var(--ov)}
+.edge.comp{stroke:var(--comp)}
+.edge.impact{stroke:var(--ev)}
+.edge.c2{stroke-dasharray:7 5}
+.edge.c3{stroke-dasharray:2 4}
+.edgehit{fill:none;stroke:transparent;stroke-width:12;cursor:pointer}
+.ev rect{fill:var(--surface);stroke:var(--ev);stroke-width:2;cursor:pointer}
+.ev text{font-size:12.5px;fill:var(--ink);text-anchor:middle;pointer-events:none;font-weight:500}
+.ev:focus{outline:none}
+.ev:focus-visible rect{stroke-width:3.5}
+.evband{fill:none;stroke:var(--line);stroke-dasharray:3 4}
+.evlabel{font-size:12px;fill:var(--muted)}
+.dim{opacity:.12!important}
+.on{opacity:1!important}
+.edge.on{stroke-width:2.6}
+@media (max-width:980px){
+  main{grid-template-columns:1fr}
+  aside{position:static}
+  .chips{display:flex}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <h1>AIの地図</h1>
+  <p class="lead">電気がAIになるまでを6つの段階に分け、会社どうしのつながりを線で見る地図です。円や線を押すと、なぜつながっているのかが右に出ます。<span class="tag">試作版</span></p>
+</header>
+
+<section class="changes" aria-label="今週の変化">
+  <div class="changes-inner">
+    <h2>今週の変化</h2>
+    <span id="chgs"></span>
+  </div>
+</section>
+
+<main>
+  <div>
+    <div class="chips" id="chips" aria-label="段階へ移動"></div>
+    <div class="mapwrap" id="mapwrap">
+      <svg id="map" viewBox="0 0 1200 780" role="img" aria-label="AI産業の会社のつながりを示す地図"></svg>
+    </div>
+  </div>
+  <aside id="panel" aria-live="polite"></aside>
+</main>
+
+<footer>
+  <p>この地図は、公開情報をもとに産業の構造を理解するための試作版です。特定の銘柄の売買を勧めるものではなく、掲載内容の正確性・完全性を保証するものでもありません。投資の判断はご自身で行ってください。</p>
+  <p>円の大きさは会社規模のおおまかな目安で、実際の時価総額を正確に表すものではありません。線の確かさは「確認済み」「一般的な見方」「仮説」の3段階で示しています。</p>
+  <p>このサイトの一部のページには広告（アフィリエイトリンク）が含まれる予定です。</p>
+</footer>
+
+<script>
+const SIZE={xl:23,l:17,m:12.5};
+const SIZELABEL={xl:"特大",l:"大",m:"中"};
+const TYPE={supply:"取引・供給",comp:"競合",impact:"影響"};
+const CONF={1:"確認済み",2:"一般的な見方",3:"仮説"};
+let LAYERS,NODES,EDGES,EVENTS,CHANGES;
+fetch("data/map.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(d=>{
+  LAYERS=d.layers;NODES=d.nodes;EDGES=d.edges;EVENTS=d.events;CHANGES=d.changes||[];
+  init();
+}).catch(err=>{
+  document.getElementById("panel").innerHTML='<h2>データを読み込めませんでした</h2><p>data/map.json が見つからないか、ファイルを直接開いています。ローカルで確認するときは、フォルダで「npx serve」を実行してブラウザで開いてください。</p>';
+});
+function init(){
+const NS="http://www.w3.org/2000/svg";
+const svg=document.getElementById("map");
+const COLW=200, X0=100, TOP=110, BOTTOM=585;
+const colX = id => X0 + LAYERS.findIndex(l=>l.id===id)*COLW;
+const el=(t,a={},p=svg)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+
+// columns
+LAYERS.forEach((l,i)=>{
+  const x=X0+i*COLW;
+  if(i%2===0) el("rect",{x:x-COLW/2,y:0,width:COLW,height:BOTTOM+10,class:"colband"});
+  const t=el("text",{x,y:36,"text-anchor":"middle",class:"colhead"}); t.textContent=`${i+1}. ${l.name}`;
+  const s=el("text",{x,y:56,"text-anchor":"middle",class:"colsub"}); s.textContent=l.sub;
+  if(i<LAYERS.length-1){ el("line",{x1:x+62,y1:72,x2:x+COLW-62,y2:72,class:"flow","marker-end":"url(#arr)"}); }
+});
+const defs=el("defs");
+const m=el("marker",{id:"arr",viewBox:"0 0 8 8",refX:"7",refY:"4",markerWidth:"7",markerHeight:"7",orient:"auto"},defs);
+el("path",{d:"M0,0 L8,4 L0,8 z",fill:"var(--muted)"},m);
+
+// node positions
+const POS={};
+LAYERS.forEach(l=>{
+  const ns=NODES.filter(n=>n.layer===l.id);
+  const gap=(BOTTOM-TOP)/(ns.length);
+  ns.forEach((n,j)=>{POS[n.id]={x:colX(l.id),y:TOP+gap*(j+0.5)}});
+});
+
+// edges
+const gEdges=el("g");
+const edgeEls={};
+EDGES.forEach(e=>{
+  const a=POS[e.from], b=POS[e.to];
+  let d;
+  if(Math.abs(a.x-b.x)<1){
+    const off=-70; d=`M${a.x},${a.y} C${a.x+off},${a.y} ${b.x+off},${b.y} ${b.x},${b.y}`;
+  }else{
+    const mx=(a.x+b.x)/2; d=`M${a.x},${a.y} C${mx},${a.y} ${mx},${b.y} ${b.x},${b.y}`;
+  }
+  const g=el("g",{},gEdges);
+  const p=el("path",{d,class:`edge ${e.type} c${e.conf}`},g);
+  const hit=el("path",{d,class:"edgehit"},g);
+  const tt=el("title",{},hit); tt.textContent=`${nameOf(e.from)} – ${nameOf(e.to)}（${TYPE[e.type]}）`;
+  hit.addEventListener("click",()=>selectEdge(e.id));
+  edgeEls[e.id]=p;
+});
+
+// events band
+el("rect",{x:20,y:BOTTOM+40,width:1160,height:130,rx:10,class:"evband"});
+const evl=el("text",{x:36,y:BOTTOM+62,class:"evlabel"}); evl.textContent="出来事・政策（点線は、影響する段階を示す）";
+const evEls={}, evLines={};
+EVENTS.forEach(ev=>{
+  const y=BOTTOM+115;
+  evLines[ev.id]=ev.layers.map(lid=>{
+    const x=colX(lid);
+    return el("path",{d:`M${ev.x},${y-18} C${ev.x},${y-60} ${x},${BOTTOM+20} ${x},${BOTTOM}`,class:`edge impact c${ev.conf}`},gEdges);
+  });
+  const g=el("g",{class:"ev",tabindex:"0",role:"button","aria-label":ev.name});
+  const w=ev.name.length*13+28;
+  el("rect",{x:ev.x-w/2,y:y-18,width:w,height:36,rx:3},g);
+  const t=el("text",{x:ev.x,y:y+5},g); t.textContent=ev.name;
+  g.addEventListener("click",()=>selectEvent(ev.id));
+  g.addEventListener("keydown",k=>{if(k.key==="Enter"||k.key===" "){k.preventDefault();selectEvent(ev.id)}});
+  evEls[ev.id]=g;
+});
+
+// nodes
+const nodeEls={};
+NODES.forEach(n=>{
+  const p=POS[n.id], r=SIZE[n.size];
+  const g=el("g",{class:`node${n.priv?" private":""}`,tabindex:"0",role:"button","aria-label":n.name});
+  el("circle",{cx:p.x,cy:p.y,r,fill:n.jp?"var(--jp)":"var(--ov)",stroke:n.priv?(n.jp?"var(--jp)":"var(--ov)"):null},g);
+  const t=el("text",{x:p.x,y:p.y+r+15},g); t.textContent=n.name;
+  g.addEventListener("click",()=>selectNode(n.id));
+  g.addEventListener("keydown",k=>{if(k.key==="Enter"||k.key===" "){k.preventDefault();selectNode(n.id)}});
+  nodeEls[n.id]=g;
+});
+
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function srcHTML(x){
+  const st=`<p class="meta">確認状況：${esc(x.status||"未確認")}</p>`;
+  if(!x.sources||!x.sources.length)return st+'<p class="meta">根拠のリンクはまだありません。</p>';
+  return st+'<ul class="conn">'+x.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener" style="color:var(--ink)">${esc(s.title||s.url)}</a><span class="conf">${esc(s.type||"")}${s.date?"・"+esc(s.date):""}</span></li>`).join("")+'</ul>';
+}
+function nameOf(id){return NODES.find(n=>n.id===id).name}
+function layerName(id){return LAYERS.find(l=>l.id===id).name}
+
+// highlight
+function clearHL(){document.querySelectorAll(".dim,.on").forEach(e=>e.classList.remove("dim","on"))}
+function focusSet(nodeIds,edgeIds,evIds=[],evLineIds=[]){
+  clearHL();
+  Object.entries(nodeEls).forEach(([id,e])=>e.classList.add(nodeIds.includes(id)?"on":"dim"));
+  Object.entries(edgeEls).forEach(([id,e])=>e.classList.add(edgeIds.includes(id)?"on":"dim"));
+  Object.entries(evEls).forEach(([id,e])=>e.classList.add(evIds.includes(id)?"on":"dim"));
+  Object.entries(evLines).forEach(([id,arr])=>arr.forEach(e=>e.classList.add(evLineIds.includes(id)?"on":"dim")));
+}
+
+const panel=document.getElementById("panel");
+const legendHTML=`
+<div class="legend">
+ <div><svg viewBox="0 0 44 14"><circle cx="8" cy="7" r="6" fill="var(--jp)"/></svg>日本の会社</div>
+ <div><svg viewBox="0 0 44 14"><circle cx="8" cy="7" r="6" fill="var(--ov)"/></svg>海外の会社</div>
+ <div><svg viewBox="0 0 44 14"><circle cx="8" cy="7" r="5" fill="none" stroke="var(--ov)" stroke-width="2"/></svg>上場していない会社</div>
+ <div><svg viewBox="0 0 44 14"><line x1="2" y1="7" x2="42" y2="7" stroke="var(--ov)" stroke-width="2"/></svg>取引・供給</div>
+ <div><svg viewBox="0 0 44 14"><line x1="2" y1="7" x2="42" y2="7" stroke="var(--comp)" stroke-width="2"/></svg>競合</div>
+ <div><svg viewBox="0 0 44 14"><line x1="2" y1="7" x2="42" y2="7" stroke="var(--ev)" stroke-width="2"/></svg>出来事の影響</div>
+ <div><svg viewBox="0 0 44 14"><line x1="2" y1="7" x2="42" y2="7" stroke="var(--muted)" stroke-width="2"/></svg>確認済み</div>
+ <div><svg viewBox="0 0 44 14"><line x1="2" y1="7" x2="42" y2="7" stroke="var(--muted)" stroke-width="2" stroke-dasharray="7 5"/></svg>一般的な見方</div>
+ <div><svg viewBox="0 0 44 14"><line x1="2" y1="7" x2="42" y2="7" stroke="var(--muted)" stroke-width="2" stroke-dasharray="2 4"/></svg>仮説</div>
+</div>`;
+const ctaHTML=`<a class="cta" href="#" onclick="return false">AIに投資する方法を見る<small>個別株・投資信託・NISAの違いを整理するページ（準備中）</small></a>`;
+
+window.showDefault=showDefault;function showDefault(){
+  clearHL();
+  panel.innerHTML=`<h2>地図の読み方</h2>
+  <p>左の「電力」から右の「AIサービス」へ、電気が計算になり、サービスになるまでの流れを6つの段階に分けています。</p>
+  <p>日本の会社は赤。日本は素材と製造装置の段階に強い会社が集まっているのが見えます。</p>
+  <h3>凡例</h3>${legendHTML}${ctaHTML}`;
+}
+function connList(items){return `<ul class="conn">${items.join("")}</ul>`}
+window.selectNode=selectNode;function selectNode(id){
+  const n=NODES.find(x=>x.id===id);
+  const es=EDGES.filter(e=>e.from===id||e.to===id);
+  const others=es.map(e=>e.from===id?e.to:e.from);
+  const evs=EVENTS.filter(ev=>ev.layers.includes(n.layer));
+  focusSet([id,...others],es.map(e=>e.id),evs.map(e=>e.id),evs.map(e=>e.id));
+  const items=es.map(e=>{
+    const o=e.from===id?e.to:e.from;
+    const dir=e.type==="supply"?(e.from===id?"供給先":"仕入れ・出資元"):TYPE[e.type];
+    return `<li><button onclick="selectEdge('${e.id}')">${nameOf(o)}</button><span class="conf">${dir}・${CONF[e.conf]}</span></li>`;
+  });
+  const evItems=evs.map(ev=>`<li><button onclick="selectEvent('${ev.id}')">${ev.name}</button><span class="conf">${CONF[ev.conf]}</span></li>`);
+  panel.innerHTML=`<h2>${n.name}</h2>
+  <div class="meta">${layerName(n.layer)}の段階・${n.jp?"日本":"海外"}の会社・規模の目安：${SIZELABEL[n.size]}${n.priv?"・非上場":""}</div>
+  <p>${n.desc}</p>
+  <h3>つながり</h3>${items.length?connList(items):"<p>まだ線がありません。</p>"}
+  ${evItems.length?`<h3>影響しうる出来事</h3>${connList(evItems)}`:""}
+  ${ctaHTML}<button class="reset" onclick="showDefault()">地図全体に戻る</button>`;
+}
+window.selectEdge=selectEdge;function selectEdge(id){
+  const e=EDGES.find(x=>x.id===id);
+  focusSet([e.from,e.to],[id]);
+  const arrow=e.type==="supply"?"→":"と";
+  panel.innerHTML=`<h2>${nameOf(e.from)} ${arrow} ${nameOf(e.to)}</h2>
+  <div class="meta">${TYPE[e.type]}・${CONF[e.conf]}</div>
+  <p>${e.text}</p>
+  <h3>根拠</h3>${srcHTML(e)}
+  <ul class="conn"><li><button onclick="selectNode('${e.from}')">${nameOf(e.from)}を見る</button></li><li><button onclick="selectNode('${e.to}')">${nameOf(e.to)}を見る</button></li></ul>
+  <button class="reset" onclick="showDefault()">地図全体に戻る</button>`;
+}
+window.selectEvent=selectEvent;function selectEvent(id){
+  const ev=EVENTS.find(x=>x.id===id);
+  const ns=NODES.filter(n=>ev.layers.includes(n.layer)).map(n=>n.id);
+  focusSet(ns,[],[id],[id]);
+  panel.innerHTML=`<h2>${ev.name}</h2>
+  <div class="meta">出来事・政策・${CONF[ev.conf]}</div>
+  <p>${ev.text}</p>
+  <h3>根拠</h3>${srcHTML(ev)}
+  <h3>影響する段階</h3><p>${ev.layers.map(layerName).join("、")}</p>
+  <button class="reset" onclick="showDefault()">地図全体に戻る</button>`;
+}
+svg.addEventListener("click",e=>{if(e.target===svg||e.target.classList.contains("colband"))showDefault()});
+
+// chips for small screens
+const chips=document.getElementById("chips"), wrap=document.getElementById("mapwrap");
+LAYERS.forEach((l,i)=>{
+  const b=document.createElement("button"); b.className="chip"; b.textContent=l.name;
+  b.onclick=()=>{const scale=svg.getBoundingClientRect().width/1200; wrap.scrollTo({left:Math.max(0,(X0+i*COLW)*scale-wrap.clientWidth/2),behavior:"smooth"})};
+  chips.appendChild(b);
+});
+const chgWrap=document.getElementById("chgs");
+CHANGES.forEach(c=>{const b=document.createElement("button");b.className="chg";b.textContent=c.label;
+  b.onclick=()=>{if(c.edge)selectEdge(c.edge);if(c.event)selectEvent(c.event);if(c.node)selectNode(c.node);
+  document.getElementById("mapwrap").scrollIntoView({behavior:"smooth",block:"start"})};chgWrap.appendChild(b)});
+showDefault();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,608 @@
+{
+  "meta": {
+    "title": "AIの地図",
+    "updated": "2026-09-21",
+    "note": "試作データ。公開前に全ての線の根拠を確認すること。changesは表示例"
+  },
+  "layers": [
+    {
+      "id": "power",
+      "name": "電力・インフラ",
+      "sub": "発電・送電・用地"
+    },
+    {
+      "id": "material",
+      "name": "素材・部品",
+      "sub": "ウエハー・材料・光配線"
+    },
+    {
+      "id": "equip",
+      "name": "製造装置",
+      "sub": "つくる・削る・検査する"
+    },
+    {
+      "id": "chip",
+      "name": "半導体",
+      "sub": "GPU・メモリ・受託製造"
+    },
+    {
+      "id": "cloud",
+      "name": "クラウド",
+      "sub": "データセンターを貸す"
+    },
+    {
+      "id": "service",
+      "name": "AIサービス",
+      "sub": "モデル開発・出資"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "hitachi",
+      "name": "日立製作所",
+      "layer": "power",
+      "jp": true,
+      "size": "l",
+      "desc": "送配電設備や電力網の制御システムを手がける。データセンターの増設で電力網を強くする需要が見込まれる。",
+      "priv": false
+    },
+    {
+      "id": "mhi",
+      "name": "三菱重工業",
+      "layer": "power",
+      "jp": true,
+      "size": "l",
+      "desc": "発電用ガスタービンの大手。データセンター向けの電力需要の増加で注目されることが多い。",
+      "priv": false
+    },
+    {
+      "id": "gev",
+      "name": "GE Vernova",
+      "layer": "power",
+      "jp": false,
+      "size": "l",
+      "desc": "米国の発電・送電設備の大手。ガスタービンなどを供給する。",
+      "priv": false
+    },
+    {
+      "id": "shin",
+      "name": "信越化学工業",
+      "layer": "material",
+      "jp": true,
+      "size": "l",
+      "desc": "半導体の土台になるシリコンウエハーで世界大手。",
+      "priv": false
+    },
+    {
+      "id": "sumco",
+      "name": "SUMCO",
+      "layer": "material",
+      "jp": true,
+      "size": "m",
+      "desc": "シリコンウエハーの大手。信越化学工業と競合する。",
+      "priv": false
+    },
+    {
+      "id": "res",
+      "name": "レゾナック",
+      "layer": "material",
+      "jp": true,
+      "size": "m",
+      "desc": "半導体の後工程（チップを包んでつなぐ工程）向けの材料を手がける。",
+      "priv": false
+    },
+    {
+      "id": "fuji",
+      "name": "フジクラ",
+      "layer": "material",
+      "jp": true,
+      "size": "m",
+      "desc": "光ファイバーなどの光通信部品。データセンター内の配線需要と結びつけて語られることが多い。",
+      "priv": false
+    },
+    {
+      "id": "tel",
+      "name": "東京エレクトロン",
+      "layer": "equip",
+      "jp": true,
+      "size": "l",
+      "desc": "膜をつける・削るなどの半導体製造装置の大手。",
+      "priv": false
+    },
+    {
+      "id": "adv",
+      "name": "アドバンテスト",
+      "layer": "equip",
+      "jp": true,
+      "size": "l",
+      "desc": "できあがった半導体がきちんと動くかを調べる検査装置（テスター）の大手。",
+      "priv": false
+    },
+    {
+      "id": "disco",
+      "name": "ディスコ",
+      "layer": "equip",
+      "jp": true,
+      "size": "l",
+      "desc": "ウエハーを切る・薄く削る装置の大手。",
+      "priv": false
+    },
+    {
+      "id": "ltec",
+      "name": "レーザーテック",
+      "layer": "equip",
+      "jp": true,
+      "size": "m",
+      "desc": "回路の原版（マスク）の欠陥を見つける検査装置を手がける。",
+      "priv": false
+    },
+    {
+      "id": "asml",
+      "name": "ASML",
+      "layer": "equip",
+      "jp": false,
+      "size": "l",
+      "desc": "オランダの会社。最先端の半導体に必要なEUV露光装置をほぼ一社で供給している。",
+      "priv": false
+    },
+    {
+      "id": "tsmc",
+      "name": "TSMC",
+      "layer": "chip",
+      "jp": false,
+      "size": "xl",
+      "desc": "台湾の会社。他社が設計した半導体を製造する受託製造の最大手。",
+      "priv": false
+    },
+    {
+      "id": "nvda",
+      "name": "NVIDIA",
+      "layer": "chip",
+      "jp": false,
+      "size": "xl",
+      "desc": "米国の会社。AIの計算に使われるGPUで高いシェアを持つ。自社では工場を持たず、設計に特化している。",
+      "priv": false
+    },
+    {
+      "id": "amd",
+      "name": "AMD",
+      "layer": "chip",
+      "jp": false,
+      "size": "l",
+      "desc": "米国の会社。GPUやCPUを設計する。AI向けGPUでNVIDIAと競合する。",
+      "priv": false
+    },
+    {
+      "id": "skh",
+      "name": "SK hynix",
+      "layer": "chip",
+      "jp": false,
+      "size": "l",
+      "desc": "韓国の会社。AI向けGPUに載せる高帯域メモリ（HBM）の大手。",
+      "priv": false
+    },
+    {
+      "id": "msft",
+      "name": "Microsoft",
+      "layer": "cloud",
+      "jp": false,
+      "size": "xl",
+      "desc": "クラウドのAzureを運営。OpenAIの主要なパートナー。",
+      "priv": false
+    },
+    {
+      "id": "amzn",
+      "name": "Amazon",
+      "layer": "cloud",
+      "jp": false,
+      "size": "xl",
+      "desc": "クラウドのAWSを運営する最大手。",
+      "priv": false
+    },
+    {
+      "id": "googl",
+      "name": "Alphabet",
+      "layer": "cloud",
+      "jp": false,
+      "size": "xl",
+      "desc": "Googleの親会社。Google Cloudを運営し、自社でもAIモデルを開発している。",
+      "priv": false
+    },
+    {
+      "id": "sakura",
+      "name": "さくらインターネット",
+      "layer": "cloud",
+      "jp": true,
+      "size": "m",
+      "desc": "国内のクラウド事業者。AI向けのGPUクラウドを広げている。",
+      "priv": false
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "layer": "service",
+      "jp": false,
+      "size": "l",
+      "priv": true,
+      "desc": "ChatGPTを開発する会社。株式は上場していないため、直接は買えない。"
+    },
+    {
+      "id": "sbg",
+      "name": "ソフトバンクG",
+      "layer": "service",
+      "jp": true,
+      "size": "l",
+      "desc": "投資会社。OpenAIに大型の出資をしている。",
+      "priv": false
+    },
+    {
+      "id": "meta",
+      "name": "Meta",
+      "layer": "service",
+      "jp": false,
+      "size": "xl",
+      "desc": "FacebookやInstagramの運営会社。AIモデルを開発し、AI向けの設備に大規模な投資をしている。",
+      "priv": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "tsmc",
+      "to": "nvda",
+      "type": "supply",
+      "conf": 1,
+      "text": "NVIDIAが設計したGPUを、TSMCが製造している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e2",
+      "from": "skh",
+      "to": "nvda",
+      "type": "supply",
+      "conf": 1,
+      "text": "AI向けGPUと組み合わせる高帯域メモリ（HBM）を供給している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e3",
+      "from": "tsmc",
+      "to": "amd",
+      "type": "supply",
+      "conf": 1,
+      "text": "AMDが設計した半導体を、TSMCが製造している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e4",
+      "from": "tel",
+      "to": "tsmc",
+      "type": "supply",
+      "conf": 1,
+      "text": "膜をつける・削るなどの製造装置を供給している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e5",
+      "from": "asml",
+      "to": "tsmc",
+      "type": "supply",
+      "conf": 1,
+      "text": "最先端品の製造に欠かせないEUV露光装置を供給している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e6",
+      "from": "adv",
+      "to": "nvda",
+      "type": "supply",
+      "conf": 2,
+      "text": "AI向けGPUの検査にアドバンテストのテスターが使われていると、広く報じられている。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e7",
+      "from": "disco",
+      "to": "skh",
+      "type": "supply",
+      "conf": 2,
+      "text": "HBMはチップを薄く削って何枚も積み重ねるため、削る装置の需要が増えるとされる。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e8",
+      "from": "ltec",
+      "to": "tsmc",
+      "type": "supply",
+      "conf": 2,
+      "text": "最先端品の量産が増えるほど、原版（マスク）の検査装置の需要も増えるとされる。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e9",
+      "from": "shin",
+      "to": "tsmc",
+      "type": "supply",
+      "conf": 2,
+      "text": "半導体の土台になるウエハーを供給している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e10",
+      "from": "sumco",
+      "to": "tsmc",
+      "type": "supply",
+      "conf": 2,
+      "text": "半導体の土台になるウエハーを供給している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e11",
+      "from": "res",
+      "to": "tsmc",
+      "type": "supply",
+      "conf": 3,
+      "text": "チップを積み重ねる先端パッケージが広がるほど、後工程の材料の需要も増えるという見方。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e12",
+      "from": "nvda",
+      "to": "msft",
+      "type": "supply",
+      "conf": 1,
+      "text": "データセンター向けにGPUを大量に供給している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e13",
+      "from": "nvda",
+      "to": "amzn",
+      "type": "supply",
+      "conf": 1,
+      "text": "データセンター向けにGPUを大量に供給している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e14",
+      "from": "nvda",
+      "to": "googl",
+      "type": "supply",
+      "conf": 1,
+      "text": "データセンター向けにGPUを供給している（自社開発のAI向けチップも併用）。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e15",
+      "from": "nvda",
+      "to": "meta",
+      "type": "supply",
+      "conf": 1,
+      "text": "AIモデルの開発用にGPUを大量に供給している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e16",
+      "from": "nvda",
+      "to": "sakura",
+      "type": "supply",
+      "conf": 1,
+      "text": "国内のGPUクラウド向けにGPUを調達している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e17",
+      "from": "amd",
+      "to": "msft",
+      "type": "supply",
+      "conf": 2,
+      "text": "AzureでAMDのAI向けGPUが使われている。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e18",
+      "from": "msft",
+      "to": "openai",
+      "type": "supply",
+      "conf": 1,
+      "text": "出資し、計算に使うクラウド（Azure）を提供してきた。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e19",
+      "from": "sbg",
+      "to": "openai",
+      "type": "supply",
+      "conf": 1,
+      "text": "大型の出資をしている。上場していないOpenAIに間接的に関わる手段として語られることがある。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e20",
+      "from": "fuji",
+      "to": "msft",
+      "type": "supply",
+      "conf": 2,
+      "text": "データセンター内で大量の光配線が必要になり、光ファイバーの需要が増えるとされる。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e21",
+      "from": "fuji",
+      "to": "amzn",
+      "type": "supply",
+      "conf": 2,
+      "text": "データセンター内で大量の光配線が必要になり、光ファイバーの需要が増えるとされる。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e22",
+      "from": "hitachi",
+      "to": "msft",
+      "type": "supply",
+      "conf": 3,
+      "text": "データセンターが増えると電力網の増強が必要になり、送配電設備の需要が増えるという見方。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "e23",
+      "from": "gev",
+      "to": "amzn",
+      "type": "supply",
+      "conf": 2,
+      "text": "米国のデータセンター向け電力需要で、ガスタービンの受注が増えていると報じられている。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "c1",
+      "from": "nvda",
+      "to": "amd",
+      "type": "comp",
+      "conf": 1,
+      "text": "AI向けGPUで競合している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "c2",
+      "from": "msft",
+      "to": "amzn",
+      "type": "comp",
+      "conf": 1,
+      "text": "クラウドで競合している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "c3",
+      "from": "amzn",
+      "to": "googl",
+      "type": "comp",
+      "conf": 1,
+      "text": "クラウドで競合している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "c4",
+      "from": "shin",
+      "to": "sumco",
+      "type": "comp",
+      "conf": 1,
+      "text": "シリコンウエハーで競合している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "c5",
+      "from": "mhi",
+      "to": "gev",
+      "type": "comp",
+      "conf": 1,
+      "text": "発電用ガスタービンで競合している。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "c6",
+      "from": "googl",
+      "to": "openai",
+      "type": "comp",
+      "conf": 1,
+      "text": "AIモデルの開発で競合している。",
+      "sources": [],
+      "status": "未確認"
+    }
+  ],
+  "events": [
+    {
+      "id": "ev1",
+      "name": "対中輸出規制",
+      "x": 500,
+      "layers": [
+        "equip",
+        "chip"
+      ],
+      "conf": 1,
+      "text": "先端の半導体や製造装置の中国向け輸出を制限する規制。中国向けの売上が多い装置メーカーほど影響を受けやすい。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "ev2",
+      "name": "データセンターの電力不足",
+      "x": 260,
+      "layers": [
+        "power",
+        "cloud"
+      ],
+      "conf": 2,
+      "text": "AI向けのデータセンターは大量の電気を使うため、電力の確保が増設のボトルネックになるという見方。発電・送電設備の需要につながる。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "ev3",
+      "name": "米国の金利",
+      "x": 960,
+      "layers": [
+        "cloud",
+        "service"
+      ],
+      "conf": 2,
+      "text": "金利が上がると、将来の成長に期待して買われている株の評価が下がりやすいという一般的な見方。",
+      "sources": [],
+      "status": "未確認"
+    },
+    {
+      "id": "ev4",
+      "name": "円安",
+      "x": 720,
+      "layers": [
+        "material",
+        "equip"
+      ],
+      "conf": 2,
+      "text": "海外への売上が多い日本の素材・装置メーカーは、円安になると円に換算した売上が増えやすい。",
+      "sources": [],
+      "status": "未確認"
+    }
+  ],
+  "changes": [
+    {
+      "label": "線を追加：SK hynix → NVIDIA",
+      "edge": "e2"
+    },
+    {
+      "label": "出来事を更新：データセンターの電力不足",
+      "event": "ev2"
+    },
+    {
+      "label": "会社を追加：さくらインターネット",
+      "node": "sakura"
+    }
+  ]
+}
