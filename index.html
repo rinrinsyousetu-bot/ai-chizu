@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>業界勢力図｜ニュースで動く、会社の追い風と向かい風</title>
+<meta name="description" content="自動車、半導体製造装置、総合商社など、業界ごとのニュースが主要企業にとって追い風か向かい風かを、1枚の地図で整理するメディアです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+:root{
+  --bg:#F3F1EC; --surface:#FFFFFF; --ink:#1C2126; --muted:#626A70; --line:#D6D2C9; --edge:#B3B0A7;
+  --accent:#B8322A; --pos:#2E8A57; --neg:#B8322A; --jp:#9E3A3A; --ov:#3F5A86; --nulls:#9AA0A5;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#14171A; --surface:#1D2125; --ink:#E9E6DF; --muted:#9CA2A7; --line:#353A3F; --edge:#555B62;
+  --accent:#E86A60; --pos:#5CBF86; --neg:#E86A60; --jp:#D47B74; --ov:#86A3D8; --nulls:#6C7278; } }
+:root[data-theme="dark"]{
+  --bg:#14171A; --surface:#1D2125; --ink:#E9E6DF; --muted:#9CA2A7; --line:#353A3F; --edge:#555B62;
+  --accent:#E86A60; --pos:#5CBF86; --neg:#E86A60; --jp:#D47B74; --ov:#86A3D8; --nulls:#6C7278; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:15px;line-height:1.75}
+a{color:inherit}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+.serif{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif}
+/* masthead */
+.mast{border-bottom:3px double var(--ink);background:var(--bg)}
+.mast .top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:22px 0 8px;flex-wrap:wrap}
+.logo{font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:clamp(30px,4.6vw,46px);line-height:1;text-decoration:none;letter-spacing:.04em}
+.logo small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:13px;letter-spacing:0;color:var(--muted);margin-top:8px}
+.dateline{font-size:12.5px;color:var(--muted);text-align:right}
+nav.gnav{display:flex;gap:4px;overflow-x:auto;border-top:1px solid var(--line);padding:6px 0;scrollbar-width:none}
+nav.gnav a{white-space:nowrap;text-decoration:none;font-weight:700;font-size:14px;padding:4px 12px;border-radius:999px}
+nav.gnav a[aria-current="page"]{background:var(--ink);color:var(--surface)}
+main{padding:24px 0 10px}
+.kicker{font-size:12.5px;font-weight:700;color:var(--accent);letter-spacing:.08em}
+h1.page{font-family:"Shippori Mincho B1",serif;font-size:clamp(28px,4vw,40px);line-height:1.25;margin:2px 0 4px}
+.sub{color:var(--muted);margin:0 0 16px}
+.crumb{font-size:12.5px;color:var(--muted);margin-bottom:6px}
+.crumb a{text-decoration:none}
+/* home */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:22px}
+.hero p{margin:6px 0}
+.feed h2,.sec h2{font-family:"Shippori Mincho B1",serif;font-size:20px;margin:0 0 8px;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.feed ol{list-style:none;margin:0;padding:0}
+.feed li{border-bottom:1px solid var(--line);padding:7px 0}
+.feed a{text-decoration:none;font-weight:500}
+.feed a:hover{text-decoration:underline}
+.feed .m{font-size:12px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px;text-decoration:none}
+.card:hover{border-color:var(--ink)}
+.card h3{font-family:"Shippori Mincho B1",serif;font-size:24px;margin:0}
+.card .tl{color:var(--muted);font-size:13.5px;margin:0}
+.card .stat{display:flex;gap:6px;flex-wrap:wrap}
+.card ul{margin:0;padding-left:1.1em;font-size:14px}
+.card .go{margin-top:auto;font-weight:700;font-size:14px}
+.chip{display:inline-block;font-size:12.5px;border-radius:999px;padding:1px 10px;border:1px solid currentColor;margin:0 6px 6px 0}
+.pos-t{color:var(--pos)} .neg-t{color:var(--neg)} .mut-t{color:var(--muted)}
+/* industry */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px;align-items:start}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:10px;position:relative;overflow:hidden}
+#net{display:block;width:100%;height:min(70vh,640px);min-height:460px;touch-action:none;cursor:grab}
+.hint{position:absolute;left:12px;bottom:8px;font-size:12px;color:var(--muted);pointer-events:none}
+.sizenote{position:absolute;left:12px;top:10px;font-size:12px;color:var(--muted);pointer-events:none;max-width:62%}
+.reset{position:absolute;right:10px;top:10px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font:inherit;font-size:12.5px;border-radius:6px;padding:3px 10px;cursor:pointer}
+.legend{font-size:13px;color:var(--muted);margin:8px 0 0}
+.link{stroke:var(--edge);stroke-width:1.3}
+.link.pos{stroke:var(--pos);stroke-width:2.2}
+.link.neg{stroke:var(--neg);stroke-dasharray:5 4;stroke-width:1.8}
+.node{cursor:pointer}
+.node text{font-size:12px;paint-order:stroke;stroke:var(--surface);stroke-width:3.5px;stroke-linejoin:round;fill:var(--ink);pointer-events:none}
+.node.hub text{font-size:14.5px;font-weight:700}
+.node.hub text.val{font-size:11px;font-weight:500;fill:var(--muted)}
+.node.news text{font-size:12.5px;font-weight:500}
+.node:focus{outline:none}
+.node:focus-visible circle,.node:focus-visible rect{stroke:var(--ink);stroke-width:3}
+.dim{opacity:.1}
+aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+aside h3{font-family:"Shippori Mincho B1",serif;font-size:22px;margin:0 0 4px;line-height:1.35}
+aside .meta,.meta{color:var(--muted);font-size:13px}
+aside p{margin:8px 0 10px} aside h4{font-size:13.5px;margin:14px 0 4px}
+aside ul{margin:0;padding-left:1.2em}
+.lnk{all:unset;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.lnk:hover{text-decoration-color:var(--ink)}
+.close{display:none}
+.cta{display:block;margin-top:16px;padding:10px 12px;border:1px solid var(--ink);border-radius:8px;text-decoration:none;font-weight:700;font-size:14px}
+.cta small{display:block;font-weight:400;color:var(--muted)}
+.sec{margin-top:28px}
+table.rank{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14px}
+.rank th,.rank td{padding:8px 12px;border-bottom:1px solid var(--line);text-align:left}
+.rank th{font-size:12.5px;color:var(--muted);font-weight:500}
+.rank td.n{text-align:right;font-variant-numeric:tabular-nums}
+.tablewrap{overflow-x:auto}
+.list article{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.list h3{margin:0;font-size:16px}
+.list p{margin:4px 0}
+.prose{max-width:46em}
+.prose h2{font-family:"Shippori Mincho B1",serif;font-size:20px;margin:26px 0 6px}
+footer{border-top:3px double var(--ink);margin-top:36px;color:var(--muted);font-size:12.5px;padding:18px 0 36px}
+footer p{margin:4px 0;max-width:80em}
+footer a{margin-right:14px}
+@media (max-width:1000px){
+  .layout{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .hero{grid-template-columns:1fr}
+  aside{position:fixed;left:0;right:0;bottom:0;top:auto;max-height:70vh;overflow:auto;border-radius:14px 14px 0 0;
+    padding:18px 20px calc(18px + env(safe-area-inset-bottom,0px));transform:translateY(105%);transition:transform .2s;z-index:10;box-shadow:0 -6px 24px rgba(0,0,0,.18)}
+  aside.open{transform:none}
+  .close{display:block;position:absolute;right:14px;top:10px;background:none;border:0;font-size:24px;color:var(--muted);cursor:pointer}
+  aside .intro{display:none}
+}
+@media (max-width:640px){ .cards{grid-template-columns:1fr} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="top">
+    <a class="logo" href="#/">業界勢力図<small>ニュースで動く、会社の追い風と向かい風。</small></a>
+    <div class="dateline" id="dateline"></div>
+  </div>
+  <nav class="gnav" id="gnav" aria-label="業界"></nav>
+</div></header>
+<div class="wrap"><main id="main"></main></div>
+<footer><div class="wrap">
+  <p><a href="#/about">このサイトについて</a><a href="#/about">免責事項</a><a href="#/about">広告について</a></p>
+  <p>見出しと説明は編集部が独自に要約したものです。詳しくはリンク先の元記事をご覧ください。追い風・向かい風の判定は編集部の見方で、特定の銘柄の売買を勧めるものではありません。投資の判断はご自身で行ってください。このサイトには広告（アフィリエイトリンク）が含まれる場合があります。</p>
+</div></footer>
+<script type="application/json" id="fallback">{"industries": {"site": {"name": "業界勢力図", "tagline": "ニュースで動く、会社の追い風と向かい風。"}, "industries": [{"id": "auto", "name": "自動車"}, {"id": "semi", "name": "半導体製造装置"}, {"id": "shosha", "name": "総合商社"}]}, "auto": {"id": "auto", "name": "自動車", "tagline": "EV・ハイブリッド・ガソリン。主要9社への追い風と向かい風", "period": "2026年9月1日〜9月20日", "updated": "2026-09-21", "size": {"label": "時価総額", "unit": "兆円", "asof": "2026年9月時点の概算（為替換算を含む・要確認）"}, "companies": [{"id": "tesla", "name": "テスラ", "jp": false, "size": 200, "note": "EVだけを作る米国のメーカー。ロボタクシーなど自動運転への期待が株価を支えている。"}, {"id": "toyota", "name": "トヨタ", "jp": true, "size": 48, "note": "ハイブリッドを主力に、EV・水素も並行する全方位戦略。"}, {"id": "byd", "name": "BYD", "jp": false, "size": 15, "note": "中国の最大手。EVと、外部から充電できるハイブリッド（PHEV）の両方が強い。日本でも軽EVを投入。"}, {"id": "honda", "name": "ホンダ", "jp": true, "size": 7.9, "note": "EVへの大型投資を掲げていたが、2026年に北米向けEVの一部開発を中止し、ハイブリッド重視に修正。"}, {"id": "suzuki", "name": "スズキ", "jp": true, "size": 4.4, "note": "インドなどで小型車が強い。軽EVの投入を進めている。"}, {"id": "subaru", "name": "スバル", "jp": true, "size": 2.0, "note": "北米での販売比率が高い。ハイブリッドを拡充中で、EVはトヨタと共同開発。"}, {"id": "nissan", "name": "日産", "jp": true, "size": 1.3, "note": "リーフなどEVの先駆け。エンジンで発電してモーターで走るe-POWERも主力。経営再建中。"}, {"id": "mazda", "name": "マツダ", "jp": true, "size": 0.7, "note": "エンジン技術へのこだわりが強い。EVは中国の提携先と組んで展開。"}, {"id": "mitsu", "name": "三菱自", "jp": true, "size": 0.6, "note": "外部から充電できるハイブリッド（PHEV）のアウトランダーが看板。東南アジアに強い。"}], "news": [{"id": "n1", "date": "2026-09-18", "title": "ホンダ、次世代HVを前倒し", "summary": "ホンダが北米で次世代ハイブリッド車の量産を数カ月早め、2027年2月にもSUVのCR-Vで始めると報じられた。3月に北米向けEV3車種の開発中止を決めており、需要の伸びるハイブリッドで立て直す狙い。", "confidence": "報道", "sources": [{"title": "日本経済新聞（2026年9月18日）", "url": "https://www.nikkei.com/article/DGXZQOUC01B240R00C26A9000000/"}], "companies": [{"id": "honda", "dir": 1}], "tags": ["米国", "ハイブリッドに追い風", "EVに向かい風"]}, {"id": "n2", "date": "2026-09-19", "title": "トヨタ、中国でEREV生産へ", "summary": "トヨタが、発電用のエンジンを積んで航続距離を延ばしたEV（レンジエクステンダーEV）を、2027年春に中国で生産すると報じられた。中国ではこの方式の需要が伸びている。", "confidence": "報道", "sources": [{"title": "日本経済新聞（2026年9月19日）", "url": "https://www.nikkei.com/article/DGXZQOFD183KZ0Y6A810C2000000/"}], "companies": [{"id": "toyota", "dir": 1}], "tags": ["中国", "EVに追い風"]}, {"id": "n3", "date": "2026-09-16", "title": "国内EV比率、5%に迫る", "summary": "2026年8月の新車販売に占めるEVとPHEVの比率は4.98%で、前年同月の2.57%からほぼ倍になった。7月末に発売されたBYDの軽EVも話題に。", "confidence": "統計", "sources": [{"title": "EV充電エネチェンジ（EV普及率のまとめ）", "url": "https://ev-charge-enechange.jp/articles/033/"}], "companies": [{"id": "byd", "dir": 1}], "tags": ["日本", "EVに追い風"]}, {"id": "n4", "date": "2026-09-16", "title": "日産、新型小型EVを予告", "summary": "日産が欧州向けの新しい小型EVを開発中で、新世代EVを9月23日に発表すると予告している。市販は2027年が有力とされる。", "confidence": "報道（スクープを含む）", "sources": [{"title": "レスポンス（2026年9月16日）", "url": "https://response.jp/article/2026/09/16/416659.html"}], "companies": [{"id": "nissan", "dir": 1}], "tags": ["欧州", "EVに追い風"]}, {"id": "n5", "date": "2026-09-17", "title": "スバル、主力車をHV中心に改良", "summary": "スバルがクロストレックとインプレッサの改良モデルを発表。クロストレックは全グレードを2.5Lのストロングハイブリッドにするなど、ハイブリッド中心にラインナップを見直した。", "confidence": "報道", "sources": [{"title": "最新自動車情報（car-repo）", "url": "https://car-repo.jp/"}], "companies": [{"id": "subaru", "dir": 1}], "tags": ["日本", "ハイブリッドに追い風"]}, {"id": "n6", "date": "2026-09-17", "title": "三菱自、軽商用EVを改良", "summary": "三菱自動車が軽商用EV「ミニキャブ EV」の一部改良を発表した。", "confidence": "公式発表", "sources": [{"title": "三菱自動車 ニュースルーム", "url": "https://www.mitsubishi-motors.com/jp/newsroom/"}], "companies": [{"id": "mitsu", "dir": 1}], "tags": ["日本", "EVに追い風"]}, {"id": "n7", "date": "2026-09-02", "title": "三菱自、パジェロ復活", "summary": "三菱自動車が本格的な悪路向けSUV「パジェロ」を約7年ぶりに復活させ、9月2日に世界初公開した。日本では10月1日から予約を受け付ける。中期経営計画ではオフロード車の強化を掲げている。", "confidence": "公式発表・報道", "sources": [{"title": "MOTA（新型車解説）", "url": "https://autoc-one.jp/daihatsu/move/newmodel-5030993/"}], "companies": [{"id": "mitsu", "dir": 1}], "tags": ["日本"]}, {"id": "n8", "date": "2026-09-05", "title": "三菱自、減益決算も黒字確保", "summary": "三菱自動車の2025年度決算は、米国の関税や中国メーカーの台頭などの逆風の中、営業利益755億円、純利益100億円で黒字を確保した。", "confidence": "報道", "sources": [{"title": "レスポンス（2026年9月5日）", "url": "https://response.jp/article/2026/09/05/416167.html"}], "companies": [{"id": "mitsu", "dir": -1}], "tags": ["日本"]}, {"id": "n9", "date": "2026-09-17", "title": "BYD、月間販売が過去最高", "summary": "BYDが月間の販売台数で過去最高を記録したと報じられた。欧州の一部の国でもEV販売を大きく伸ばしており、EV販売でテスラとの差が広がっているとの見方が出ている。", "confidence": "報道", "sources": [{"title": "The Motley Fool（2026年9月17日・英語）", "url": "https://www.fool.com/investing/2026/09/17/byd-just-reported-record-monthly-sales-heres-what/"}], "companies": [{"id": "byd", "dir": 1}, {"id": "tesla", "dir": -1}], "tags": ["中国", "EVに追い風"]}, {"id": "n10", "date": "2026-09-09", "title": "テスラ、ロボタクシーを拡大", "summary": "テスラの自動運転タクシー専用車「サイバーキャブ」が、米テキサス州オースティンで45台走っていると報じられた。テスラの株価は、車の販売よりこの分野への期待で支えられている面が大きい。", "confidence": "報道", "sources": [{"title": "The Motley Fool（2026年9月・英語、関連記事の見出しより）", "url": "https://www.fool.com/investing/2026/09/11/byd-outsold-tesla-by-roughly-77000-evs-again-in-q2/"}], "companies": [{"id": "tesla", "dir": 1}], "tags": ["米国", "EVに追い風"]}, {"id": "n11", "date": "2026-09-05", "title": "マツダ、ロードスターを改良", "summary": "マツダがロードスターとロードスターRFの商品改良を発表し、9月上旬に発売した。走りの楽しさを磨いたエンジン車で、特別仕様車も追加。", "confidence": "公式発表", "sources": [{"title": "カーサービスフレンズ（9月の新車動向）", "url": "https://carservicefriends.com/blog/2026/08/22/2026%E5%B9%B49%E6%9C%88%E6%9C%80%E6%96%B0%E7%89%88%E3%80%91%E5%9B%BD%E7%94%A3%E3%83%BB%E8%BC%B8%E5%85%A5%E8%BB%8A%E3%81%AE%E6%96%B0%E8%BB%8A%E5%8B%95%E5%90%91%E3%82%92%E5%BE%B9%E5%BA%95%E8%A7%A3"}], "companies": [{"id": "mazda", "dir": 1}], "tags": ["日本", "ガソリンに追い風"]}, {"id": "n12", "date": "2026-08-08", "title": "世界のEV比率、16%超に", "summary": "2026年6月末時点で、世界の新車販売に占めるEV（BEV）の比率は16%を上回り、伸び続けている。一方でPHEVは7.1%と2025年末から下がった。", "confidence": "統計", "sources": [{"title": "CHINA CASE（2026年8月）", "url": "https://note.com/china_case/n/n3886831d50f3"}], "companies": [], "tags": ["世界全体", "EVに追い風", "ハイブリッドに向かい風"], "ongoing": true}, {"id": "b1", "date": "2026-02-16", "title": "米国の関税15%が続く", "summary": "日本から米国へ輸出する車には15%の関税がかかる状態が続いており、日本の自動車メーカーに共通の向かい風になっている。", "confidence": "続いているテーマ", "sources": [{"title": "ダイヤモンド・オンライン（2026年2月）", "url": "https://diamond.jp/articles/-/383983"}], "companies": [{"id": "toyota", "dir": -1}, {"id": "honda", "dir": -1}, {"id": "nissan", "dir": -1}, {"id": "mitsu", "dir": -1}, {"id": "suzuki", "dir": -1}, {"id": "subaru", "dir": -1}, {"id": "mazda", "dir": -1}], "tags": ["米国", "EVに向かい風", "ハイブリッドに向かい風", "ガソリンに向かい風"], "ongoing": true}]}, "semi": {"id": "semi", "name": "半導体製造装置", "tagline": "AI需要を追い風に、日本が世界で強い分野", "period": "2026年9月（試作用）", "updated": "2026-09-21", "size": {"label": "時価総額", "unit": "兆円", "asof": "2026年7月16日時点の概数（toshitime.com調べ）。未記入は確認中"}, "companies": [{"id": "tel", "name": "東京エレクトロン", "jp": true, "size": 33.2, "note": "膜をつける・削る・洗うなど、半導体の前工程の製造装置を幅広く手がける。"}, {"id": "adv", "name": "アドバンテスト", "jp": true, "size": 21.7, "note": "できあがった半導体が正しく動くかを調べるテスト装置の大手。AI向け半導体の検査で存在感。"}, {"id": "screen", "name": "SCREEN", "jp": true, "size": null, "note": "半導体ウエハーの洗浄装置に強い。"}, {"id": "disco", "name": "ディスコ", "jp": true, "size": null, "note": "ウエハーを切る・薄く削る装置の大手。"}, {"id": "ltec", "name": "レーザーテック", "jp": true, "size": null, "note": "回路の原版（マスク）の欠陥を見つける検査装置を手がける。"}], "news": [{"id": "s1", "date": "2026-09-18", "title": "NVIDIAの強気見通しで検査装置株に買い", "confidence": "報道（見出し）", "summary": "NVIDIAが来年の販売が大きく伸びるとの見通しを示したと伝わり、AI向け半導体の検査を担うアドバンテストの株価が反発したと報じられた。", "companies": [{"id": "adv", "dir": 1}], "tags": ["米国発", "AI需要"], "sources": [{"title": "日本経済新聞（2026年9月18日・見出し）", "url": "https://www.nikkei.com/nkd/company/?scode=8035"}]}, {"id": "s2", "date": "2026-09-18", "title": "日銀利上げ後の円安、半導体株に買い", "confidence": "報道（見出し）", "summary": "日銀の利上げ決定後に円安が進み、日経平均は3日続伸で6万5000円台を回復。半導体関連株に買いが入ったと報じられた。", "companies": [{"id": "tel", "dir": 1}, {"id": "adv", "dir": 1}], "tags": ["日本", "為替"], "sources": [{"title": "日本経済新聞（2026年9月18日・見出し）", "url": "https://www.nikkei.com/nkd/company/?scode=8035"}]}, {"id": "s3", "date": "2026-09-12", "title": "東京エレクトロン、1株を5株に分割へ", "confidence": "報道", "summary": "東京エレクトロンは9月末を基準日に、10月1日付で1株を5株に分割する。100株を買うのに必要な資金は大きく下がるが、それでも東証が望ましいとする50万円未満より高い水準が続く。", "companies": [{"id": "tel", "dir": 1}], "tags": ["日本", "株主還元"], "sources": [{"title": "財経新聞（2026年9月12日）", "url": "https://www.zaikei.co.jp/article/20260912/869537.html"}]}, {"id": "s4", "date": "2026-09-12", "title": "東京エレクトロン、中国向け比率に注意", "confidence": "報道", "ongoing": true, "summary": "東京エレクトロンは中国向けの売上比率や輸出規制の影響に注意が必要とされる。半導体メーカーの設備投資が減速すれば、装置の需要が変動する可能性もある。", "companies": [{"id": "tel", "dir": -1}], "tags": ["中国", "輸出規制"], "sources": [{"title": "財経新聞（2026年9月12日）", "url": "https://www.zaikei.co.jp/article/20260912/869537.html"}]}]}, "shosha": {"id": "shosha", "name": "総合商社", "tagline": "資源と非資源、バフェットも買った5大商社", "period": "2026年5月〜9月（試作用）", "updated": "2026-09-21", "size": {"label": "時価総額", "unit": "兆円", "asof": "2026年7月16日時点の概数（toshitime.com調べ）。未記入は確認中"}, "companies": [{"id": "mc", "name": "三菱商事", "jp": true, "size": 16.8, "note": "資源と非資源の両方に強い最大手。ローソンなど生活関連の事業も持つ。"}, {"id": "itochu", "name": "伊藤忠商事", "jp": true, "size": 15.2, "note": "食品・繊維など生活に近い非資源分野に強い。"}, {"id": "mitsui", "name": "三井物産", "jp": true, "size": 13.6, "note": "鉄鉱石やLNGなど資源分野の比重が大きい。"}, {"id": "sumitomo", "name": "住友商事", "jp": true, "size": null, "note": "メディア、不動産、自動車関連など事業が幅広い。"}, {"id": "marubeni", "name": "丸紅", "jp": true, "size": null, "note": "穀物や電力に強く、非資源分野の伸びが目立つ。"}], "news": [{"id": "t1", "date": "2026-08-05", "title": "商社3社、1Q純利益が接戦", "confidence": "報道", "summary": "2027年3月期の第1四半期決算で、三菱商事が純利益2,985億円で首位に立ち、三井物産（2,941億円）、伊藤忠商事（2,938億円）が僅差で続いた。各社とも通期計画に対する進捗率は30%前後と好調な滑り出し。", "companies": [{"id": "mc", "dir": 1}, {"id": "mitsui", "dir": 1}, {"id": "itochu", "dir": 1}], "tags": ["決算"], "sources": [{"title": "ワンキャリア転職（2026年8月）", "url": "https://plus.onecareer.jp/articles/935"}]}, {"id": "t2", "date": "2026-05-01", "title": "資源価格の調整で資源系が減益", "confidence": "報道", "ongoing": true, "summary": "2026年5月に発表された前期決算では、資源価格の調整が続いたことで、資源の比重が大きい三菱商事と三井物産が前年度から減益となった。", "companies": [{"id": "mc", "dir": -1}, {"id": "mitsui", "dir": -1}], "tags": ["決算", "資源価格"], "sources": [{"title": "ワンキャリア転職（2026年8月）", "url": "https://plus.onecareer.jp/articles/935"}]}, {"id": "t3", "date": "2026-04-28", "title": "バフェット効果で商社株に資金", "confidence": "解説記事", "ongoing": true, "summary": "バフェット氏が商社株の保有上限の緩和と買い増しの意欲を示して以降、商社株全体が評価を高めてきた。直近3カ月では丸紅や三菱商事の上昇率が大きかったとされる。", "companies": [{"id": "mc", "dir": 1}, {"id": "itochu", "dir": 1}, {"id": "mitsui", "dir": 1}, {"id": "sumitomo", "dir": 1}, {"id": "marubeni", "dir": 1}], "tags": ["株主", "米国発"], "sources": [{"title": "ココノエ（note・2026年）", "url": "https://note.com/kokonoe_cluture/n/nf2b18a4e220f"}]}]}}</script>
+<script>
+const FB=JSON.parse(document.getElementById("fallback").textContent);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const main=document.getElementById("main");
+let IDX, IND={};
+async function getJSON(p,key){try{const r=await fetch(p,{cache:"no-store"});if(!r.ok)throw 0;return await r.json()}catch(e){return key?FB[key]:FB.industries}}
+async function loadAll(){IDX=await getJSON("data/industries.json");for(const i of IDX.industries){IND[i.id]=await getJSON(`data/${i.id}.json`,i.id)}}
+const cta=`<a class="cta" href="#/about">株に投資する方法を見る<small>個別株・投資信託・NISAの違いを整理するページ（準備中）</small></a>`;
+function scores(ind){
+  const s={}; ind.companies.forEach(c=>s[c.id]={pos:0,neg:0});
+  ind.news.forEach(n=>n.companies.forEach(x=>{if(s[x.id]){x.dir>0?s[x.id].pos++:s[x.id].neg++}}));
+  return s;
+}
+function coName(ind,id){return ind.companies.find(c=>c.id===id)?.name||id}
+function nav(active){
+  document.getElementById("gnav").innerHTML=`<a href="#/" ${active==="home"?'aria-current="page"':""}>トップ</a>`+
+    IDX.industries.map(i=>`<a href="#/i/${i.id}" ${active===i.id?'aria-current="page"':""}>${esc(i.name)}</a>`).join("")+
+    `<a href="#/about" ${active==="about"?'aria-current="page"':""}>このサイトについて</a>`;
+  const up=Object.values(IND).map(i=>i.updated).sort().pop();
+  document.getElementById("dateline").textContent=`${up} 更新・試作版`;
+}
+/* ---------- home ---------- */
+function home(){
+  nav("home"); document.title="業界勢力図｜ニュースで動く、会社の追い風と向かい風";
+  const all=[];Object.values(IND).forEach(ind=>ind.news.filter(n=>!n.ongoing).forEach(n=>all.push({ind,n})));
+  all.sort((a,b)=>b.n.date.localeCompare(a.n.date));
+  const feed=all.slice(0,8).map(({ind,n})=>`<li><a href="#/i/${ind.id}/${n.id}">${esc(n.title)}</a><div class="m">${esc(ind.name)}・${esc(n.date)}</div></li>`).join("");
+  const cards=IDX.industries.map(i=>{
+    const ind=IND[i.id], s=scores(ind), arr=Object.entries(s);
+    const best=arr.filter(x=>x[1].pos>0).sort((a,b)=>(b[1].pos-b[1].neg)-(a[1].pos-a[1].neg))[0];
+    const worst=arr.filter(x=>x[1].neg>0).sort((a,b)=>(b[1].neg-b[1].pos)-(a[1].neg-a[1].pos))[0];
+    const heads=ind.news.filter(n=>!n.ongoing).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3).map(n=>`<li>${esc(n.title)}</li>`).join("");
+    return `<a class="card" href="#/i/${ind.id}"><div class="kicker">${esc(ind.period)}</div><h3>${esc(ind.name)}</h3><p class="tl">${esc(ind.tagline)}</p>
+      <div class="stat">${best?`<span class="chip pos-t">追い風：${esc(coName(ind,best[0]))}</span>`:""}${worst?`<span class="chip neg-t">向かい風：${esc(coName(ind,worst[0]))}</span>`:""}<span class="chip mut-t">ニュース${ind.news.length}件</span></div>
+      <ul>${heads}</ul><span class="go">勢力図を見る →</span></a>`;}).join("");
+  main.innerHTML=`<section class="hero"><div><div class="kicker">今週の勢力図</div>
+    <h1 class="page">ニュースは、どの会社の<br>追い風になったか。</h1>
+    <p>業界ごとに主要な会社を並べ、その週のニュースが「追い風」か「向かい風」かを線でつないだ地図を毎週更新しています。丸の大きさは時価総額です。</p>
+    <p class="meta">元記事へのリンク付き。見出しと要約は編集部が独自に作成しています。</p></div>
+    <div class="feed"><h2>新着ニュース</h2><ol>${feed}</ol></div></section>
+    <section><h2 class="serif" style="font-size:22px;margin:0 0 12px">業界の勢力図</h2><div class="cards">${cards}</div></section>`;
+}
+/* ---------- industry ---------- */
+let G={};
+function industry(id,focusNews){
+  const ind=IND[id]; if(!ind){home();return}
+  nav(id); document.title=`${ind.name}の勢力図｜業界勢力図`;
+  const s=scores(ind);
+  const rows=[...ind.companies].sort((a,b)=>(b.size??-1)-(a.size??-1)).map(c=>`<tr><td><button class="lnk" onclick="selectNode('hub:${c.id}')">${esc(c.name)}</button></td><td class="n">${c.size!=null?c.size+"兆円":"確認中"}</td><td class="n pos-t">${s[c.id].pos}</td><td class="n neg-t">${s[c.id].neg}</td></tr>`).join("");
+  const list=[...ind.news].sort((a,b)=>b.date.localeCompare(a.date)).map(n=>{
+    const ch=n.companies.map(x=>`<span class="chip ${x.dir>0?"pos-t":"neg-t"}">${esc(coName(ind,x.id))}に${x.dir>0?"追い風":"向かい風"}</span>`).join("")+(n.tags||[]).map(t=>`<span class="chip mut-t">${esc(t)}</span>`).join("");
+    const src=(n.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`).join("／");
+    return `<article id="a-${n.id}"><h3>${esc(n.title)}</h3><div class="meta">${esc(n.date)}${n.ongoing?"・続いているテーマ":""}・${esc(n.confidence)}</div><p>${esc(n.summary)}</p><div>${ch}</div><div class="meta">元記事：${src}</div></article>`;}).join("");
+  main.innerHTML=`<div class="crumb"><a href="#/">トップ</a> ／ ${esc(ind.name)}</div>
+  <div class="kicker">${esc(ind.period)}</div><h1 class="page">${esc(ind.name)}の勢力図</h1><p class="sub">${esc(ind.tagline)}</p>
+  <div class="layout"><div>
+    <div class="stage"><svg id="net" role="img" aria-label="${esc(ind.name)}の会社とニュースのつながり"></svg>
+      <div class="sizenote">円の大きさ：${esc(ind.size.label)}（${esc(ind.size.asof)}）</div>
+      <button class="reset" id="resetBtn">全体表示</button><div class="hint">ドラッグで移動・ホイールやピンチで拡大・丸や四角を押すと詳細</div></div>
+    <p class="legend"><span class="pos-t">緑の線＝追い風</span>　<span class="neg-t">赤い点線＝向かい風</span>　四角＝ニュース、丸＝会社（赤系は日本、青系は海外）</p>
+    <section class="sec"><h2>会社別の追い風・向かい風</h2><div class="tablewrap"><table class="rank"><thead><tr><th>会社</th><th class="n">時価総額</th><th class="n">追い風</th><th class="n">向かい風</th></tr></thead><tbody>${rows}</tbody></table></div></section>
+    <section class="sec list"><h2>ニュース一覧（${ind.news.length}件）</h2>${list}</section>
+  </div><aside id="panel" aria-live="polite"></aside></div>`;
+  G={ind}; buildGraph(); drawGraph();
+  document.getElementById("resetBtn").onclick=()=>{d3.select("#net").transition().duration(300).call(G.zoom.transform,d3.zoomIdentity);intro()};
+  if(focusNews) selectNode("news:"+focusNews); else intro();
+}
+function buildGraph(){
+  const ind=G.ind, nodes=[], links=[];
+  const vmax=Math.max(...ind.companies.filter(c=>c.size!=null).map(c=>c.size),1);
+  ind.companies.forEach(c=>nodes.push({id:"hub:"+c.id,type:"hub",label:c.name,ref:c,r:c.size==null?16:16+36*Math.sqrt(c.size/vmax)}));
+  ind.news.forEach(n=>{nodes.push({id:"news:"+n.id,type:"news",label:n.title,ref:n});
+    n.companies.forEach(x=>links.push({source:"news:"+n.id,target:"hub:"+x.id,kind:x.dir>0?"pos":"neg"}))});
+  G.nodes=nodes;G.links=links;
+}
+function drawGraph(){
+  const svg=d3.select("#net"); svg.selectAll("*").remove();
+  const W=svg.node().clientWidth,H=svg.node().clientHeight, {nodes,links}=G;
+  const g=svg.append("g");
+  G.zoom=d3.zoom().scaleExtent([0.3,4]).on("zoom",e=>g.attr("transform",e.transform));
+  svg.call(G.zoom).on("dblclick.zoom",null);
+  svg.on("click",e=>{if(e.target===svg.node())intro()});
+  const hubs=nodes.filter(n=>n.type==="hub"), R=Math.min(W,H)*0.36, cx=W/2, cy=H/2+10;
+  hubs.forEach((h,i)=>{const a=-Math.PI/2+i*2*Math.PI/hubs.length;h.fx=cx+R*Math.cos(a)*(W>H?1.3:1);h.fy=cy+R*Math.sin(a)});
+  G.linkSel=g.append("g").selectAll("line").data(links).join("line").attr("class",d=>"link "+d.kind);
+  G.nodeSel=g.append("g").selectAll("g").data(nodes).join("g")
+    .attr("class",d=>"node "+d.type).attr("tabindex",0).attr("role","button").attr("aria-label",d=>d.label)
+    .on("click",(e,d)=>{e.stopPropagation();selectNode(d.id)})
+    .on("keydown",(e,d)=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();selectNode(d.id)}})
+    .call(d3.drag().on("start",(e,d)=>{if(!e.active)G.sim.alphaTarget(.2).restart();d.fx=d.x;d.fy=d.y})
+      .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y})
+      .on("end",(e,d)=>{if(!e.active)G.sim.alphaTarget(0);if(d.type!=="hub"){d.fx=null;d.fy=null}}));
+  const unit=G.ind.size.unit;
+  G.nodeSel.each(function(d){
+    const s=d3.select(this);
+    if(d.type==="news"){
+      const neg=d.ref.companies.length&&d.ref.companies.every(e=>e.dir<0);
+      s.append("rect").attr("x",-7).attr("y",-7).attr("width",14).attr("height",14).attr("rx",3)
+        .attr("fill",neg?"var(--surface)":"var(--ink)").attr("stroke",neg?"var(--neg)":"var(--surface)").attr("stroke-width",neg?2.5:2);
+      s.append("text").attr("x",11).attr("y",4).text(d.label);
+    }else{
+      s.append("circle").attr("r",d.r).attr("fill",d.ref.size==null?"var(--nulls)":d.ref.jp?"var(--jp)":"var(--ov)").attr("stroke","var(--surface)").attr("stroke-width",2);
+      s.append("text").attr("text-anchor","middle").attr("y",d.r+17).text(d.label);
+      s.append("text").attr("class","val").attr("text-anchor","middle").attr("y",d.r+31).text(d.ref.size!=null?d.ref.size+unit:"確認中");
+    }
+  });
+  const pad=36;
+  G.sim=d3.forceSimulation(nodes)
+    .force("link",d3.forceLink(links).id(d=>d.id).distance(l=>l.target.r+70).strength(0.5))
+    .force("charge",d3.forceManyBody().strength(d=>d.type==="news"?-380:-200))
+    .force("collide",d3.forceCollide().radius(d=>d.type==="news"?58:d.r+40))
+    .force("x",d3.forceX(W/2).strength(0.03)).force("y",d3.forceY(H/2).strength(0.03))
+    .on("tick",()=>{
+      nodes.forEach(d=>{d.x=Math.max(pad,Math.min(W-140,d.x));d.y=Math.max(pad+14,Math.min(H-pad,d.y))});
+      G.linkSel.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+      G.nodeSel.attr("transform",d=>`translate(${d.x},${d.y})`);
+    });
+}
+function highlight(id){
+  if(!G.nodeSel)return;
+  if(!id){G.nodeSel.classed("dim",false);G.linkSel.classed("dim",false);return}
+  const nb=new Set([id]);G.links.forEach(l=>{if(l.source.id===id)nb.add(l.target.id);if(l.target.id===id)nb.add(l.source.id)});
+  G.nodeSel.classed("dim",d=>!nb.has(d.id));G.linkSel.classed("dim",l=>!(l.source.id===id||l.target.id===id));
+}
+function selectNode(id){
+  const panel=document.getElementById("panel"); if(!panel)return;
+  const nd=G.nodes.find(n=>n.id===id); if(!nd)return; highlight(id);
+  const ind=G.ind; let h=`<button class="close" aria-label="閉じる" onclick="intro()">×</button>`;
+  if(nd.type==="news"){
+    const n=nd.ref;
+    const ch=n.companies.map(x=>`<span class="chip ${x.dir>0?"pos-t":"neg-t"}">${esc(coName(ind,x.id))}に${x.dir>0?"追い風":"向かい風"}</span>`).join("");
+    const src=(n.sources||[]).map(x=>`<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a></li>`).join("");
+    h+=`<h3>${esc(n.title)}</h3><div class="meta">${esc(n.date)}${n.ongoing?"・続いているテーマ":""}・${esc(n.confidence)}</div><p>${esc(n.summary)}</p><h4>会社への影響</h4><div>${ch}</div><h4>元記事</h4><ul>${src}</ul>${cta}`;
+  }else{
+    const c=nd.ref, rel=G.links.filter(l=>l.target.id===id);
+    const li=rel.map(l=>`<li><button class="lnk" onclick="selectNode('${l.source.id}')">${esc(l.source.ref.title)}</button> <span class="${l.kind==="pos"?"pos-t":"neg-t"}" style="font-size:12.5px">${l.kind==="pos"?"追い風":"向かい風"}</span></li>`).join("");
+    h+=`<h3>${esc(c.name)}</h3><div class="meta">${esc(ind.size.label)}：${c.size!=null?c.size+ind.size.unit:"確認中"}</div><p>${esc(c.note)}</p><h4>関係するニュース（${rel.length}件）</h4><ul>${li||"<li>この期間はなし</li>"}</ul>${cta}`;
+  }
+  panel.innerHTML=h; panel.classList.add("open");
+}
+function intro(){
+  highlight(null); const panel=document.getElementById("panel"); if(!panel)return;
+  panel.classList.remove("open");
+  panel.innerHTML=`<div class="intro"><h3>見方</h3><p>丸が会社、四角がニュースです。ニュースから会社への緑の線は追い風、赤い点線は向かい風。</p><p>丸や四角を押すと、つながっているものだけが浮かび上がり、ここに中身と元記事が出ます。</p>${cta}</div>`;
+}
+window.selectNode=selectNode; window.intro=intro;
+/* ---------- about ---------- */
+function about(){
+  nav("about"); document.title="このサイトについて｜業界勢力図";
+  main.innerHTML=`<div class="prose"><div class="crumb"><a href="#/">トップ</a> ／ このサイトについて</div><h1 class="page">このサイトについて</h1>
+  <h2>何をしているサイトか</h2><p>業界ごとに主要な会社を選び、その週のニュースがそれぞれの会社にとって追い風か向かい風かを整理して、地図の形で毎週お届けしています。</p>
+  <h2>情報の集め方</h2><p>報道や各社の公式発表をもとにしています。見出しと要約は編集部が独自に作成したもので、元記事の文章を転載していません。詳しい内容は、各ニュースに付けたリンク先の元記事をご覧ください。</p>
+  <h2>免責事項</h2><p>追い風・向かい風の判定は編集部の見方であり、特定の銘柄の売買を勧めるものではありません。掲載内容の正確性や完全性を保証するものではなく、時価総額などの数値は概算です。投資の判断はご自身の責任で行ってください。</p>
+  <h2>広告について</h2><p>このサイトには、証券会社などの広告（アフィリエイトリンク）が含まれる場合があります。広告の有無が、ニュースの判定に影響することはありません。</p>
+  <h2>お問い合わせ</h2><p>誤りのご指摘などは、準備中のお問い合わせフォームから受け付ける予定です。</p></div>`;
+}
+/* ---------- router ---------- */
+function route(){
+  const h=location.hash.replace(/^#\/?/,"").split("/");
+  window.scrollTo(0,0);
+  if(h[0]==="i") industry(h[1],h[2]); else if(h[0]==="about") about(); else home();
+}
+let rt; window.addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>{if(G.ind&&document.getElementById("net")){buildGraph();drawGraph();intro()}},250)});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")intro()});
+window.addEventListener("hashchange",route);
+loadAll().then(route);
+</script>
+</body>
+</html>
