@@ -14,6 +14,7 @@ import anthropic
 MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-5")
 MAX_SEARCHES = int(os.environ.get("MAX_SEARCHES", "8"))
 MAX_ITEMS = int(os.environ.get("MAX_ITEMS", "40"))
+GROUP_SIZE = int(os.environ.get("GROUP_SIZE", "4"))
 JST = datetime.timezone(datetime.timedelta(hours=9))
 
 client = anthropic.Anthropic()  # APIキーは環境変数 ANTHROPIC_API_KEY から読む
@@ -105,6 +106,11 @@ def validate(items, ind, seen_urls, start, end):
     return ok
 
 
+def chunks(lst, n):
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+
+
 def update_industry(ind_id, today):
     path = f"{ind_id}.json"
     with open(path, encoding="utf-8") as f:
@@ -112,14 +118,27 @@ def update_industry(ind_id, today):
     end = today - datetime.timedelta(days=1)
     start = end - datetime.timedelta(days=6)
 
-    text, urls = run_claude(build_prompt(ind, start, end))
-    try:
-        items = parse_json(text).get("news", [])
-    except Exception as e:
-        print(f"[{ind_id}] JSONを読み取れませんでした: {e}")
-        return False
-    new = validate(items, ind, urls, start, end)
-    print(f"[{ind_id}] 候補{len(items)}件 → 採用{len(new)}件（検索で見たURL {len(urls)}件）")
+    new, seen_titles = [], set()
+    for group in chunks(ind["companies"], GROUP_SIZE):
+        sub = dict(ind)
+        sub["companies"] = group
+        names = "・".join(c["name"] for c in group)
+        try:
+            text, urls = run_claude(build_prompt(sub, start, end))
+            items = parse_json(text).get("news", [])
+        except Exception as e:
+            print(f"[{ind_id}] {names}: 取得に失敗 {e}")
+            continue
+        got = validate(items, ind, urls, start, end)
+        for n in got:  # 同じ見出しの重複を避ける
+            if n["title"] in seen_titles:
+                continue
+            seen_titles.add(n["title"])
+            new.append(n)
+        print(f"[{ind_id}] {names}: 候補{len(items)}件 → 採用{len(got)}件")
+
+    new = new[:MAX_ITEMS]
+    print(f"[{ind_id}] 合計 採用{len(new)}件")
     if not new:
         print(f"[{ind_id}] 採用できるニュースがなかったので、今週は更新しません")
         return False
