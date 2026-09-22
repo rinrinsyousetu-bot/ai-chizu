@@ -13,6 +13,7 @@ import anthropic
 
 MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-5")
 MAX_SEARCHES = int(os.environ.get("MAX_SEARCHES", "8"))
+MAX_ITEMS = int(os.environ.get("MAX_ITEMS", "40"))
 JST = datetime.timezone(datetime.timedelta(hours=9))
 
 client = anthropic.Anthropic()  # APIキーは環境変数 ANTHROPIC_API_KEY から読む
