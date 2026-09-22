@@ -76,46 +76,34 @@
   ],
   "news": [
     {
-      "date": "2026-09-18",
-      "title": "SCREEN、インド市場開拓で供給開始へ",
-      "summary": "日本の半導体製造装置メーカーSCREEN Holdingsは、セミコンインディア展での発表を通じ、インド市場向けの洗浄装置などの供給を2027年夏にも開始することを明らかにした。インドの半導体産業の成長と政府支援政策を背景に、グローバル戦略での重要市場と位置づけている。",
-      "confidence": "報道",
+      "date": "2026-09-17",
+      "title": "米国での投資家層拡大狙うスポンサー付きADR開始",
+      "summary": "東京エレクトロンは米国預託証券（ADR）プログラムをスポンサー付きに移行し、米国東部時間9月17日から売買開始した。米国での投資家層拡大と認知度向上を目指す。発行済み株式数は増えない。",
+      "confidence": "公式発表",
       "companies": [
         {
-          "id": "screen",
+          "id": "tel",
           "dir": 1
         }
       ],
       "tags": [
-        "インド",
-        "市場拡大"
+        "米国",
+        "IR"
       ],
       "sources": [
         {
-          "title": "Vibe Trader（2026年9月18日）",
-          "url": "https://www.vibetrader.com/news/69e3845f-2379-4aab-b7fc-78be0b8731c9"
-        },
-        {
-          "title": "ICO Optics（2026年9月18日）",
-          "url": "https://www.ico-optics.org/screen-holdings-expands-chip-equipment-operations-into-india-now/"
+          "title": "日本経済新聞（2026年9月17日）",
+          "url": "https://www.nikkei.com/article/DGXZQOUB17A360X10C26A9000000/"
         }
       ],
       "id": "20260923-1"
     },
     {
-      "date": "2026-09-18",
-      "title": "半導体装置株が買い戻し、資本支出楽観で上昇",
-      "summary": "9月18日の米国市場で、ラムリサーチが6.98%、アプライドマテリアルズが6.51%、KLAが4.74%上昇するなど半導体製造装置メーカーが堅調。JPモルガンが2026年のウエハー製造装置支出が31%増加、2027年は38%増加と予想し、AI関連の資本支出計画を背景とした買い戻しと分析。",
+      "date": "2026-09-19",
+      "title": "JPMorganがKLAをトップピック指定",
+      "summary": "JPMorganはウェーハ製造装置市場の見通しを引き上げ、KLAを米国チップ機器メーカーの中で最上位ピックとして指定した。アナリストのMio Shikanaiは2026年のWFE市場成長を31%と予測し、2027年のファウンドリーおよびロジック支出のシフトがKLAに有利に働くと述べた。",
       "confidence": "報道",
       "companies": [
-        {
-          "id": "amat",
-          "dir": 1
-        },
-        {
-          "id": "lam",
-          "dir": 1
-        },
         {
           "id": "kla",
           "dir": 1
@@ -123,42 +111,65 @@
       ],
       "tags": [
         "米国",
-        "AI需要"
+        "セミコンダクター"
       ],
       "sources": [
         {
-          "title": "Yahoo Finance（2026年9月18日）",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/lam-research-climbs-5-chip-165944019.html"
+          "title": "Yahoo Finance（2026年9月13日）",
+          "url": "https://ca.finance.yahoo.com/news/5-big-analyst-ai-moves-093009716.html"
         },
         {
-          "title": "Stocks Down Under（2026年9月20日）",
-          "url": "https://stocksdownunder.com/lam-research-applied-materials-kla-ai-rally/"
+          "title": "Ad-hoc-news（2026年9月20日）",
+          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/kla-corporation-stock-gains-on-ai-demand-and-jpmorgan-top-pick-call/70136328"
         }
       ],
       "id": "20260923-2"
     },
     {
-      "date": "2026-09-21",
-      "title": "ASML、2028年にEUV生産110台超目指す",
-      "summary": "ASMLは2028年に最大110台以上のEUV露光装置の生産能力実現を目指す方針を発表。2027年は80台程度、2028年に30%増の拡大を計画。AI需要を背景にしたチップメーカーからの旺盛な受注に対応する。",
+      "date": "2026-09-18",
+      "title": "KLA株が4.74%上昇",
+      "summary": "KLAの株価はAIインフラストラクチャ関連銘柄への需要の回復を背景に4.74%上昇し、176.99ドルで終値を付けた。このアナリストの推奨と業界における強気の見方に支持されている。",
       "confidence": "報道",
       "companies": [
         {
-          "id": "asml",
+          "id": "kla",
           "dir": 1
         }
       ],
       "tags": [
-        "オランダ",
-        "EUV"
+        "米国",
+        "株価"
       ],
       "sources": [
         {
-          "title": "GuruFocus（2026年9月21日）",
-          "url": "https://finance.yahoo.com/technology/articles/asml-adds-1-110-euv-194501828.html"
+          "title": "Ad-hoc-news（2026年9月20日）",
+          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/kla-corporation-stock-gains-on-jpmorgan-top-pick-call-and-strong-ai-demand/70130697"
         }
       ],
       "id": "20260923-3"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "KLA株が3.94%値上がり",
+      "summary": "KLAはセミコンダクター資本支出への前向きなセンチメント回復の中、9月21日に3.94%上昇して183.97ドルで引け、ウェーハファブ機器需要の堅調さを反映した。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "kla",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "米国",
+        "株価"
+      ],
+      "sources": [
+        {
+          "title": "Ad-hoc-news（2026年9月22日）",
+          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/kla-corporation-stock-gains-3-94-percent-ahead-of-the-open/70151215"
+        }
+      ],
+      "id": "20260923-4"
     },
     {
       "id": "s4",
