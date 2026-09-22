@@ -2,8 +2,8 @@ name: 週次ニュース更新
 
 on:
   schedule:
-    - cron: "0 12 * * 0"   # 毎週日曜 21:00（日本時間）
-  workflow_dispatch:        # 手動でも実行できる
+    - cron: "0 12 * * 0"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -20,8 +20,6 @@ jobs:
       - run: pip install anthropic
       - name: ニュースを集めてデータを作る
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}        
-          env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MAX_SEARCHES: "15"
           MAX_ITEMS: "40"
