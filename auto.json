@@ -2,8 +2,8 @@
   "id": "auto",
   "name": "自動車",
   "tagline": "EV・ハイブリッド・ガソリン。主要9社への追い風と向かい風",
-  "period": "2026年9月1日〜9月20日",
-  "updated": "2026-09-21",
+  "period": "2026年9月15日〜9月21日",
+  "updated": "2026-09-22",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -76,260 +76,50 @@
   ],
   "news": [
     {
-      "id": "n1",
+      "date": "2026-09-17",
+      "title": "三菱自、軽商用EV「ミニキャブEV」を一部改良",
+      "summary": "三菱自動車は軽商用電気自動車「ミニキャブ EV」の一部改良を発表した。装備や機能の見直しによる商品力の底上げが目的とみられる。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "mitsu",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "軽EV",
+        "商用車"
+      ],
+      "sources": [
+        {
+          "title": "三菱自動車 公式お知らせ（2026年9月17日）",
+          "url": "https://www.mitsubishi-motors.co.jp/information/"
+        }
+      ],
+      "id": "20260922-1"
+    },
+    {
       "date": "2026-09-18",
-      "title": "ホンダ、次世代HVを前倒し",
-      "summary": "ホンダが北米で次世代ハイブリッド車の量産を数カ月早め、2027年2月にもSUVのCR-Vで始めると報じられた。3月に北米向けEV3車種の開発中止を決めており、需要の伸びるハイブリッドで立て直す狙い。",
+      "title": "テスラFSD、日本解禁の詳細が年内目標なのに未発表",
+      "summary": "テスラが目標としていた完全自動運転支援機能「FSD」の2026年内の日本導入について、提供開始日・価格・対象車種のいずれも9月時点で公表されていないことが報じられた。中国や欧州では既に展開が進んでおり、日本市場での遅れが目立つ状況にある。",
       "confidence": "報道",
-      "sources": [
-        {
-          "title": "日本経済新聞（2026年9月18日）",
-          "url": "https://www.nikkei.com/article/DGXZQOUC01B240R00C26A9000000/"
-        }
-      ],
       "companies": [
-        {
-          "id": "honda",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "米国",
-        "ハイブリッドに追い風",
-        "EVに向かい風"
-      ]
-    },
-    {
-      "id": "n2",
-      "date": "2026-09-19",
-      "title": "トヨタ、中国でEREV生産へ",
-      "summary": "トヨタが、発電用のエンジンを積んで航続距離を延ばしたEV（レンジエクステンダーEV）を、2027年春に中国で生産すると報じられた。中国ではこの方式の需要が伸びている。",
-      "confidence": "報道",
-      "sources": [
-        {
-          "title": "日本経済新聞（2026年9月19日）",
-          "url": "https://www.nikkei.com/article/DGXZQOFD183KZ0Y6A810C2000000/"
-        }
-      ],
-      "companies": [
-        {
-          "id": "toyota",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "中国",
-        "EVに追い風"
-      ]
-    },
-    {
-      "id": "n3",
-      "date": "2026-09-16",
-      "title": "国内EV比率、5%に迫る",
-      "summary": "2026年8月の新車販売に占めるEVとPHEVの比率は4.98%で、前年同月の2.57%からほぼ倍になった。7月末に発売されたBYDの軽EVも話題に。",
-      "confidence": "統計",
-      "sources": [
-        {
-          "title": "EV充電エネチェンジ（EV普及率のまとめ）",
-          "url": "https://ev-charge-enechange.jp/articles/033/"
-        }
-      ],
-      "companies": [
-        {
-          "id": "byd",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "日本",
-        "EVに追い風"
-      ]
-    },
-    {
-      "id": "n4",
-      "date": "2026-09-16",
-      "title": "日産、新型小型EVを予告",
-      "summary": "日産が欧州向けの新しい小型EVを開発中で、新世代EVを9月23日に発表すると予告している。市販は2027年が有力とされる。",
-      "confidence": "報道（スクープを含む）",
-      "sources": [
-        {
-          "title": "レスポンス（2026年9月16日）",
-          "url": "https://response.jp/article/2026/09/16/416659.html"
-        }
-      ],
-      "companies": [
-        {
-          "id": "nissan",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "欧州",
-        "EVに追い風"
-      ]
-    },
-    {
-      "id": "n5",
-      "date": "2026-09-17",
-      "title": "スバル、主力車をHV中心に改良",
-      "summary": "スバルがクロストレックとインプレッサの改良モデルを発表。クロストレックは全グレードを2.5Lのストロングハイブリッドにするなど、ハイブリッド中心にラインナップを見直した。",
-      "confidence": "報道",
-      "sources": [
-        {
-          "title": "最新自動車情報（car-repo）",
-          "url": "https://car-repo.jp/"
-        }
-      ],
-      "companies": [
-        {
-          "id": "subaru",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "日本",
-        "ハイブリッドに追い風"
-      ]
-    },
-    {
-      "id": "n6",
-      "date": "2026-09-17",
-      "title": "三菱自、軽商用EVを改良",
-      "summary": "三菱自動車が軽商用EV「ミニキャブ EV」の一部改良を発表した。",
-      "confidence": "公式発表",
-      "sources": [
-        {
-          "title": "三菱自動車 ニュースルーム",
-          "url": "https://www.mitsubishi-motors.com/jp/newsroom/"
-        }
-      ],
-      "companies": [
-        {
-          "id": "mitsu",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "日本",
-        "EVに追い風"
-      ]
-    },
-    {
-      "id": "n7",
-      "date": "2026-09-02",
-      "title": "三菱自、パジェロ復活",
-      "summary": "三菱自動車が本格的な悪路向けSUV「パジェロ」を約7年ぶりに復活させ、9月2日に世界初公開した。日本では10月1日から予約を受け付ける。中期経営計画ではオフロード車の強化を掲げている。",
-      "confidence": "公式発表・報道",
-      "sources": [
-        {
-          "title": "MOTA（新型車解説）",
-          "url": "https://autoc-one.jp/daihatsu/move/newmodel-5030993/"
-        }
-      ],
-      "companies": [
-        {
-          "id": "mitsu",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "日本"
-      ]
-    },
-    {
-      "id": "n8",
-      "date": "2026-09-05",
-      "title": "三菱自、減益決算も黒字確保",
-      "summary": "三菱自動車の2025年度決算は、米国の関税や中国メーカーの台頭などの逆風の中、営業利益755億円、純利益100億円で黒字を確保した。",
-      "confidence": "報道",
-      "sources": [
-        {
-          "title": "レスポンス（2026年9月5日）",
-          "url": "https://response.jp/article/2026/09/05/416167.html"
-        }
-      ],
-      "companies": [
-        {
-          "id": "mitsu",
-          "dir": -1
-        }
-      ],
-      "tags": [
-        "日本"
-      ]
-    },
-    {
-      "id": "n9",
-      "date": "2026-09-17",
-      "title": "BYD、月間販売が過去最高",
-      "summary": "BYDが月間の販売台数で過去最高を記録したと報じられた。欧州の一部の国でもEV販売を大きく伸ばしており、EV販売でテスラとの差が広がっているとの見方が出ている。",
-      "confidence": "報道",
-      "sources": [
-        {
-          "title": "The Motley Fool（2026年9月17日・英語）",
-          "url": "https://www.fool.com/investing/2026/09/17/byd-just-reported-record-monthly-sales-heres-what/"
-        }
-      ],
-      "companies": [
-        {
-          "id": "byd",
-          "dir": 1
-        },
         {
           "id": "tesla",
           "dir": -1
         }
       ],
       "tags": [
-        "中国",
-        "EVに追い風"
-      ]
-    },
-    {
-      "id": "n10",
-      "date": "2026-09-09",
-      "title": "テスラ、ロボタクシーを拡大",
-      "summary": "テスラの自動運転タクシー専用車「サイバーキャブ」が、米テキサス州オースティンで45台走っていると報じられた。テスラの株価は、車の販売よりこの分野への期待で支えられている面が大きい。",
-      "confidence": "報道",
+        "自動運転",
+        "日本"
+      ],
       "sources": [
         {
-          "title": "The Motley Fool（2026年9月・英語、関連記事の見出しより）",
-          "url": "https://www.fool.com/investing/2026/09/11/byd-outsold-tesla-by-roughly-77000-evs-again-in-q2/"
+          "title": "自動運転ラボ（2026年9月）",
+          "url": "https://jidounten-lab.com/u_67871"
         }
       ],
-      "companies": [
-        {
-          "id": "tesla",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "米国",
-        "EVに追い風"
-      ]
-    },
-    {
-      "id": "n11",
-      "date": "2026-09-05",
-      "title": "マツダ、ロードスターを改良",
-      "summary": "マツダがロードスターとロードスターRFの商品改良を発表し、9月上旬に発売した。走りの楽しさを磨いたエンジン車で、特別仕様車も追加。",
-      "confidence": "公式発表",
-      "sources": [
-        {
-          "title": "カーサービスフレンズ（9月の新車動向）",
-          "url": "https://carservicefriends.com/blog/2026/08/22/2026%E5%B9%B49%E6%9C%88%E6%9C%80%E6%96%B0%E7%89%88%E3%80%91%E5%9B%BD%E7%94%A3%E3%83%BB%E8%BC%B8%E5%85%A5%E8%BB%8A%E3%81%AE%E6%96%B0%E8%BB%8A%E5%8B%95%E5%90%91%E3%82%92%E5%BE%B9%E5%BA%95%E8%A7%A3"
-        }
-      ],
-      "companies": [
-        {
-          "id": "mazda",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "日本",
-        "ガソリンに追い風"
-      ]
+      "id": "20260922-2"
     },
     {
       "id": "n12",
