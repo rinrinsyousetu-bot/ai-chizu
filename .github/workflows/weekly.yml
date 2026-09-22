@@ -20,7 +20,12 @@ jobs:
       - run: pip install anthropic
       - name: ニュースを集めてデータを作る
         env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}        
+          env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MAX_SEARCHES: "15"
+          MAX_ITEMS: "40"
+          CLAUDE_MODEL: "claude-haiku-4-5-20251001"
         run: python update_news.py
       - name: 確認用のプルリクエストを作る
         uses: peter-evans/create-pull-request@v7
