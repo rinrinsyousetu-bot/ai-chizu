@@ -1,0 +1,21 @@
+{
+  "id": "chip",
+  "name": "半導体（チップ）",
+  "tagline": "AIの頭脳をつくる、設計・製造・メモリの主役たち",
+  "period": "次回の自動更新から掲載",
+  "updated": "2026-09-22",
+  "size": {"label": "時価総額", "unit": "兆円", "asof": "海外企業は2026年8月時点・1ドル=150円で換算、日本企業は2026年9月時点の概数（各種集計サイト・IRBANK調べ）"},
+  "companies": [
+    {"id": "nvda", "name": "NVIDIA", "jp": false, "size": 796, "note": "米国の会社。AIの計算に使うGPUで圧倒的なシェアを持つ。工場は持たず設計に特化。"},
+    {"id": "tsmc", "name": "TSMC", "jp": false, "size": 325, "note": "台湾の会社。他社が設計した半導体を製造する受託製造の最大手。NVIDIAやアップルの製品を作る。"},
+    {"id": "avgo", "name": "ブロードコム", "jp": false, "size": 300, "note": "米国の会社。通信用の半導体や、大手IT企業向けの特注AIチップに強い。"},
+    {"id": "samsung", "name": "サムスン電子", "jp": false, "size": 161, "note": "韓国の会社。メモリで世界大手。受託製造も手がける。"},
+    {"id": "mu", "name": "マイクロン", "jp": false, "size": 149, "note": "米国唯一のメモリ大手。AI向けの高帯域メモリ（HBM）で成長。"},
+    {"id": "amd", "name": "AMD", "jp": false, "size": 120, "note": "米国の会社。CPUとGPUを設計し、AI向けGPUでNVIDIAを追う。"},
+    {"id": "skh", "name": "SKハイニックス", "jp": false, "size": 107, "note": "韓国の会社。AI向け高帯域メモリ（HBM）の最大手で、NVIDIAの主要な供給元。"},
+    {"id": "intc", "name": "インテル", "jp": false, "size": 76, "note": "米国の会社。パソコン向けCPUの大手で、受託製造への参入で立て直しを図る。"},
+    {"id": "kioxia", "name": "キオクシア", "jp": true, "size": 29.6, "note": "日本の会社。データを保存するNAND型フラッシュメモリで世界大手。旧東芝メモリ。"},
+    {"id": "renesas", "name": "ルネサス", "jp": true, "size": 6.0, "note": "日本の会社。自動車や家電を制御するマイコンで世界大手。"}
+  ],
+  "news": []
+}
