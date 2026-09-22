@@ -138,7 +138,7 @@ const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 const main=document.getElementById("main");
 let IDX, IND={};
 async function getJSON(p,key){try{const r=await fetch(p,{cache:"no-store"});if(!r.ok)throw 0;return await r.json()}catch(e){return key?FB[key]:FB.industries}}
-async function loadAll(){IDX=await getJSON("data/industries.json");for(const i of IDX.industries){IND[i.id]=await getJSON(`data/${i.id}.json`,i.id)}}
+async function loadAll(){IDX=await getJSON("industries.json");for(const i of IDX.industries){IND[i.id]=await getJSON(`${i.id}.json`,i.id)}}
 const cta=`<a class="cta" href="#/about">株に投資する方法を見る<small>個別株・投資信託・NISAの違いを整理するページ（準備中）</small></a>`;
 function scores(ind){
   const s={}; ind.companies.forEach(c=>s[c.id]={pos:0,neg:0});
