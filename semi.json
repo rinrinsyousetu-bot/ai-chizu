@@ -7,7 +7,7 @@
   "size": {
     "label": "時価総額",
     "unit": "兆円",
-    "asof": "2026年7月16日時点の概数（toshitime.com調べ）。未記入は確認中"
+    "asof": "2026年6〜9月の概数（会社により基準日が異なる。IRBANK・toshitime.com調べ）"
   },
   "companies": [
     {
@@ -28,21 +28,21 @@
       "id": "screen",
       "name": "SCREEN",
       "jp": true,
-      "size": null,
+      "size": 3.6,
       "note": "半導体ウエハーの洗浄装置に強い。"
     },
     {
       "id": "disco",
       "name": "ディスコ",
       "jp": true,
-      "size": null,
+      "size": 7.8,
       "note": "ウエハーを切る・薄く削る装置の大手。"
     },
     {
       "id": "ltec",
       "name": "レーザーテック",
       "jp": true,
-      "size": null,
+      "size": 3.6,
       "note": "回路の原版（マスク）の欠陥を見つける検査装置を手がける。"
     }
   ],
