@@ -2,8 +2,8 @@
   "id": "semi",
   "name": "半導体製造装置",
   "tagline": "AI需要を追い風に、日本が世界で強い分野",
-  "period": "2026年9月16日〜9月22日",
-  "updated": "2026-09-23",
+  "period": "2026年9月15日〜9月21日",
+  "updated": "2026-09-22",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -77,9 +77,9 @@
   "news": [
     {
       "date": "2026-09-17",
-      "title": "米国上場へADRプログラム始動",
-      "summary": "東京エレクトロンがスポンサー付きの米国預託証券（ADR）プログラムを設立し、米国での投資家層拡大を狙う。米国での新規上場や株式発行はなく、既存株式の利便性向上が目的。",
-      "confidence": "公式発表",
+      "title": "東京エレクトロン、インドに研修拠点表明",
+      "summary": "インド・ニューデリーで9月17日に開幕した半導体産業の国際展示会「セミコン・インディア」で、東京エレクトロンの河合利樹社長が挨拶に立ち、日本政府と協力して西部グジャラート州に半導体人材育成の研修センターを来年設立すると発表した。同展示会にはアドバンテストや富士フイルムなど日系企業も出展し、インド市場での事業機会を探る動きが広がっている。",
+      "confidence": "報道",
       "companies": [
         {
           "id": "tel",
@@ -87,85 +87,21 @@
         }
       ],
       "tags": [
-        "米国",
-        "資本市場"
+        "インド",
+        "SEMICON",
+        "人材育成"
       ],
       "sources": [
         {
-          "title": "日本経済新聞（2026年9月17日）",
-          "url": "https://www.nikkei.com/article/DGXZQOUB17A360X10C26A9000000/"
-        }
-      ],
-      "id": "20260923-1"
-    },
-    {
-      "date": "2026-09-22",
-      "title": "欧州でのEUV装置販売ゼロ",
-      "summary": "ASMLの幹部が、ヨーロッパでは同社のEUV露光装置を全く販売していないと発言。欧州のファブ建設投資不足が原因で、地域が競争から取り残される懸念を示唆。",
-      "confidence": "報道",
-      "companies": [
+          "title": "時事通信（2026年9月17日）",
+          "url": "https://www.jiji.com/jc/article?k=2026091701081&g=int"
+        },
         {
-          "id": "asml",
-          "dir": -1
+          "title": "Yahoo!ニュース／時事通信（2026年9月17日）",
+          "url": "https://news.yahoo.co.jp/articles/1c141a6476ce6b588c368423e7579e945476e64a"
         }
       ],
-      "tags": [
-        "欧州",
-        "市場"
-      ],
-      "sources": [
-        {
-          "title": "Bloomberg（2026年9月22日）",
-          "url": "https://www.bloomberg.com/news/articles/2026-09-22/asml-executive-says-europe-s-biggest-firm-has-no-sales-in-europe"
-        }
-      ],
-      "id": "20260923-2"
-    },
-    {
-      "date": "2026-09-19",
-      "title": "ラムリサーチ株が急騰",
-      "summary": "ラムリサーチ株が午後の取引で5.3%上昇。JPモルガンのリサーチノートで、2026年度のウェーハ製造装置支出が前年比31%成長と予測されたことを受け、セクター全体の見通しが改善。",
-      "confidence": "報道",
-      "companies": [
-        {
-          "id": "lam",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "WFE市場",
-        "見通し"
-      ],
-      "sources": [
-        {
-          "title": "Investing.com（2026年9月19日）",
-          "url": "https://jp.investing.com/news/stock-market-news/article-93CH-1685694"
-        }
-      ],
-      "id": "20260923-3"
-    },
-    {
-      "date": "2026-09-21",
-      "title": "ASML株が上昇",
-      "summary": "欧州半導体株全体が上昇する中、ASML株が2.8%上昇。AI関連銘柄への投資継続が背景。ASMLの技術的リーダーシップがAI向け半導体製造で重要な役割を果たしている。",
-      "confidence": "報道",
-      "companies": [
-        {
-          "id": "asml",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "AI",
-        "株価"
-      ],
-      "sources": [
-        {
-          "title": "GuruFocus（2026年9月21日）",
-          "url": "https://www.gurufocus.com/news/9089519/european-semiconductor-stocks-surge-amid-ai-investment-interest"
-        }
-      ],
-      "id": "20260923-4"
+      "id": "20260922-1"
     },
     {
       "id": "s4",

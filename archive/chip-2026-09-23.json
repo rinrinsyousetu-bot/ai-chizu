@@ -84,27 +84,50 @@
   "news": [
     {
       "date": "2026-09-21",
-      "title": "AMD市場時価総額が1兆米ドルを突破",
-      "summary": "Meta推出の個人型AI人工知能体Museが話題となり、AI推論用CPU需要が急増。これを受けてAMDの株価が急騰し、時価総額が初めて1兆米ドルを超えた。フィラデルフィア半導体指数も単日で4.29%上昇。",
+      "title": "TSMC株、AI需要と米中対話期待で上昇",
+      "summary": "台湾市場でTSMC株は9月21日に0.81%高の2480台湾ドルで取引を終え、台湾加権指数（TAIEX）も1.14%上昇した。米ハイテク株の上昇やAIインフラ需要の強さに加え、米中間の通商対話に前向きな兆しが出たことが買いを支えた。",
       "confidence": "報道",
       "companies": [
         {
-          "id": "amd",
+          "id": "tsmc",
           "dir": 1
         }
       ],
       "tags": [
-        "AI",
-        "CPU",
-        "市場動向"
+        "台湾",
+        "AI需要",
+        "株価"
       ],
       "sources": [
         {
-          "title": "新浪財経（2026年9月22日）",
-          "url": "https://k.sina.com.cn/article_7857201856_1d45362c001908oe14.html"
+          "title": "ad-hoc-news（2026年9月22日）",
+          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/tsmc-stock-heads-into-the-open-after-a-2-41-percent-gain/70152181"
         }
       ],
       "id": "20260923-1"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "台湾株式市場で半導体株堅調、TSMCに買い",
+      "summary": "9月17日の台湾株式市場で半導体株が総じて上昇し、TSMC株に買いが集まった。前週までのAI関連需要への強気な見方が引き続き相場を支えた。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "台湾",
+        "株価"
+      ],
+      "sources": [
+        {
+          "title": "日本経済新聞（2026年9月17日）",
+          "url": "https://www.nikkei.com/nkd/company/us/TSM/news/"
+        }
+      ],
+      "id": "20260923-2"
     }
   ]
 }
