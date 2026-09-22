@@ -1,0 +1,26 @@
+{
+  "id": "consult",
+  "name": "コンサル",
+  "tagline": "AIとDXの需要で揺れる、コンサル・ITサービス各社",
+  "period": "次回の自動更新から掲載",
+  "updated": "2026-09-22",
+  "size": {"label": "時価総額", "unit": "兆円", "asof": "アクセンチュア・NRI・ベイカレントは2026年9月、その他は2026年3月末の概数（アクセンチュアは1ドル=150円で換算。IRBANK・コンサルのあんなこと、こんなこと等調べ）。枠線だけの丸は非上場"},
+  "companies": [
+    {"id": "acn", "name": "アクセンチュア", "jp": false, "size": 16.6, "note": "米国上場（本社アイルランド）の世界最大級の総合コンサル。戦略からシステム導入・運用まで手がける。"},
+    {"id": "nri", "name": "野村総合研究所", "jp": true, "size": 2.9, "note": "シンクタンク発祥で、コンサルとITシステムの両方を手がける。金融機関向けのシステムに強い。"},
+    {"id": "baycurrent", "name": "ベイカレント", "jp": true, "size": 1.1, "note": "日本発の総合コンサル。大企業向けのDX支援などで急成長してきた。"},
+    {"id": "funai", "name": "船井総研HD", "jp": true, "size": 0.11, "note": "中堅・中小企業向けの経営コンサルが中心。"},
+    {"id": "yamada", "name": "山田コンサル", "jp": true, "size": 0.033, "note": "中堅・中小企業の事業承継やM&A、事業再生の支援に強い。"},
+    {"id": "di", "name": "ドリームインキュベータ", "jp": true, "size": 0.025, "note": "戦略コンサルと投資事業を組み合わせた会社。"},
+    {"id": "rise", "name": "ライズ・コンサル", "jp": true, "size": 0.012, "note": "2023年に上場した日本発の総合コンサル。"},
+    {"id": "mck", "name": "マッキンゼー", "jp": false, "size": null, "note": "米国発の戦略コンサル最大手。非上場。", "priv": true},
+    {"id": "bcg", "name": "BCG", "jp": false, "size": null, "note": "米国発の戦略コンサル大手（ボストン コンサルティング グループ）。非上場。", "priv": true},
+    {"id": "bain", "name": "ベイン", "jp": false, "size": null, "note": "米国発の戦略コンサル大手。非上場。", "priv": true},
+    {"id": "deloitte", "name": "デロイト", "jp": false, "size": null, "note": "世界4大会計事務所系（Big4）の一つで、コンサル部門の規模が大きい。非上場。", "priv": true},
+    {"id": "pwc", "name": "PwC", "jp": false, "size": null, "note": "Big4の一つ。非上場。", "priv": true},
+    {"id": "ey", "name": "EY", "jp": false, "size": null, "note": "Big4の一つ。非上場。", "priv": true},
+    {"id": "kpmg", "name": "KPMG", "jp": false, "size": null, "note": "Big4の一つ。非上場。", "priv": true},
+    {"id": "abeam", "name": "アビーム", "jp": true, "size": null, "note": "日本発の総合コンサル。NEC傘下。非上場。", "priv": true}
+  ],
+  "news": []
+}
