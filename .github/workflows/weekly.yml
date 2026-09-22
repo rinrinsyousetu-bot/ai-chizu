@@ -1,0 +1,35 @@
+name: 週次ニュース更新
+
+on:
+  schedule:
+    - cron: "0 12 * * 0"   # 毎週日曜 21:00（日本時間）
+  workflow_dispatch:        # 手動でも実行できる
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install anthropic
+      - name: ニュースを集めてデータを作る
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python update_news.py
+      - name: 確認用のプルリクエストを作る
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: weekly-update
+          delete-branch: true
+          commit-message: 今週のニュースを更新
+          title: 今週のニュース更新（確認してからマージ）
+          body: |
+            AIが集めた今週のニュースです。
+            「Files changed」で内容を確認し、問題なければ「Merge pull request」を押すとサイトに公開されます。
+            おかしなニュースがあれば、該当ファイルを編集してから公開してください。
