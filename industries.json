@@ -1,20 +1,10 @@
 {
-  "site": {
-    "name": "業界勢力図",
-    "tagline": "ニュースで動く、会社の追い風と向かい風。"
-  },
+  "site": {"name": "業界勢力図", "tagline": "ニュースで動く、会社の追い風と向かい風。"},
   "industries": [
-    {
-      "id": "auto",
-      "name": "自動車"
-    },
-    {
-      "id": "semi",
-      "name": "半導体製造装置"
-    },
-    {
-      "id": "shosha",
-      "name": "総合商社"
-    }
+    {"id": "auto", "name": "自動車"},
+    {"id": "chip", "name": "半導体（チップ）"},
+    {"id": "semi", "name": "半導体製造装置"},
+    {"id": "shosha", "name": "総合商社"},
+    {"id": "consult", "name": "コンサル"}
   ]
 }
