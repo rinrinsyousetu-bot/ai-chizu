@@ -76,78 +76,71 @@
   ],
   "news": [
     {
-      "date": "2026-09-17",
-      "title": "米国上場へADRプログラム始動",
-      "summary": "東京エレクトロンがスポンサー付きの米国預託証券（ADR）プログラムを設立し、米国での投資家層拡大を狙う。米国での新規上場や株式発行はなく、既存株式の利便性向上が目的。",
-      "confidence": "公式発表",
+      "date": "2026-09-18",
+      "title": "SCREEN、インド市場開拓で供給開始へ",
+      "summary": "日本の半導体製造装置メーカーSCREEN Holdingsは、セミコンインディア展での発表を通じ、インド市場向けの洗浄装置などの供給を2027年夏にも開始することを明らかにした。インドの半導体産業の成長と政府支援政策を背景に、グローバル戦略での重要市場と位置づけている。",
+      "confidence": "報道",
       "companies": [
         {
-          "id": "tel",
+          "id": "screen",
           "dir": 1
         }
       ],
       "tags": [
-        "米国",
-        "資本市場"
+        "インド",
+        "市場拡大"
       ],
       "sources": [
         {
-          "title": "日本経済新聞（2026年9月17日）",
-          "url": "https://www.nikkei.com/article/DGXZQOUB17A360X10C26A9000000/"
+          "title": "Vibe Trader（2026年9月18日）",
+          "url": "https://www.vibetrader.com/news/69e3845f-2379-4aab-b7fc-78be0b8731c9"
+        },
+        {
+          "title": "ICO Optics（2026年9月18日）",
+          "url": "https://www.ico-optics.org/screen-holdings-expands-chip-equipment-operations-into-india-now/"
         }
       ],
       "id": "20260923-1"
     },
     {
-      "date": "2026-09-22",
-      "title": "欧州でのEUV装置販売ゼロ",
-      "summary": "ASMLの幹部が、ヨーロッパでは同社のEUV露光装置を全く販売していないと発言。欧州のファブ建設投資不足が原因で、地域が競争から取り残される懸念を示唆。",
+      "date": "2026-09-18",
+      "title": "半導体装置株が買い戻し、資本支出楽観で上昇",
+      "summary": "9月18日の米国市場で、ラムリサーチが6.98%、アプライドマテリアルズが6.51%、KLAが4.74%上昇するなど半導体製造装置メーカーが堅調。JPモルガンが2026年のウエハー製造装置支出が31%増加、2027年は38%増加と予想し、AI関連の資本支出計画を背景とした買い戻しと分析。",
       "confidence": "報道",
       "companies": [
         {
-          "id": "asml",
-          "dir": -1
+          "id": "amat",
+          "dir": 1
+        },
+        {
+          "id": "lam",
+          "dir": 1
+        },
+        {
+          "id": "kla",
+          "dir": 1
         }
       ],
       "tags": [
-        "欧州",
-        "市場"
+        "米国",
+        "AI需要"
       ],
       "sources": [
         {
-          "title": "Bloomberg（2026年9月22日）",
-          "url": "https://www.bloomberg.com/news/articles/2026-09-22/asml-executive-says-europe-s-biggest-firm-has-no-sales-in-europe"
+          "title": "Yahoo Finance（2026年9月18日）",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/lam-research-climbs-5-chip-165944019.html"
+        },
+        {
+          "title": "Stocks Down Under（2026年9月20日）",
+          "url": "https://stocksdownunder.com/lam-research-applied-materials-kla-ai-rally/"
         }
       ],
       "id": "20260923-2"
     },
     {
-      "date": "2026-09-19",
-      "title": "ラムリサーチ株が急騰",
-      "summary": "ラムリサーチ株が午後の取引で5.3%上昇。JPモルガンのリサーチノートで、2026年度のウェーハ製造装置支出が前年比31%成長と予測されたことを受け、セクター全体の見通しが改善。",
-      "confidence": "報道",
-      "companies": [
-        {
-          "id": "lam",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "WFE市場",
-        "見通し"
-      ],
-      "sources": [
-        {
-          "title": "Investing.com（2026年9月19日）",
-          "url": "https://jp.investing.com/news/stock-market-news/article-93CH-1685694"
-        }
-      ],
-      "id": "20260923-3"
-    },
-    {
       "date": "2026-09-21",
-      "title": "ASML株が上昇",
-      "summary": "欧州半導体株全体が上昇する中、ASML株が2.8%上昇。AI関連銘柄への投資継続が背景。ASMLの技術的リーダーシップがAI向け半導体製造で重要な役割を果たしている。",
+      "title": "ASML、2028年にEUV生産110台超目指す",
+      "summary": "ASMLは2028年に最大110台以上のEUV露光装置の生産能力実現を目指す方針を発表。2027年は80台程度、2028年に30%増の拡大を計画。AI需要を背景にしたチップメーカーからの旺盛な受注に対応する。",
       "confidence": "報道",
       "companies": [
         {
@@ -156,16 +149,16 @@
         }
       ],
       "tags": [
-        "AI",
-        "株価"
+        "オランダ",
+        "EUV"
       ],
       "sources": [
         {
           "title": "GuruFocus（2026年9月21日）",
-          "url": "https://www.gurufocus.com/news/9089519/european-semiconductor-stocks-surge-amid-ai-investment-interest"
+          "url": "https://finance.yahoo.com/technology/articles/asml-adds-1-110-euv-194501828.html"
         }
       ],
-      "id": "20260923-4"
+      "id": "20260923-3"
     },
     {
       "id": "s4",
