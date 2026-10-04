@@ -2,8 +2,8 @@
   "id": "auto",
   "name": "自動車",
   "tagline": "EV・ハイブリッド・ガソリン。主要9社への追い風と向かい風",
-  "period": "2026年9月16日〜9月22日",
-  "updated": "2026-09-23",
+  "period": "2026年9月28日〜10月4日",
+  "updated": "2026-10-05",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -76,36 +76,9 @@
   ],
   "news": [
     {
-      "date": "2026-09-16",
-      "title": "ランドクルーザー300にハイブリッド初搭載",
-      "summary": "トヨタは「ランドクルーザー300」シリーズを一部改良し、ランドクルーザーシリーズとして国内初となるハイブリッドモデルを設定。ガソリンモデルは廃止され、3.5リッターハイブリッドモデルが主力となる。10月1日発売。",
-      "confidence": "報道",
-      "companies": [
-        {
-          "id": "toyota",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "ハイブリッド",
-        "日本"
-      ],
-      "sources": [
-        {
-          "title": "Car Watch（2026年9月16日）",
-          "url": "https://car.watch.impress.co.jp/docs/news/2141403.html"
-        },
-        {
-          "title": "webCG（2026年9月17日）",
-          "url": "https://www.webcg.net/articles/-/54310"
-        }
-      ],
-      "id": "20260923-1"
-    },
-    {
-      "date": "2026-09-17",
-      "title": "サイバーキャブ大阪での展示開始",
-      "summary": "テスラが無人タクシー用に開発した「サイバーキャブ」の日本初公開イベントが、大阪のテスラグランフロント大阪で9月17日より開始。東京、大阪、名古屋を回るジャパンツアーの一環。",
+      "date": "2026-10-02",
+      "title": "テスラQ3納車48.7万台、市場予想上回る",
+      "summary": "テスラが2026年7～9月期の世界販売台数を前年同期比2.1%減の48万6532台と発表。アナリスト予想の平均46万1974台を上回り、株価が一時6%上昇した。米国でのEV税額控除廃止前の駆け込み需要の反動が影響。",
       "confidence": "報道",
       "companies": [
         {
@@ -114,74 +87,136 @@
         }
       ],
       "tags": [
-        "自動運転",
-        "日本"
+        "販売実績",
+        "米国"
       ],
       "sources": [
         {
-          "title": "webCG（2026年9月11日）",
-          "url": "https://www.webcg.net/articles/-/54297"
-        },
-        {
-          "title": "Car Watch（2026年9月7日）",
-          "url": "https://car.watch.impress.co.jp/docs/news/2138604.html"
+          "title": "日本経済新聞（2026年10月2日）",
+          "url": "https://www.nikkei.com/article/DGXZQOGN0231G0S6A001C2000000/"
         }
       ],
-      "id": "20260923-2"
+      "id": "20261005-1"
     },
     {
-      "date": "2026-09-17",
-      "title": "スバル、クロストレック改良でハイブリッド一本化",
-      "summary": "スバルはクロストレックの改良モデルを発表。全グレードをe-BOXER（ストロングハイブリッド）搭載に統一し、ラインアップを見直した。WLTCモードで19.5km/Lの燃費性能を実現。価格は383万3500円から。",
-      "confidence": "公式発表",
+      "date": "2026-09-29",
+      "title": "テスラ電動トラック「セミ」量産開始",
+      "summary": "テスラが商用電動トラック「セミ」の出荷を開始。乗用EV開発が難航し、発表から約9年でようやく量産化。1回の充電で約800キロメートル走行可能。ディーゼル燃料高騰が続く中、物流会社などに販売。",
+      "confidence": "報道",
       "companies": [
         {
-          "id": "subaru",
+          "id": "tesla",
           "dir": 1
         }
       ],
       "tags": [
-        "日本",
-        "ハイブリッド"
+        "商用車",
+        "米国"
       ],
       "sources": [
         {
-          "title": "Response.jp（2026年9月17日）",
-          "url": "https://response.jp/article/2026/09/17/416753.html"
-        },
-        {
-          "title": "SUBARU ニュースリリース（2026年9月17日）",
-          "url": "https://www.subaru.co.jp/news/2026_09_17_104044/"
+          "title": "日本経済新聞（2026年9月29日）",
+          "url": "https://www.nikkei.com/article/DGXZQOGN272R40X20C26A9000000/"
         }
       ],
-      "id": "20260923-3"
+      "id": "20261005-2"
     },
     {
-      "date": "2026-09-17",
-      "title": "スバル、インプレッサ改良で2.0Lガソリン搭載に集約",
-      "summary": "スバルはインプレッサの改良モデルを発表。ラインアップを2.0Lガソリン搭載の「Smart Edition」グレードに集約し、スマートアシスト機能を進化させた。",
-      "confidence": "公式発表",
+      "date": "2026-09-28",
+      "title": "テスラ新型ロードスター公開イベント延期",
+      "summary": "テスラが10月1日予定していたテキサス州ウェーコでのロードスター公開イベントを、悪天候予報により10月15日に延期。SpaceXスラスターで車体を飛ばすデモンストレーションを計画していた。",
+      "confidence": "報道",
       "companies": [
         {
-          "id": "subaru",
+          "id": "tesla",
+          "dir": -1
+        }
+      ],
+      "tags": [
+        "イベント",
+        "米国"
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch（2026年9月28日）",
+          "url": "https://techcrunch.com/2026/09/28/tesla-delays-roadster-2-event-again-due-to-bad-weather/"
+        }
+      ],
+      "id": "20261005-3"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "トヨタ米国9月販売前月比4.0%増",
+      "summary": "トヨタモーター・ノースアメリカが2026年9月の米国販売20万1306台を発表。前年同月比では8.4%増。電動化車両販売は前年同月比37.8%増の11万7215台で、総販売の58.2%を占めた。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "toyota",
           "dir": 1
         }
       ],
       "tags": [
+        "販売実績",
+        "米国"
+      ],
+      "sources": [
+        {
+          "title": "Toyota Newsroom（2026年10月1日）",
+          "url": "https://pressroom.toyota.com/toyota-motor-north-america-reports-september-third-quarter-2026-u-s-sales-results/"
+        }
+      ],
+      "id": "20261005-4"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "BYD新型「ATTO 3 EX」の投入を発表",
+      "summary": "BYDが日本市場で技術説明会を実施。新型「ATTO 3 EX」を投入し、バッテリ容量を58.56kWhから74.88kWhへ拡大して航続距離を470kmから大幅延伸。さらに11月下旬には国内初のコンパクトPHEV「ATTO 2」投入を予告。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "byd",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "新型車",
         "日本"
       ],
       "sources": [
         {
-          "title": "Response.jp（2026年9月17日）",
-          "url": "https://response.jp/article/2026/09/17/416753.html"
+          "title": "Car Watch（2026年9月30日）",
+          "url": "https://car.watch.impress.co.jp/docs/news/2144578.html"
         }
       ],
-      "id": "20260923-4"
+      "id": "20261005-5"
     },
     {
-      "date": "2026-09-17",
-      "title": "スズキ、東京ゲームショウ2026に特別協賛出展",
-      "summary": "スズキは東京ゲームショウ2026（9月17-21日）に特別協賛企業として出展。カプコンの人気ゲーム『ストリートファイター6』のキャラクターとコラボレーションした四輪車と二輪車を展示する。",
+      "date": "2026-10-01",
+      "title": "BYD9月販売世界で46.4万台、前年同月比17%増",
+      "summary": "BYDが9月の世界販売46万3561台を発表（前年同月比17%増）。輸出が154%増の17万9877台と大幅伸長し、売上の約40%を占めた。国内需要が鈍い中、海外展開が業績を支える。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "byd",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "販売実績",
+        "輸出"
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance（2026年10月1日）",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/byd-september-2026-exports-jump-140000199.html"
+        }
+      ],
+      "id": "20261005-6"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "スズキ、新型エンジン3基の技術戦略を発表",
+      "summary": "スズキは9月25日の技術戦略発表会で、2030年までの市販化を目指す新型エンジン3基を公開した。軽自動車用の48Vマイルドハイブリッド、1.2L直噴ターボ、そしてPHEV用シリーズハイブリッドを展示し、電動と内燃機関の両立戦略を示した。",
       "confidence": "報道",
       "companies": [
         {
@@ -190,21 +225,25 @@
         }
       ],
       "tags": [
-        "日本",
-        "マーケティング"
+        "エンジン技術",
+        "ハイブリッド"
       ],
       "sources": [
         {
-          "title": "Response.jp（2026年）",
-          "url": "https://response.jp/special/recent/245/%E3%82%B9%E3%82%BA%E3%82%AD"
+          "title": "AUTOCAR JAPAN（2026年9月28日）",
+          "url": "https://www.autocar.jp/post/1280781"
+        },
+        {
+          "title": "MotorFan（2026年9月28日）",
+          "url": "https://news.yahoo.co.jp/articles/3c5039b65fbe15b4d03afc9bdf165994fd0d1781"
         }
       ],
-      "id": "20260923-5"
+      "id": "20261005-7"
     },
     {
-      "date": "2026-09-22",
-      "title": "日産、リーフベースの新型リリーフカーがDeNA始動",
-      "summary": "日産はリーフをベースに製作した新型リリーフカーを横浜DeNAベイスターズに提供。9月22日のシーズン試合で始動する。EVを活用した球団サポートを実施。",
+      "date": "2026-09-28",
+      "title": "日産『スカイライン』新型が12月公開予定",
+      "summary": "日産の新型スカイラインが2026年12月に披露されることが明らかになった。開発期間を約50カ月から26カ月に短縮し、ブランド復活の象徴となるモデルとして位置付けられている。",
       "confidence": "報道",
       "companies": [
         {
@@ -213,21 +252,158 @@
         }
       ],
       "tags": [
-        "日本",
-        "EV"
+        "新型車",
+        "経営再建"
       ],
       "sources": [
         {
-          "title": "Response.jp（2026年9月9日）",
-          "url": "https://response.jp/article/2026/09/11/416471.html"
+          "title": "レスポンス（2026年9月28日）",
+          "url": "https://response.jp/article/2026/09/28/417059.html"
         }
       ],
-      "id": "20260923-6"
+      "id": "20261005-8"
     },
     {
-      "date": "2026-09-17",
-      "title": "軽商用EV『ミニキャブEV』を一部改良",
-      "summary": "三菱自動車は軽商用EV『ミニキャブEV』を一部改良し、法人・事業者向けの「車両運行サポートサービス」に対応した車載通信機をメーカーオプションとして新たに設定。価格は254万1000円から。",
+      "date": "2026-10-01",
+      "title": "日産、自動運転モビリティサービス研究プロジェクトを開始",
+      "summary": "日産がイギリス・ケンブリッジで自動運転技術を活用したモビリティサービスの実用化に向けた研究プロジェクト「ADventure」を開始した。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "nissan",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "自動運転",
+        "イギリス"
+      ],
+      "sources": [
+        {
+          "title": "日産ニュースルーム（2026年9月28日）",
+          "url": "https://global.nissannews.com/ja-JP/channels/channel-NNG244?selectedTabId=news-releases-releases"
+        }
+      ],
+      "id": "20261005-9"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "スズキ・インド、サプライヤーに週6日制を指示",
+      "summary": "スズキはインドのサプライヤーに対して、週6日制での生産スケジュール導入と機械メンテナンス用に週1日の生産停止を指示した。インドでの製造品質向上と2030年の400万台体制に向けた準備。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "suzuki",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "インド",
+        "サプライチェーン"
+      ],
+      "sources": [
+        {
+          "title": "Business Recorder（2026年10月4日）",
+          "url": "https://www.brecorder.com/news/amp/40442492"
+        }
+      ],
+      "id": "20261005-10"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "マツダ、ロータリーエンジン搭載車60周年を記念しモデルカー発",
+      "summary": "マツダがロータリーエンジン搭載車60周年を記念して、漫画『頭文字D』とのコラボレーション企画を実施し、初の公式コラボレーションモデルカーを発売。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "mazda",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "記念企画",
+        "コラボ"
+      ],
+      "sources": [
+        {
+          "title": "マツダニュースルーム（2026年10月2日）",
+          "url": "https://newsroom.mazda.com/ja/publicity/release/"
+        }
+      ],
+      "id": "20261005-11"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "スバル、米国9月の販売が13.2%増で好調",
+      "summary": "スバル・オブ・アメリカが9月の販売で前年同月比13.2%増を達成した。フォレスターが最高記録を更新し、WRXも堅調。SUVラインナップへの需要の強さが示された。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "subaru",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "米国",
+        "販売実績"
+      ],
+      "sources": [
+        {
+          "title": "Autoblog（2026年10月2日）",
+          "url": "https://www.motor1.com/news/721163/toyota-mazda-subaru-new-engines/"
+        }
+      ],
+      "id": "20261005-12"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "マツダ・スズキ、9月販売実績が好調",
+      "summary": "マツダスズキ・インドが2026年9月の総販売台数で24.4%の前年同月比増を達成した。国内販売185,252台、輸出44,219台など堅調な実績。",
+      "confidence": "統計",
+      "companies": [
+        {
+          "id": "suzuki",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "インド",
+        "販売実績"
+      ],
+      "sources": [
+        {
+          "title": "The Tribune（2026年10月1日）",
+          "url": "https://www.tribuneindia.com/news/business/maruti-suzuki-sales-rise-24-4-to-2-36-lakh-tata-motors-cv-sales-jump-42-4-to-51062-in-september/amp/?utm=relatedarticles"
+        }
+      ],
+      "id": "20261005-13"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "日産、技能五輪で銀賞・敢闘賞を受賞",
+      "summary": "日産自動車が第48回技能五輪国際大会で、自動車板金職種の吉田将選手が銀賞、自動車工職種の高尾翔太選手が敢闘賞を受賞。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "nissan",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "人材育成"
+      ],
+      "sources": [
+        {
+          "title": "日産ニュースルーム（2026年10月2日）",
+          "url": "https://global.nissannews.com/ja-JP/channels/channel-NNG244?selectedTabId=channel-NNG244-releases"
+        }
+      ],
+      "id": "20261005-14"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "新型パジェロ予約受注開始",
+      "summary": "三菱自動車は10月1日から新型パジェロの予約注文受け付けを開始した。同日より予約注文リーフレットも販売店にて配布開始。",
       "confidence": "公式発表",
       "companies": [
         {
@@ -236,22 +412,22 @@
         }
       ],
       "tags": [
-        "商用EV",
-        "国内"
+        "新型車",
+        "パジェロ"
       ],
       "sources": [
         {
-          "title": "三菱自動車 ニュースリリース（2026年9月17日）",
-          "url": "https://www.mitsubishi-motors.com/jp/newsroom/"
+          "title": "三菱自動車（2026年10月1日）",
+          "url": "https://www.mitsubishi-motors.co.jp/"
         }
       ],
-      "id": "20260923-7"
+      "id": "20261005-15"
     },
     {
-      "date": "2026-09-17",
-      "title": "法人向け車両運行サポートサービス提供開始",
-      "summary": "三菱自動車は法人向けの「車両運行サポートサービス」の提供を開始。走行履歴や走行状況などをダッシュボードで確認できるサービスと、ドライバー向けの「MITSUBISHI CONNECT」で構成される。",
-      "confidence": "公式発表",
+      "date": "2026-10-01",
+      "title": "北米販売好調、アウトランダー27%増",
+      "summary": "三菱自動車北米法人が第3四半期の販売台数を発表。アウトランダーは9,311台で前年同期比27.1%増となり、SUVラインアップの好調を牽引した。",
+      "confidence": "報道",
       "companies": [
         {
           "id": "mitsu",
@@ -259,39 +435,17 @@
         }
       ],
       "tags": [
-        "サービス",
-        "法人向け"
+        "北米",
+        "アウトランダー",
+        "販売"
       ],
       "sources": [
         {
-          "title": "三菱自動車 ニュースリリース（2026年9月17日）",
-          "url": "https://www.mitsubishi-motors.com/jp/newsroom/"
+          "title": "Mitsubishi Motors North America, Inc.（2026年10月1日）",
+          "url": "https://media.mitsubishicars.com/en-US/releases/mitsubishi-motors-reports-third-quarter-2026-sales"
         }
       ],
-      "id": "20260923-8"
-    },
-    {
-      "date": "2026-09-18",
-      "title": "アウトランダーPHEVで給電デモ実施",
-      "summary": "三菱自動車は「第一回京都こどもメディカルラリー」に参加し、『アウトランダーPHEV』での給電デモを実施。電動車の給電機能の活用を展示。",
-      "confidence": "公式発表",
-      "companies": [
-        {
-          "id": "mitsu",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "PHEV",
-        "京都"
-      ],
-      "sources": [
-        {
-          "title": "三菱自動車 ニュースリリース（2026年9月18日）",
-          "url": "https://www.mitsubishi-motors.com/jp/newsroom/"
-        }
-      ],
-      "id": "20260923-9"
+      "id": "20261005-16"
     },
     {
       "id": "n12",

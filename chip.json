@@ -2,8 +2,8 @@
   "id": "chip",
   "name": "半導体（チップ）",
   "tagline": "AIの頭脳をつくる、設計・製造・メモリの主役たち",
-  "period": "2026年9月16日〜9月22日",
-  "updated": "2026-09-23",
+  "period": "2026年9月28日〜10月4日",
+  "updated": "2026-10-05",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -83,51 +83,500 @@
   ],
   "news": [
     {
-      "date": "2026-09-18",
-      "title": "SKハイニックス株、6％上昇",
-      "summary": "米国の半導体株高に追随してSKハイニックス株が6%上昇。メモリメーカーの好調な業績期待が相場を支えた。",
+      "date": "2026-09-28",
+      "title": "NVIDIAが株式買い戻し1500億ドルを承認",
+      "summary": "NVIDIAの取締役会は、既存の株式買い戻しプログラム下での追加承認金として1500億ドルを承認した。これにより、買い戻し総額は2350億ドルになった。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "nvda",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "米国",
+        "株式"
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA Newsroom (2026年9月28日)",
+          "url": "https://nvidianews.nvidia.com/news"
+        }
+      ],
+      "id": "20261005-1"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "NVIDIAがAIエージェント向けセキュリティプラットフォー",
+      "summary": "NVIDIAは、AIエージェントがサンドボックスを脱出するのを防ぐためのオープンエージェントセーフティプラットフォームを発表した。IBM、Microsoft、Palantir、Anthropicなど多数の企業が参画している。",
       "confidence": "報道",
       "companies": [
         {
-          "id": "skh",
+          "id": "nvda",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "米国",
+        "AI安全性"
+      ],
+      "sources": [
+        {
+          "title": "Bloomberg (2026年9月28日)",
+          "url": "https://www.bloomberg.com/news/articles/2026-09-28/nvidia-debuts-system-designed-to-stop-ai-agents-from-going-awry"
+        },
+        {
+          "title": "ABC News (2026年9月28日)",
+          "url": "https://abcnews.com/Business/nvidia-releases-software-prevent-ai-security-incidents/story?id=136818683"
+        },
+        {
+          "title": "CNBC (2026年9月28日)",
+          "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html"
+        }
+      ],
+      "id": "20261005-2"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "TSMC、テキサスでのチップ製造拡大を検討中",
+      "summary": "TSMCは、アリゾナの既存2650億ドルへの投資に加えて、テキサスに新しいキャンパスを建設する大規模投資を検討中と報じられている。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "米国",
+        "拡大"
+      ],
+      "sources": [
+        {
+          "title": "TipRanks (2026年9月28日)",
+          "url": "https://tradersunion.com/news/stocks/show/3638372-tsmc-jumps-3-11percent-as-dividend"
+        }
+      ],
+      "id": "20261005-3"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "TSMC、配当金を発表",
+      "summary": "TSMCは1株当たり1.11ドルの四半期ADR配当を2026年10月8日に支払うことを発表した。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "台湾",
+        "配当"
+      ],
+      "sources": [
+        {
+          "title": "TipRanks (2026年9月30日)",
+          "url": "https://tradersunion.com/news/stocks/show/3638372-tsmc-jumps-3-11percent-as-dividend"
+        }
+      ],
+      "id": "20261005-4"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "ブロードコムがシンガポール新施設をオープン",
+      "summary": "ブロードコムとTOPPANの合弁会社であるAdvanced Substrate Technologies（AST）が、シンガポール初の高級FC-BGAサブストレート製造施設をオープンした。AI需要に対応する。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "avgo",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "シンガポール",
+        "AI"
+      ],
+      "sources": [
+        {
+          "title": "Broadcom Newsroom (2026年9月28日)",
+          "url": "https://www.broadcom.com/company/news"
+        }
+      ],
+      "id": "20261005-5"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "サムスン電子がHelix社に10億ドル投資",
+      "summary": "サムスン電子はAIインフラ企業Helix社に10億ドルの投資を実施。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "samsung",
           "dir": 1
         }
       ],
       "tags": [
         "韓国",
-        "株価"
+        "AI"
       ],
       "sources": [
         {
-          "title": "日本経済新聞（2026年09月18日）",
-          "url": "https://www.nikkei.com/nkd/company/us/SKHY/"
+          "title": "Samsung Global Newsroom (2026年9月29日)",
+          "url": "https://news.samsung.com/global/"
         }
       ],
-      "id": "20260923-1"
+      "id": "20261005-6"
     },
     {
-      "date": "2026-09-15",
-      "title": "インテル、AI Infra Summit 2026に参加",
-      "summary": "インテルがAI Infra Summit 2026で、AI基盤構造の進展を展示。CEO Lip-Bu Tan氏がエッジ、エンタープライズ、クラウド、物理AI環境全体にわたるAIインフラのビジョンについて議論した。",
+      "date": "2026-09-28",
+      "title": "サムスンがKTとSK Telecomと5Gスマートオフィスを",
+      "summary": "サムスン電子、SK Telecom、Hana Financial Groupが韓国初の民間5Gスマートオフィスを金融セクターで構築することを発表した。",
       "confidence": "公式発表",
       "companies": [
         {
+          "id": "samsung",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "韓国",
+        "5G"
+      ],
+      "sources": [
+        {
+          "title": "Samsung Global Newsroom (2026年9月28日)",
+          "url": "https://news.samsung.com/global/"
+        }
+      ],
+      "id": "20261005-7"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "TSMCがASMLと12インチ高NA対応を協力",
+      "summary": "TSMCとASMLは、高NA EUV露光用の12インチフォトマスク開発を協力することを発表。2030年からの高NA量産に向け、2031年に12インチマスクのパイロットラインを目指している。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "台湾",
+        "製造技術"
+      ],
+      "sources": [
+        {
+          "title": "AD HOC NEWS (2026年9月28日)",
+          "url": "https://www.ad-hoc-news.de/boerse/news/nachboerse/tsmc-stock-last-trades-at-usd-452-11-on-september-28-2026/70194148"
+        }
+      ],
+      "id": "20261005-8"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "TSMCが高NA EUVロードマップを発表",
+      "summary": "TSMCは高NA露光技術を2030年から先端ノードの量産に導入する計画を発表。2033年までに本格運用を目指している。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "台湾",
+        "製造技術"
+      ],
+      "sources": [
+        {
+          "title": "AD HOC NEWS (2026年10月4日)",
+          "url": "https://ad-hoc-news.de/boerse/news/corporate-news/taiwan-semiconductor-manufacturing-company-stock-gained-2-96-percent-on-high-na-plan/70226477"
+        }
+      ],
+      "id": "20261005-9"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "ブロードコムがAnthropicに420億ドル融資",
+      "summary": "ブロードコムはAI企業Anthropicに最大420億ドルの融資枠を合意した。同社はチップ供給、設備リース、融資、株式投資と複数の関係を持つことになる。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "avgo",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "米国",
+        "提携"
+      ],
+      "sources": [
+        {
+          "title": "24/7 Wall St. (2026年10月4日)",
+          "url": "https://247wallst.com/investing/2026/10/04/broadcoms-massive-42-billion-chip-buying-deal-with-anthropic-raises-circular-financing-worries"
+        }
+      ],
+      "id": "20261005-10"
+    },
+    {
+      "date": "2026-10-04",
+      "title": "サムスン電子がASMLと高NA EUV戦略を拡大",
+      "summary": "サムスン電子はASMLと高NA EUV露光技術での協力を拡大。業界初となるDRAM量産への高NA EUV導入を2028年に予定している。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "samsung",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "韓国",
+        "製造技術"
+      ],
+      "sources": [
+        {
+          "title": "Samsung Global Newsroom (2026年9月8日)",
+          "url": "https://news.samsung.com/global/samsung-electronics-and-asml-expand-strategic-collaboration-for-next-generation-semiconductor-manufacturing"
+        }
+      ],
+      "id": "20261005-11"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "マイクロン、過去最高業績で来期も強気見通し",
+      "summary": "マイクロンテクノロジーは9月30日、2026年度第4四半期および通期決算を発表し、過去最高の業績を記録した。AIインフラの需要を追い風に2026年9～11月期の売上高を前年同期比4.5倍の約615億ドルと予想し、2027年と2028年にもメモリ供給が逼迫すると予測した。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "mu",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "AI",
+        "決算"
+      ],
+      "sources": [
+        {
+          "title": "日本経済新聞（2026年9月30日）",
+          "url": "https://www.nikkei.com/article/DGXZQOGN293T80Z20C26A9000000/"
+        },
+        {
+          "title": "Bloomberg Japan（2026年9月30日）",
+          "url": "https://www.bloomberg.com/jp/news/articles/2026-09-30/TM71AST96OSJ00"
+        }
+      ],
+      "id": "20261005-12"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "AMD、World Labsを82億ドルで買収へ",
+      "summary": "AMDは空間知能研究を手がけるWorld Labsを約82億ドルの全額株式で買収する最終契約を締結した。共同創業者のフェイフェイ・リー氏は買収完了後、AMDの執行副社長兼最高科学責任者に就任する。規制当局の承認を経て2026年末までの完了を見込む。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "amd",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "買収",
+        "AI"
+      ],
+      "sources": [
+        {
+          "title": "Forbes Japan（2026年9月28日）",
+          "url": "https://forbesjapan.com/articles/detail/105605"
+        },
+        {
+          "title": "ITmedia NEWS（2026年9月29日）",
+          "url": "https://www.itmedia.co.jp/news/article/2609/29/2000001826/"
+        }
+      ],
+      "id": "20261005-13"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "SKハイニックス株が大幅下落、ソリダイムIPO検討で懸念高ま",
+      "summary": "SKハイニックスの株価が一時5%下落した。傘下の米企業ソリダイムが2027年にも米国でのIPOを検討しており、企業価値が最大1000億ドルに達する可能性があると報じられ、グループ内の資本関係が複雑化することへの懸念が広がった。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "skh",
+          "dir": -1
+        }
+      ],
+      "tags": [
+        "株価",
+        "子会社"
+      ],
+      "sources": [
+        {
+          "title": "Bloomberg Japan（2026年9月28日）",
+          "url": "https://www.bloomberg.com/jp/news/articles/2026-09-28/TM249OT96OSH00"
+        },
+        {
+          "title": "株探（2026年9月28日）",
+          "url": "https://s.kabutan.jp/news/n202609281057/"
+        }
+      ],
+      "id": "20261005-14"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "インテル株が5.67%下落、利回り上昇とAI安全保障懸念で",
+      "summary": "インテル株は9月28日、国債利回りの上昇やOpenAIが先進モデルの提供を一時停止したというAI安全保障上の懸念を受けて5.67%下落し、116.03ドルで終値をつけた。同社のCFOは、ファウンドリ事業の損益分岐点が2028年末までずれ込む可能性があると述べている。",
+      "confidence": "報道",
+      "companies": [
+        {
           "id": "intc",
+          "dir": -1
+        }
+      ],
+      "tags": [
+        "株価",
+        "市場動向"
+      ],
+      "sources": [
+        {
+          "title": "TIKR（2026年9月28日）",
+          "url": "https://www.tikr.com/ja/blog/intel-stock-fell-nearly-6-in-a-day-heres-the-foundry-deadline-that-matters-more"
+        },
+        {
+          "title": "Yahoo Finance（2026年9月28日）",
+          "url": "https://finance.yahoo.com/quote/INTC/news/"
+        }
+      ],
+      "id": "20261005-15"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "AMD、宇宙用カスタムSoC量産へ",
+      "summary": "AMDは、Versal AI Core Adaptive SoCの宇宙グレード版をサンプル出荷開始した。新しいClass Y認定パッケージを採用し、15年間の長期ミッション向けに信頼性を確保する。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "amd",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "新製品",
+        "宇宙"
+      ],
+      "sources": [
+        {
+          "title": "AMD Newsroom（2026年10月1日）",
+          "url": "https://newsroom.amd.com/"
+        }
+      ],
+      "id": "20261005-16"
+    },
+    {
+      "date": "2026-09-29",
+      "title": "AMD CEO、2026年OCPカンファレンスで基調講演へ",
+      "summary": "AMDのCEO Lisa Suが2026年のOpen Compute Projectカンファレンスで基調講演を行う。企業向けオープンで統合されたAIインフラストラクチャの提供について講演する予定。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "amd",
           "dir": 1
         }
       ],
       "tags": [
         "イベント",
-        "AI",
-        "インフラ"
+        "AI"
       ],
       "sources": [
         {
-          "title": "Intel Newsroom（2026年09月15日）",
-          "url": "https://newsroom.intel.com/artificial-intelligence/intel-at-ai-infra-summit-2026"
+          "title": "AMD Newsroom（2026年9月29日）",
+          "url": "https://newsroom.amd.com/"
         }
       ],
-      "id": "20260923-2"
+      "id": "20261005-17"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "AIデータセンター向け両面冷却GaN新製品",
+      "summary": "ルネサスは耐圧650V、両面冷却対応のGaNパワーデバイス「TP65H020G4PLSGBD」のサンプル提供を開始した。8×8mmの小型パッケージで実装面積を57％削減し、メガワット級AIデータセンター向けの高密度電力変換に対応。量産は2027年半ばを予定。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "renesas",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "AI",
+        "データセンター",
+        "GaN"
+      ],
+      "sources": [
+        {
+          "title": "EDN Japan（2026年09月30日）",
+          "url": "https://edn.itmedia.co.jp/edn/articles/2609/30/news097.html"
+        },
+        {
+          "title": "マイナビテックプラス（2026年10月01日）",
+          "url": "https://news.mynavi.jp/techplus/article/20261001-5052855/"
+        }
+      ],
+      "id": "20261005-18"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "1株を3株に株式分割実施",
+      "summary": "キオクシアホールディングスが9月30日基準日で1株を3株に分割。10月1日に効力が発生した。個人投資家の投資単位を引き下げることで参加を促進する。分割に伴い、1株当たりの株価も約3分の1となった。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "kioxia",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "資本政策"
+      ],
+      "sources": [
+        {
+          "title": "日本経済新聞（2026年07月31日）",
+          "url": "https://www.nikkei.com/article/DGXZQOUB309KI0Q6A730C2000000/"
+        },
+        {
+          "title": "たろ速（2026年09月29日）",
+          "url": "https://tarosoku.jp/2026/09/29/kioxia-stock-split-purpose-shareholders-impact/"
+        }
+      ],
+      "id": "20261005-19"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "ソフトウェア事業の子会社を設立",
+      "summary": "ルネサスはソフトウェア関連事業を統括する中間持ち株会社「Re-Alt Software Holdings」を米国デラウェア州に10月中旬に設立する。2024年に買収した米アルティウムを含むソフトウェア企業を傘下に集約し、事業効率化を目指す。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "renesas",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "組織再編",
+        "ソフトウェア"
+      ],
+      "sources": [
+        {
+          "title": "日本経済新聞（2026年10月02日）",
+          "url": "https://www.nikkei.com/article/DGXZQOUC028KF0S6A001C2000000/"
+        },
+        {
+          "title": "BigGo ファイナンス（2026年10月02日）",
+          "url": "https://finance.biggo.jp/news/jpx_tdnet_140120261002545124"
+        }
+      ],
+      "id": "20261005-20"
     }
   ]
 }

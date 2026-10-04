@@ -2,8 +2,8 @@
   "id": "semi",
   "name": "半導体製造装置",
   "tagline": "AI需要を追い風に、日本が世界で強い分野",
-  "period": "2026年9月16日〜9月22日",
-  "updated": "2026-09-23",
+  "period": "2026年9月28日〜10月4日",
+  "updated": "2026-10-05",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -76,9 +76,9 @@
   ],
   "news": [
     {
-      "date": "2026-09-17",
-      "title": "米国での投資家層拡大狙うスポンサー付きADR開始",
-      "summary": "東京エレクトロンは米国預託証券（ADR）プログラムをスポンサー付きに移行し、米国東部時間9月17日から売買開始した。米国での投資家層拡大と認知度向上を目指す。発行済み株式数は増えない。",
+      "date": "2026-09-28",
+      "title": "MSCI指数への組入",
+      "summary": "東京エレクトロンがMSCI Selection Indexesの構成銘柄に選定された。国際的な投資指標への採用により投資家の認知度向上につながる。",
       "confidence": "公式発表",
       "companies": [
         {
@@ -87,22 +87,43 @@
         }
       ],
       "tags": [
-        "米国",
-        "IR"
+        "指数選定"
       ],
       "sources": [
         {
-          "title": "日本経済新聞（2026年9月17日）",
-          "url": "https://www.nikkei.com/article/DGXZQOUB17A360X10C26A9000000/"
+          "title": "東京エレクトロン公式ニュースルーム（2026年9月28日）",
+          "url": "https://www.tel.co.jp/news/"
         }
       ],
-      "id": "20260923-1"
+      "id": "20261005-1"
     },
     {
-      "date": "2026-09-19",
-      "title": "JPMorganがKLAをトップピック指定",
-      "summary": "JPMorganはウェーハ製造装置市場の見通しを引き上げ、KLAを米国チップ機器メーカーの中で最上位ピックとして指定した。アナリストのMio Shikanaiは2026年のWFE市場成長を31%と予測し、2027年のファウンドリーおよびロジック支出のシフトがKLAに有利に働くと述べた。",
-      "confidence": "報道",
+      "date": "2026-09-28",
+      "title": "ASML自社株買い戻しを実施",
+      "summary": "ASMLは現在の自社株買い戻しプログラムに基づき、9月21-22日にそれぞれ25,500株および29,000株を買い戻した。週間規模の株式買い戻しプログラムの継続を示している。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "asml",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "資本還元"
+      ],
+      "sources": [
+        {
+          "title": "GlobeNewswire（2026年9月28日）",
+          "url": "https://www.globenewswire.com/news-release/2026/09/28/3369809/0/en/asml-reports-transactions-under-its-current-share-buyback-program.html"
+        }
+      ],
+      "id": "20261005-2"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "第1四半期決算発表を10月28日に予定",
+      "summary": "KLAが2027年度第1四半期（9月期）の決算発表を10月28日に実施することを正式発表。9月期の売上ガイダンスは40億ドル（±2億ドル）、希薄化EPSは1.14ドル（±0.10ドル）を見込んでいる。",
+      "confidence": "公式発表",
       "companies": [
         {
           "id": "kla",
@@ -110,66 +131,38 @@
         }
       ],
       "tags": [
-        "米国",
-        "セミコンダクター"
+        "IR",
+        "ガイダンス"
       ],
       "sources": [
         {
-          "title": "Yahoo Finance（2026年9月13日）",
-          "url": "https://ca.finance.yahoo.com/news/5-big-analyst-ai-moves-093009716.html"
-        },
-        {
-          "title": "Ad-hoc-news（2026年9月20日）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/kla-corporation-stock-gains-on-ai-demand-and-jpmorgan-top-pick-call/70136328"
+          "title": "KLA IR（2026年10月1日）",
+          "url": "https://ir.kla.com/news-events/press-releases/detail/522/kla-announces-first-quarter-fiscal-year-2027-earnings-date"
         }
       ],
-      "id": "20260923-2"
+      "id": "20261005-3"
     },
     {
-      "date": "2026-09-18",
-      "title": "KLA株が4.74%上昇",
-      "summary": "KLAの株価はAIインフラストラクチャ関連銘柄への需要の回復を背景に4.74%上昇し、176.99ドルで終値を付けた。このアナリストの推奨と業界における強気の見方に支持されている。",
+      "date": "2026-09-30",
+      "title": "アナリストが投資判定を引き下げ",
+      "summary": "Zacks Researchが、KLAの投資格付けを「強気」から「中立」に引き下げた。ただし業界全体の平均判定は「中立強気」のままで、19人のアナリストがBUYを推奨している。",
       "confidence": "報道",
       "companies": [
         {
           "id": "kla",
-          "dir": 1
+          "dir": -1
         }
       ],
       "tags": [
-        "米国",
-        "株価"
+        "格付け"
       ],
       "sources": [
         {
-          "title": "Ad-hoc-news（2026年9月20日）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/kla-corporation-stock-gains-on-jpmorgan-top-pick-call-and-strong-ai-demand/70130697"
+          "title": "MarketBeat（2026年9月30日）",
+          "url": "https://www.marketbeat.com/instant-alerts/analyst-kla-nasdaq-klac-downgraded-by-zacks-research-to-hold-2026-09-30/"
         }
       ],
-      "id": "20260923-3"
-    },
-    {
-      "date": "2026-09-21",
-      "title": "KLA株が3.94%値上がり",
-      "summary": "KLAはセミコンダクター資本支出への前向きなセンチメント回復の中、9月21日に3.94%上昇して183.97ドルで引け、ウェーハファブ機器需要の堅調さを反映した。",
-      "confidence": "報道",
-      "companies": [
-        {
-          "id": "kla",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "米国",
-        "株価"
-      ],
-      "sources": [
-        {
-          "title": "Ad-hoc-news（2026年9月22日）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/kla-corporation-stock-gains-3-94-percent-ahead-of-the-open/70151215"
-        }
-      ],
-      "id": "20260923-4"
+      "id": "20261005-4"
     },
     {
       "id": "s4",
