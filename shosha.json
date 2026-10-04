@@ -2,8 +2,8 @@
   "id": "shosha",
   "name": "総合商社",
   "tagline": "資源と非資源、バフェットも買った5大商社",
-  "period": "2026年9月16日〜9月22日",
-  "updated": "2026-09-23",
+  "period": "2026年9月28日〜10月4日",
+  "updated": "2026-10-05",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -48,10 +48,38 @@
   ],
   "news": [
     {
-      "date": "2026-09-17",
-      "title": "タイ火力発電の持ち分売却",
-      "summary": "住友商事がタイの火力発電事業の株式を一部売却し、四国電力に譲渡した。電力事業のポートフォリオ最適化の一環。",
-      "confidence": "報道",
+      "date": "2026-09-29",
+      "title": "カナダLNG拡張に5000億円投資決定",
+      "summary": "三菱商事はLNGカナダプロジェクトの液化設備拡張について最終投資決定を実施。生産能力を年間1,400万トンから2,800万トンへ倍増させ、総事業費は約5,000億円となる見通し。2030年代初頭の稼働開始を目指す。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "mc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "カナダ",
+        "LNG",
+        "資源"
+      ],
+      "sources": [
+        {
+          "title": "ロイター（2026年9月29日）",
+          "url": "https://topics.smt.docomo.ne.jp/article/reuters/business/reuters-20260929094"
+        },
+        {
+          "title": "日本経済新聞（2026年9月29日）",
+          "url": "https://www.nikkei.com/article/DGXZQOUC284B70Y6A920C2000000/"
+        }
+      ],
+      "id": "20261005-1"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "MILIZEとAI金融サービス提携",
+      "summary": "住友商事はフィンテック企業MILIZEと資本業務提携を締結。金融分野のAI・データ活用技術とグループの事業基盤を組み合わせ、新たなデジタルサービスの創出・事業化を推進する。",
+      "confidence": "公式発表",
       "companies": [
         {
           "id": "sumitomo",
@@ -59,16 +87,111 @@
         }
       ],
       "tags": [
-        "タイ",
-        "電力"
+        "AI",
+        "金融",
+        "デジタル"
       ],
       "sources": [
         {
-          "title": "日本経済新聞（2026年9月17日）",
-          "url": "https://www.nikkei.com/nkd/company/?scode=8053"
+          "title": "住友商事ニュースリリース（2026年9月30日）",
+          "url": "https://www.sumitomocorp.com/ja/jp/news/topics/2026/group/20260930"
+        },
+        {
+          "title": "日本経済新聞（2026年9月29日）",
+          "url": "https://www.nikkei.com/article/DGXZQOUB290QP0Z20C26A9000000/"
         }
       ],
-      "id": "20260923-1"
+      "id": "20261005-2"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "FDMプリンター新モデルF870の取扱開始",
+      "summary": "丸紅I-DIGIOホールディングスの丸紅情報システムズが、ストラタシス社の大型治具・工具製作用FDMプラットフォーム「F870」の取り扱いを開始した。北米トヨタとリビアンが自動車生産現場に先行導入している。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "marubeni",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "製造",
+        "3Dプリンター"
+      ],
+      "sources": [
+        {
+          "title": "PR TIMES（2026年10月2日）",
+          "url": "https://prtimes.jp/main/html/rd/p/000000079.000145332.html"
+        }
+      ],
+      "id": "20261005-3"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "自己株式取得の進捗状況を報告",
+      "summary": "丸紅は2026年10月1日に自己株式の取得状況に関する適時開示を提出した。継続的な株主還元施策として自社株を取得している。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "marubeni",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "株主還元"
+      ],
+      "sources": [
+        {
+          "title": "丸紅公式（2026年10月1日）",
+          "url": "https://www.marubeni.com/jp/"
+        }
+      ],
+      "id": "20261005-4"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "基幹システムのクラウド基盤を変更",
+      "summary": "丸紅I-DIGIOが基幹システム「RISE with SAP」の稼働基盤をAWSからGoogle Cloudへの移行を完了した。クラウドインフラの最適化を進めている。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "marubeni",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "IT",
+        "クラウド"
+      ],
+      "sources": [
+        {
+          "title": "PR TIMES（2026年9月30日）",
+          "url": "https://prtimes.jp/main/html/rd/p/000000002.000189786.html"
+        }
+      ],
+      "id": "20261005-5"
+    },
+    {
+      "date": "2026-09-29",
+      "title": "カーリット株式保有比率が低下",
+      "summary": "丸紅がカーリット（4275）の株式保有比率を7.89%から5.66%に引き下げたことが5%ルール報告書で明かされた。ポートフォリオの最適化の一環と考えられる。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "marubeni",
+          "dir": -1
+        }
+      ],
+      "tags": [
+        "投資"
+      ],
+      "sources": [
+        {
+          "title": "株探（2026年9月29日）",
+          "url": "https://s.kabutan.jp/news/n202609290464/"
+        }
+      ],
+      "id": "20261005-6"
     },
     {
       "id": "t2",

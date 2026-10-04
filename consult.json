@@ -2,8 +2,8 @@
   "id": "consult",
   "name": "コンサル",
   "tagline": "AIとDXの需要で揺れる、コンサル・ITサービス各社",
-  "period": "2026年9月16日〜9月22日",
-  "updated": "2026-09-23",
+  "period": "2026年9月28日〜10月4日",
+  "updated": "2026-10-05",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -126,9 +126,9 @@
   ],
   "news": [
     {
-      "date": "2026-09-15",
-      "title": "決算説明会開催予告",
-      "summary": "アクセンチュアは10月1日に第4四半期・通期決算の説明会を開催予定。収益ガイダンスを含める。",
+      "date": "2026-10-01",
+      "title": "第4四半期決算で新規受注222億ドル",
+      "summary": "アクセンチュアが2026年度第4四半期（6-8月）の決算を発表。新規受注が222億ドルで市場予想の約200億ドルを超過。売上高も187億ドルで予想の180億ドル超過。通期売上高は742億ドルで前年比6%増となった。",
       "confidence": "公式発表",
       "companies": [
         {
@@ -137,90 +137,26 @@
         }
       ],
       "tags": [
-        "決算"
-      ],
-      "sources": [
-        {
-          "title": "Accenture Newsroom（2026年9月15日）",
-          "url": "https://newsroom.accenture.com/news/2026/accenture-to-announce-fourth-quarter-and-full-year-fiscal-2026-results"
-        }
-      ],
-      "id": "20260923-1"
-    },
-    {
-      "date": "2026-09-16",
-      "title": "三菱重工とAI活用で共同検討",
-      "summary": "野村総合研究所は三菱重工業と、AIをはじめとするデジタル技術を活用した業務プロセス改革に関する共同検討と実践活動を開始する。",
-      "confidence": "公式発表",
-      "companies": [
-        {
-          "id": "nri",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "提携",
+        "決算",
         "AI"
       ],
       "sources": [
         {
-          "title": "NRI公式ページ（2026年9月16日）",
-          "url": "https://www.nri.com/jp/index.html"
+          "title": "Bloomberg（2026年10月2日）",
+          "url": "https://www.bloomberg.com/jp/news/articles/2026-10-02/TM8E91T9NJLS00"
+        },
+        {
+          "title": "Investing.com（2026年10月1日）",
+          "url": "https://jp.investing.com/news/earnings/article-1698321"
         }
       ],
-      "id": "20260923-2"
+      "id": "20261005-1"
     },
     {
-      "date": "2026-09-17",
-      "title": "NRIセキュアがAI対応診断強化",
-      "summary": "NRIセキュアは「フロンティアAI対応プロアクティブ脆弱性診断」におけるデータ取り扱い体制を強化。AI時代のセキュリティ対応を加速。",
+      "date": "2026-09-28",
+      "title": "Combe社のOracle導入完了",
+      "summary": "アクセンチュアがCombe Inc.のグローバル財務・サプライチェーン業務をOracle Fusion Cloud上で変革。複数の信頼できるブランドを持つ消費者向けパーソナルケア企業のコア業務システムをクラウド化し、AI活用の基盤を構築した。",
       "confidence": "公式発表",
-      "companies": [
-        {
-          "id": "nri",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "新サービス",
-        "セキュリティ"
-      ],
-      "sources": [
-        {
-          "title": "NRI公式ページ（2026年9月17日）",
-          "url": "https://www.nri.com/jp/index.html"
-        }
-      ],
-      "id": "20260923-3"
-    },
-    {
-      "date": "2026-09-17",
-      "title": "SMBC日興が投資評価開始",
-      "summary": "SMBC日興証券がベイカレントの投資評価を新規カバレッジ開始。AI導入支援やサイバーセキュリティが成長分野と位置づけ、目標株価9500円。",
-      "confidence": "報道",
-      "companies": [
-        {
-          "id": "baycurrent",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "投資評価",
-        "AI"
-      ],
-      "sources": [
-        {
-          "title": "財経新聞（2026年9月17日）",
-          "url": "https://www.zaikei.co.jp/article/20260917/870474.html"
-        }
-      ],
-      "id": "20260923-4"
-    },
-    {
-      "date": "2026-09-21",
-      "title": "Anthropicと1億ドルの投資で合意",
-      "summary": "アクセンチュアとAnthropicは5年間でそれぞれ最低1億ドルを投資し、AI安全性評価に関する共同プログラムを開発する。",
-      "confidence": "報道",
       "companies": [
         {
           "id": "acn",
@@ -228,64 +164,116 @@
         }
       ],
       "tags": [
-        "提携",
+        "Oracle",
+        "クラウド化"
+      ],
+      "sources": [
+        {
+          "title": "Accenture Newsroom（2026年9月28日）",
+          "url": "https://newsroom.accenture.com/news"
+        }
+      ],
+      "id": "20261005-2"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "DS Smith社のEU規制対応支援",
+      "summary": "アクセンチュアとosapiens（osapiens）がDS Smith（国際的な持続可能なパッケージング企業）と協業し、EU森林破壊規制（EUDR）対応のためのサプライチェーン透明化を実現。ヨーロッパ・中東・アフリカ地域全体の材料の流通を可視化した。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "acn",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "サプライチェーン",
+        "ESG"
+      ],
+      "sources": [
+        {
+          "title": "Accenture Newsroom（2026年9月28日）",
+          "url": "https://newsroom.accenture.com/news"
+        }
+      ],
+      "id": "20261005-3"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "企業不正の実態調査を発表、20年で課題が転換",
+      "summary": "KPMGが日本企業の不正に関する実態調査「Fraud Survey 2026」を発表。2006年の調査開始から20年、不正リスク管理が「制度整備」から「実効性確保」へシフトしたことを分析。388社からの有効回答を分析。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "kpmg",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "日本",
+        "リスク管理"
+      ],
+      "sources": [
+        {
+          "title": "PR TIMES（2026年9月28日）",
+          "url": "https://prtimes.jp/main/html/rd/p/000000006.000166724.html"
+        },
+        {
+          "title": "KPMG公式（2026年9月28日）",
+          "url": "https://kpmg.com/jp/ja/media/press-releases.html"
+        }
+      ],
+      "id": "20261005-4"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "Coupaと調達領域の運用保守アライアンス契約",
+      "summary": "KPMGコンサルティングが調達・購買プラットフォーム大手のCoupaと運用保守に関するアライアンス契約を締結。導入から活用・定着、運用保守までエンドツーエンドのサービス提供が可能に。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "kpmg",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "日本",
+        "業務プロセス改革"
+      ],
+      "sources": [
+        {
+          "title": "PR TIMES（2026年9月30日）",
+          "url": "https://prtimes.jp/main/html/rd/p/000000074.000077848.html"
+        },
+        {
+          "title": "KPMG公式（2026年9月30日）",
+          "url": "https://kpmg.com/jp/ja/media/press-releases.html"
+        }
+      ],
+      "id": "20261005-5"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "AI時代の調達力向上をテーマにイベント開催",
+      "summary": "アビームコンサルティングがAIエージェントの進化と調達業務の変革をテーマにしたイベントを開催。企業の調達機能の高度化に向けた知見を提供。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "abeam",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "日本",
         "AI"
       ],
       "sources": [
         {
-          "title": "AD HOC NEWS（2026年9月22日）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/accenture-plc-stock-heads-into-the-open-after-a-3-2-percent-gain/70152052"
+          "title": "アビーム公式（2026年9月28日）",
+          "url": "https://www.abeam.com/jp/ja/events/"
         }
       ],
-      "id": "20260923-5"
-    },
-    {
-      "date": "2026-09-16",
-      "title": "環境省ナッジ実証9年分の知見を総括",
-      "summary": "EYストラテジー・アンド・コンサルティングが、環境省による9年間135件のナッジ実証事業の初総括を支援。行動変容を実現するための「効く条件」を体系化し、新たな政策アプローチ「本音の正当化」を提示した。",
-      "confidence": "公式発表",
-      "companies": [
-        {
-          "id": "ey",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "日本",
-        "政策支援",
-        "行動科学"
-      ],
-      "sources": [
-        {
-          "title": "共同通信PRワイヤー（2026年9月16日）",
-          "url": "https://kyodonewsprwire.jp/release/202609155945"
-        }
-      ],
-      "id": "20260923-6"
-    },
-    {
-      "date": "2026-09-19",
-      "title": "AI競争戦略の書籍を出版",
-      "summary": "EYストラテジー・アンド・コンサルティングが、AI時代に企業が持続的な競争優位を築くための考え方と5つのモート（競争防御要素）を解説する書籍を出版。",
-      "confidence": "公式発表",
-      "companies": [
-        {
-          "id": "ey",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "日本",
-        "AI",
-        "経営戦略"
-      ],
-      "sources": [
-        {
-          "title": "EY Japan（2026年9月19日）",
-          "url": "https://www.ey.com/ja_jp"
-        }
-      ],
-      "id": "20260923-7"
+      "id": "20261005-6"
     }
   ]
 }
