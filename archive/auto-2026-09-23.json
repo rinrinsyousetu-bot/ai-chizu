@@ -77,8 +77,8 @@
   "news": [
     {
       "date": "2026-09-16",
-      "title": "ランクル新型HV、国内投入開始",
-      "summary": "トヨタはランドクルーザー300の新型ハイブリッド版を国内市場に投入。9月16日の発売により、同車のハイブリッド化が実現した。",
+      "title": "ランドクルーザー300にハイブリッド初搭載",
+      "summary": "トヨタは「ランドクルーザー300」シリーズを一部改良し、ランドクルーザーシリーズとして国内初となるハイブリッドモデルを設定。ガソリンモデルは廃止され、3.5リッターハイブリッドモデルが主力となる。10月1日発売。",
       "confidence": "報道",
       "companies": [
         {
@@ -87,23 +87,53 @@
         }
       ],
       "tags": [
-        "日本",
         "ハイブリッド",
-        "SUV"
+        "日本"
       ],
       "sources": [
         {
-          "title": "日本経済新聞（2026年9月16日）",
-          "url": "https://www.nikkei.com/nkd/company/news/?scode=7203"
+          "title": "Car Watch（2026年9月16日）",
+          "url": "https://car.watch.impress.co.jp/docs/news/2141403.html"
+        },
+        {
+          "title": "webCG（2026年9月17日）",
+          "url": "https://www.webcg.net/articles/-/54310"
         }
       ],
       "id": "20260923-1"
     },
     {
-      "date": "2026-09-16",
-      "title": "スバル、顧客満足度で複数1位獲得",
-      "summary": "スバルは2026年ACSI調査のガソリン車部門で、安全性・品質・サービス・リセールバリューで1位を獲得。7年連続の安全性第1位。",
+      "date": "2026-09-17",
+      "title": "サイバーキャブ大阪での展示開始",
+      "summary": "テスラが無人タクシー用に開発した「サイバーキャブ」の日本初公開イベントが、大阪のテスラグランフロント大阪で9月17日より開始。東京、大阪、名古屋を回るジャパンツアーの一環。",
       "confidence": "報道",
+      "companies": [
+        {
+          "id": "tesla",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "自動運転",
+        "日本"
+      ],
+      "sources": [
+        {
+          "title": "webCG（2026年9月11日）",
+          "url": "https://www.webcg.net/articles/-/54297"
+        },
+        {
+          "title": "Car Watch（2026年9月7日）",
+          "url": "https://car.watch.impress.co.jp/docs/news/2138604.html"
+        }
+      ],
+      "id": "20260923-2"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "スバル、クロストレック改良でハイブリッド一本化",
+      "summary": "スバルはクロストレックの改良モデルを発表。全グレードをe-BOXER（ストロングハイブリッド）搭載に統一し、ラインアップを見直した。WLTCモードで19.5km/Lの燃費性能を実現。価格は383万3500円から。",
+      "confidence": "公式発表",
       "companies": [
         {
           "id": "subaru",
@@ -111,63 +141,157 @@
         }
       ],
       "tags": [
-        "米国",
-        "顧客満足"
+        "日本",
+        "ハイブリッド"
       ],
       "sources": [
         {
-          "title": "AutoGuide（2026年9月16日）",
-          "url": "https://www.autoguide.com/auto/manufacturers/subaru/subaru-claims-top-spot-for-safety-quality-and-resale-value-in-2026-44638690"
-        }
-      ],
-      "id": "20260923-2"
-    },
-    {
-      "date": "2026-09-16",
-      "title": "マツダがNICA公式パートナー化",
-      "summary": "マツダはサイクリング競技団体NICAの全国公式パートナーおよび複数地域のスポンサーに。青少年スポーツを支援。",
-      "confidence": "報道",
-      "companies": [
+          "title": "Response.jp（2026年9月17日）",
+          "url": "https://response.jp/article/2026/09/17/416753.html"
+        },
         {
-          "id": "mazda",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "米国",
-        "スポンサーシップ"
-      ],
-      "sources": [
-        {
-          "title": "Mazda USA Newsroom（2026年9月16日）",
-          "url": "https://news.mazdausa.com/"
+          "title": "SUBARU ニュースリリース（2026年9月17日）",
+          "url": "https://www.subaru.co.jp/news/2026_09_17_104044/"
         }
       ],
       "id": "20260923-3"
     },
     {
-      "date": "2026-09-16",
-      "title": "トヨタ、ダカール2027でFCV参戦へ",
-      "summary": "トヨタのレーシングチームGAZOO Racingが2027年ダカールラリーの新カテゴリーに燃料電池車で参戦することを発表。",
-      "confidence": "報道",
+      "date": "2026-09-17",
+      "title": "スバル、インプレッサ改良で2.0Lガソリン搭載に集約",
+      "summary": "スバルはインプレッサの改良モデルを発表。ラインアップを2.0Lガソリン搭載の「Smart Edition」グレードに集約し、スマートアシスト機能を進化させた。",
+      "confidence": "公式発表",
       "companies": [
         {
-          "id": "toyota",
+          "id": "subaru",
           "dir": 1
         }
       ],
       "tags": [
-        "欧州",
-        "レーシング",
-        "水素"
+        "日本"
       ],
       "sources": [
         {
-          "title": "Toyota Europe Newsroom（2026年9月16日）",
-          "url": "https://newsroom.toyota.eu/en/"
+          "title": "Response.jp（2026年9月17日）",
+          "url": "https://response.jp/article/2026/09/17/416753.html"
         }
       ],
       "id": "20260923-4"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "スズキ、東京ゲームショウ2026に特別協賛出展",
+      "summary": "スズキは東京ゲームショウ2026（9月17-21日）に特別協賛企業として出展。カプコンの人気ゲーム『ストリートファイター6』のキャラクターとコラボレーションした四輪車と二輪車を展示する。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "suzuki",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "日本",
+        "マーケティング"
+      ],
+      "sources": [
+        {
+          "title": "Response.jp（2026年）",
+          "url": "https://response.jp/special/recent/245/%E3%82%B9%E3%82%BA%E3%82%AD"
+        }
+      ],
+      "id": "20260923-5"
+    },
+    {
+      "date": "2026-09-22",
+      "title": "日産、リーフベースの新型リリーフカーがDeNA始動",
+      "summary": "日産はリーフをベースに製作した新型リリーフカーを横浜DeNAベイスターズに提供。9月22日のシーズン試合で始動する。EVを活用した球団サポートを実施。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "nissan",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "日本",
+        "EV"
+      ],
+      "sources": [
+        {
+          "title": "Response.jp（2026年9月9日）",
+          "url": "https://response.jp/article/2026/09/11/416471.html"
+        }
+      ],
+      "id": "20260923-6"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "軽商用EV『ミニキャブEV』を一部改良",
+      "summary": "三菱自動車は軽商用EV『ミニキャブEV』を一部改良し、法人・事業者向けの「車両運行サポートサービス」に対応した車載通信機をメーカーオプションとして新たに設定。価格は254万1000円から。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "mitsu",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "商用EV",
+        "国内"
+      ],
+      "sources": [
+        {
+          "title": "三菱自動車 ニュースリリース（2026年9月17日）",
+          "url": "https://www.mitsubishi-motors.com/jp/newsroom/"
+        }
+      ],
+      "id": "20260923-7"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "法人向け車両運行サポートサービス提供開始",
+      "summary": "三菱自動車は法人向けの「車両運行サポートサービス」の提供を開始。走行履歴や走行状況などをダッシュボードで確認できるサービスと、ドライバー向けの「MITSUBISHI CONNECT」で構成される。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "mitsu",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "サービス",
+        "法人向け"
+      ],
+      "sources": [
+        {
+          "title": "三菱自動車 ニュースリリース（2026年9月17日）",
+          "url": "https://www.mitsubishi-motors.com/jp/newsroom/"
+        }
+      ],
+      "id": "20260923-8"
+    },
+    {
+      "date": "2026-09-18",
+      "title": "アウトランダーPHEVで給電デモ実施",
+      "summary": "三菱自動車は「第一回京都こどもメディカルラリー」に参加し、『アウトランダーPHEV』での給電デモを実施。電動車の給電機能の活用を展示。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "mitsu",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "PHEV",
+        "京都"
+      ],
+      "sources": [
+        {
+          "title": "三菱自動車 ニュースリリース（2026年9月18日）",
+          "url": "https://www.mitsubishi-motors.com/jp/newsroom/"
+        }
+      ],
+      "id": "20260923-9"
     },
     {
       "id": "n12",

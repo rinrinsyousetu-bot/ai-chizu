@@ -126,10 +126,10 @@
   ],
   "news": [
     {
-      "date": "2026-09-18",
-      "title": "AnthropicとAI安全評価で提携",
-      "summary": "アクセンチュアはAnthropicと提携し、AIモデルの安全性評価チームを設置。Faculty買収で得た専門知識を活かし、5年間で各社10億ドル以上の投資を予定。",
-      "confidence": "報道",
+      "date": "2026-09-15",
+      "title": "決算説明会開催予告",
+      "summary": "アクセンチュアは10月1日に第4四半期・通期決算の説明会を開催予定。収益ガイダンスを含める。",
+      "confidence": "公式発表",
       "companies": [
         {
           "id": "acn",
@@ -137,71 +137,66 @@
         }
       ],
       "tags": [
-        "AI",
-        "安全性"
+        "決算"
       ],
       "sources": [
         {
-          "title": "Accenture Newsroom（2026年9月18日）",
-          "url": "https://newsroom.accenture.com/news/2026/accenture-and-anthropic-partner-to-build-team-of-embedded-evaluators-at-anthropic"
-        },
-        {
-          "title": "Bloomberg（2026年9月18日）",
-          "url": "https://www.bloomberg.com/news/articles/2026-09-18/anthropic-to-embed-evaluators-from-accenture-to-test-ai-safety"
+          "title": "Accenture Newsroom（2026年9月15日）",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-to-announce-fourth-quarter-and-full-year-fiscal-2026-results"
         }
       ],
       "id": "20260923-1"
     },
     {
       "date": "2026-09-16",
-      "title": "Dragos買収が完了に向け進行中",
-      "summary": "アクセンチュアが先月発表したDragos（過半数）、runZero、NetRise買収（総額41億7500万ドル）のうち、Dragos買収が9月16日に完了。サイバーセキュリティ事業を強化。",
-      "confidence": "報道",
+      "title": "三菱重工とAI活用で共同検討",
+      "summary": "野村総合研究所は三菱重工業と、AIをはじめとするデジタル技術を活用した業務プロセス改革に関する共同検討と実践活動を開始する。",
+      "confidence": "公式発表",
       "companies": [
         {
-          "id": "acn",
+          "id": "nri",
           "dir": 1
         }
       ],
       "tags": [
-        "M&A",
-        "セキュリティ"
+        "提携",
+        "AI"
       ],
       "sources": [
         {
-          "title": "SecurityWeek（2026年9月21日）",
-          "url": "https://www.securityweek.com/dragos-completes-netrise-and-runzero-acquisitions-following-accenture-deal/"
+          "title": "NRI公式ページ（2026年9月16日）",
+          "url": "https://www.nri.com/jp/index.html"
         }
       ],
       "id": "20260923-2"
     },
     {
       "date": "2026-09-17",
-      "title": "runZero買収が完了",
-      "summary": "Dragos完了に続き、runZero買収が9月17日に完了。NetRiseは9月21日に完了予定。3社統合でOTセキュリティ市場での競争力強化。",
-      "confidence": "報道",
+      "title": "NRIセキュアがAI対応診断強化",
+      "summary": "NRIセキュアは「フロンティアAI対応プロアクティブ脆弱性診断」におけるデータ取り扱い体制を強化。AI時代のセキュリティ対応を加速。",
+      "confidence": "公式発表",
       "companies": [
         {
-          "id": "acn",
+          "id": "nri",
           "dir": 1
         }
       ],
       "tags": [
-        "M&A",
+        "新サービス",
         "セキュリティ"
       ],
       "sources": [
         {
-          "title": "Accenture Newsroom（2026年9月17日）",
-          "url": "https://newsroom.accenture.com/news/2026/accenture-to-strengthen-critical-infrastructure-defense-with-end-to-end-cybersecurity-platform-in-age-of-ai-driven-cyber-threats-and-geopolitical-risk"
+          "title": "NRI公式ページ（2026年9月17日）",
+          "url": "https://www.nri.com/jp/index.html"
         }
       ],
       "id": "20260923-3"
     },
     {
-      "date": "2026-09-16",
-      "title": "SMBC日興証券が新規カバレッジ開始",
-      "summary": "ベイカレントについてSMBC日興証券が新規に強気判定を付与し、目標株価9500円を設定。需要変化を成長機会と評価。",
+      "date": "2026-09-17",
+      "title": "SMBC日興が投資評価開始",
+      "summary": "SMBC日興証券がベイカレントの投資評価を新規カバレッジ開始。AI導入支援やサイバーセキュリティが成長分野と位置づけ、目標株価9500円。",
       "confidence": "報道",
       "companies": [
         {
@@ -210,15 +205,87 @@
         }
       ],
       "tags": [
-        "レーティング"
+        "投資評価",
+        "AI"
       ],
       "sources": [
         {
-          "title": "株探ニュース（2026年9月16日）",
-          "url": "https://kabutan.jp/stock/news?code=6532&b=n202609160969"
+          "title": "財経新聞（2026年9月17日）",
+          "url": "https://www.zaikei.co.jp/article/20260917/870474.html"
         }
       ],
       "id": "20260923-4"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "Anthropicと1億ドルの投資で合意",
+      "summary": "アクセンチュアとAnthropicは5年間でそれぞれ最低1億ドルを投資し、AI安全性評価に関する共同プログラムを開発する。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "acn",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "提携",
+        "AI"
+      ],
+      "sources": [
+        {
+          "title": "AD HOC NEWS（2026年9月22日）",
+          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/accenture-plc-stock-heads-into-the-open-after-a-3-2-percent-gain/70152052"
+        }
+      ],
+      "id": "20260923-5"
+    },
+    {
+      "date": "2026-09-16",
+      "title": "環境省ナッジ実証9年分の知見を総括",
+      "summary": "EYストラテジー・アンド・コンサルティングが、環境省による9年間135件のナッジ実証事業の初総括を支援。行動変容を実現するための「効く条件」を体系化し、新たな政策アプローチ「本音の正当化」を提示した。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "ey",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "日本",
+        "政策支援",
+        "行動科学"
+      ],
+      "sources": [
+        {
+          "title": "共同通信PRワイヤー（2026年9月16日）",
+          "url": "https://kyodonewsprwire.jp/release/202609155945"
+        }
+      ],
+      "id": "20260923-6"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "AI競争戦略の書籍を出版",
+      "summary": "EYストラテジー・アンド・コンサルティングが、AI時代に企業が持続的な競争優位を築くための考え方と5つのモート（競争防御要素）を解説する書籍を出版。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "ey",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "日本",
+        "AI",
+        "経営戦略"
+      ],
+      "sources": [
+        {
+          "title": "EY Japan（2026年9月19日）",
+          "url": "https://www.ey.com/ja_jp"
+        }
+      ],
+      "id": "20260923-7"
     }
   ]
 }

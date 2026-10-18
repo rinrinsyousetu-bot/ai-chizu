@@ -2,8 +2,8 @@
   "id": "semi",
   "name": "半導体製造装置",
   "tagline": "AI需要を追い風に、日本が世界で強い分野",
-  "period": "2026年9月16日〜9月22日",
-  "updated": "2026-09-23",
+  "period": "2026年10月11日〜10月17日",
+  "updated": "2026-10-18",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -76,9 +76,9 @@
   ],
   "news": [
     {
-      "date": "2026-09-17",
-      "title": "米国での投資家層拡大狙うスポンサー付きADR開始",
-      "summary": "東京エレクトロンは米国預託証券（ADR）プログラムをスポンサー付きに移行し、米国東部時間9月17日から売買開始した。米国での投資家層拡大と認知度向上を目指す。発行済み株式数は増えない。",
+      "date": "2026-10-13",
+      "title": "東京エレクトロン、RBA監査でプラチナ・ステータス取得",
+      "summary": "東京エレクトロンのグループ企業TEL Manufacturing and Engineering of Americaが、RBA（Responsible Business Alliance）監査でプラチナ・ステータスを取得。サステナビリティ面での取組みが評価される。",
       "confidence": "公式発表",
       "companies": [
         {
@@ -87,48 +87,220 @@
         }
       ],
       "tags": [
-        "米国",
-        "IR"
+        "サステナビリティ"
       ],
       "sources": [
         {
-          "title": "日本経済新聞（2026年9月17日）",
-          "url": "https://www.nikkei.com/article/DGXZQOUB17A360X10C26A9000000/"
+          "title": "東京エレクトロン公式ニュースリリース（2026年10月13日）",
+          "url": "https://www.tel.co.jp/"
         }
       ],
-      "id": "20260923-1"
+      "id": "20261018-1"
     },
     {
-      "date": "2026-09-19",
-      "title": "JPMorganがKLAをトップピック指定",
-      "summary": "JPMorganはウェーハ製造装置市場の見通しを引き上げ、KLAを米国チップ機器メーカーの中で最上位ピックとして指定した。アナリストのMio Shikanaiは2026年のWFE市場成長を31%と予測し、2027年のファウンドリーおよびロジック支出のシフトがKLAに有利に働くと述べた。",
-      "confidence": "報道",
+      "date": "2026-10-13",
+      "title": "アドバンテスト、SEMICON Westで最新テスト技術を展",
+      "summary": "アドバンテストは2026年10月13日から15日までサンフランシスコで開催される「SEMICON West 2026」に出展。最新の半導体テスト技術を展示する。",
+      "confidence": "公式発表",
       "companies": [
         {
-          "id": "kla",
+          "id": "adv",
           "dir": 1
         }
       ],
       "tags": [
         "米国",
-        "セミコンダクター"
+        "イベント"
       ],
       "sources": [
         {
-          "title": "Yahoo Finance（2026年9月13日）",
-          "url": "https://ca.finance.yahoo.com/news/5-big-analyst-ai-moves-093009716.html"
+          "title": "Advantest公式ニュース（2026年10月13日）",
+          "url": "https://www.advantest.com/ja/news/2026/"
+        }
+      ],
+      "id": "20261018-2"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "アドバンテスト、国際テスト学会ITCで最新技術を展示",
+      "summary": "アドバンテストは2026年10月11日から16日までテキサス州サンアントニオで開催される「International Test Conference 2026」に出展。IC テスト技術を展示し、業界専門家が講演予定。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "adv",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "米国",
+        "イベント"
+      ],
+      "sources": [
+        {
+          "title": "Globe Newswire （2026年10月13日）",
+          "url": "https://www.globenewswire.com/news-release/2026/10/13/3379342/0/en/advantest-to-highlight-latest-test-solutions-at-international-test-conference-2026-in-san-antonio-texas.html"
+        }
+      ],
+      "id": "20261018-3"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "アドバンテスト、VOICE 2027の論文募集開始",
+      "summary": "アドバンテストはユーザーグループ会議「VOICE 2027」の論文募集を開始。同会議は半導体テスト専門家の国際的なコミュニティが集まり最新技術動向を議論する年次イベント。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "adv",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "イベント"
+      ],
+      "sources": [
+        {
+          "title": "Advantest公式ニュース（2026年10月14日）",
+          "url": "https://www.advantest.com/ja/news/2026/"
+        }
+      ],
+      "id": "20261018-4"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "SCREEN、電子デバイスフォーラム京都に出展",
+      "summary": "SCREENは2026年10月29日から30日に京都で開催される「第13回 電子デバイスフォーラム京都」に出展。半導体製造装置の最新技術を紹介する技術講演も実施予定。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "screen",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "イベント",
+        "日本"
+      ],
+      "sources": [
+        {
+          "title": "SCREEN Holdings公式（2026年10月14日）",
+          "url": "https://www.screen.co.jp/"
+        }
+      ],
+      "id": "20261018-5"
+    },
+    {
+      "date": "2026-10-12",
+      "title": "レーザーテック社長、受注回復の強気姿勢を示唆",
+      "summary": "レーザーテックの仙洞田哲也社長は、2028年以降の受注見通しについて悪くなる要素がないとの見方を示した。AI関連の半導体投資が続くことが背景にあるとみられる。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "ltec",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "受注",
+        "AI半導体"
+      ],
+      "sources": [
+        {
+          "title": "日本経済新聞（2026年10月12日）",
+          "url": "https://www.nikkei.com/article/DGXZQOUC311W00R30C26A8000000/"
+        }
+      ],
+      "id": "20261018-6"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "ASML、通期売上高予想を上方修正",
+      "summary": "オランダのASMLは第3四半期決算で売上高が過去最高の116.6億ユーロを達成し、2026年通期売上高の下限を430億ユーロから440億ユーロに引き上げた。AI需要による半導体装置の旺盛な需要が背景。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "asml",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "決算",
+        "AI半導体",
+        "EUV"
+      ],
+      "sources": [
+        {
+          "title": "Bloomberg（2026年10月14日）",
+          "url": "https://www.bloomberg.com/jp/news/articles/2026-10-14/TMVT98T96OSR00"
         },
         {
-          "title": "Ad-hoc-news（2026年9月20日）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/kla-corporation-stock-gains-on-ai-demand-and-jpmorgan-top-pick-call/70136328"
+          "title": "ビジネス+IT（2026年10月14日）",
+          "url": "https://www.sbbit.jp/article/cont1/187463"
+        },
+        {
+          "title": "マイナビニュース（2026年10月15日）",
+          "url": "https://news.mynavi.jp/techplus/article/20261015-5128537/"
         }
       ],
-      "id": "20260923-2"
+      "id": "20261018-7"
     },
     {
-      "date": "2026-09-18",
-      "title": "KLA株が4.74%上昇",
-      "summary": "KLAの株価はAIインフラストラクチャ関連銘柄への需要の回復を背景に4.74%上昇し、176.99ドルで終値を付けた。このアナリストの推奨と業界における強気の見方に支持されている。",
+      "date": "2026-10-14",
+      "title": "ASML、2027～28年の装置供給が需要に届かない見通し",
+      "summary": "ASMLはAI関連投資を背景に2027年と2028年の装置供給が顧客需要を満たしきれないとの見通しを示した。顧客の中には2029年や2030年の発注にも関心を示す企業がある。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "asml",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "供給制約",
+        "AI半導体"
+      ],
+      "sources": [
+        {
+          "title": "財経新聞（2026年10月15日）",
+          "url": "https://www.zaikei.co.jp/article/20261015/873645.html"
+        }
+      ],
+      "id": "20261018-8"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "アプライドマテリアルズ、50億ドルのEPICセンター公開",
+      "summary": "アプライドマテリアルズが米カリフォルニア州サニーベールに50億ドルを投じたEPICセンターを公開した。半導体メーカーや大学とともに材料・装置・プロセス技術を並行開発し、AI時代の半導体技術商用化を加速する。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "amat",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "R&D施設",
+        "AI半導体"
+      ],
+      "sources": [
+        {
+          "title": "PR TIMES（2026年10月13日）",
+          "url": "https://prtimes.jp/main/html/rd/p/000000118.000053218.html"
+        },
+        {
+          "title": "マイナビニュース（2026年10月14日）",
+          "url": "https://news.mynavi.jp/techplus/article/20261014-5128192/"
+        },
+        {
+          "title": "財経新聞（2026年10月15日）",
+          "url": "https://www.zaikei.co.jp/article/20261015/873604.html"
+        }
+      ],
+      "id": "20261018-9"
+    },
+    {
+      "date": "2026-10-17",
+      "title": "機関投資家がKLA株を新規購入",
+      "summary": "ゴールドザー・インベストメント・マネジメントが第3四半期にKLA株35,588株を新規購入した。投資家の買い入れと一方で経営陣のインサイダー売却が続いている。",
       "confidence": "報道",
       "companies": [
         {
@@ -137,39 +309,59 @@
         }
       ],
       "tags": [
-        "米国",
-        "株価"
+        "機関投資家"
       ],
       "sources": [
         {
-          "title": "Ad-hoc-news（2026年9月20日）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/kla-corporation-stock-gains-on-jpmorgan-top-pick-call-and-strong-ai-demand/70130697"
+          "title": "MarketBeat（2026年10月17日）",
+          "url": "https://www.marketbeat.com/instant-alerts/filing-kla-corporation-klac-shares-newly-purchased-by-goelzer-investment-management-inc-2026-10-17/"
         }
       ],
-      "id": "20260923-3"
+      "id": "20261018-10"
     },
     {
-      "date": "2026-09-21",
-      "title": "KLA株が3.94%値上がり",
-      "summary": "KLAはセミコンダクター資本支出への前向きなセンチメント回復の中、9月21日に3.94%上昇して183.97ドルで引け、ウェーハファブ機器需要の堅調さを反映した。",
+      "date": "2026-10-16",
+      "title": "KLA株が10連続下げで20%超下落",
+      "summary": "KLA株が10営業日連続の下げ相場を記録し、株価は20%近く下落した。好調な決算結果にもかかわらず、プレミアム評価の剥落とセクター全体の売却圧力が株価を押し下げている。",
       "confidence": "報道",
       "companies": [
         {
           "id": "kla",
-          "dir": 1
+          "dir": -1
         }
       ],
       "tags": [
-        "米国",
-        "株価"
+        "株価下落"
       ],
       "sources": [
         {
-          "title": "Ad-hoc-news（2026年9月22日）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/kla-corporation-stock-gains-3-94-percent-ahead-of-the-open/70151215"
+          "title": "Trefis（2026年10月17日）",
+          "url": "https://www.trefis.com/stock/klac/articles/619135/a-10-day-losing-streak-has-kla-stock-down-20/2026-10-17"
         }
       ],
-      "id": "20260923-4"
+      "id": "20261018-11"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "AI需要減退懸念でKLA株が一段安",
+      "summary": "半導体セクター全体の売却に巻き込まれ、KLAが3.74%下落した。マクロ経済のインフレ懸念と高金利により、テクノロジーセクターの株価評価が見直されている。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "kla",
+          "dir": -1
+        }
+      ],
+      "tags": [
+        "セクター売却"
+      ],
+      "sources": [
+        {
+          "title": "TradingKey（2026年10月15日）",
+          "url": "https://www.tradingkey.com/news/market-movers/262219198-market-movers-klac-20261015"
+        }
+      ],
+      "id": "20261018-12"
     },
     {
       "id": "s4",

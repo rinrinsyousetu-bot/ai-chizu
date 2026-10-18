@@ -83,47 +83,48 @@
   ],
   "news": [
     {
-      "date": "2026-09-15",
-      "title": "マイクロン世界初の512GB DDR5メモリを発表",
-      "summary": "マイクロンが世界初のサーバー向け512GB DDR5 RDIMM（レジスタ付きメモリモジュール）の開発に成功したことを発表。複数のサーバープラットフォームで動作を確認し、量産は2027年後半の予定。最大速度9200MT/sで、電力効率は従来構成比60%以上削減可能。",
-      "confidence": "公式発表",
+      "date": "2026-09-18",
+      "title": "SKハイニックス株、6％上昇",
+      "summary": "米国の半導体株高に追随してSKハイニックス株が6%上昇。メモリメーカーの好調な業績期待が相場を支えた。",
+      "confidence": "報道",
       "companies": [
         {
-          "id": "mu",
+          "id": "skh",
           "dir": 1
         }
       ],
       "tags": [
-        "メモリ",
-        "DDR5"
+        "韓国",
+        "株価"
       ],
       "sources": [
         {
-          "title": "Yahoo!ニュース（2026年9月16日）",
-          "url": "https://news.yahoo.co.jp/articles/e32cb418b367861633d1faf5106055c96b430b24"
+          "title": "日本経済新聞（2026年09月18日）",
+          "url": "https://www.nikkei.com/nkd/company/us/SKHY/"
         }
       ],
       "id": "20260923-1"
     },
     {
-      "date": "2026-09-21",
-      "title": "AMD時価総額1兆ドル超え",
-      "summary": "AMDの株価が初めて時価総額1兆ドルを突破し、米半導体メーカーではエヌビディア、ブロードコム、マイクロンに次ぐ4社目。AIエージェント需要の拡大とCPU市場シェア獲得への期待から買いが集まった。",
-      "confidence": "報道",
+      "date": "2026-09-15",
+      "title": "インテル、AI Infra Summit 2026に参加",
+      "summary": "インテルがAI Infra Summit 2026で、AI基盤構造の進展を展示。CEO Lip-Bu Tan氏がエッジ、エンタープライズ、クラウド、物理AI環境全体にわたるAIインフラのビジョンについて議論した。",
+      "confidence": "公式発表",
       "companies": [
         {
-          "id": "amd",
+          "id": "intc",
           "dir": 1
         }
       ],
       "tags": [
+        "イベント",
         "AI",
-        "市場評価"
+        "インフラ"
       ],
       "sources": [
         {
-          "title": "ロイター（2026年9月21日）",
-          "url": "https://topics.smt.docomo.ne.jp/article/reuters/business/reuters-20260921033"
+          "title": "Intel Newsroom（2026年09月15日）",
+          "url": "https://newsroom.intel.com/artificial-intelligence/intel-at-ai-infra-summit-2026"
         }
       ],
       "id": "20260923-2"

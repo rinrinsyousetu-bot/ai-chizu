@@ -2,8 +2,8 @@
   "id": "consult",
   "name": "コンサル",
   "tagline": "AIとDXの需要で揺れる、コンサル・ITサービス各社",
-  "period": "2026年9月16日〜9月22日",
-  "updated": "2026-09-23",
+  "period": "2026年10月11日〜10月17日",
+  "updated": "2026-10-18",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -126,9 +126,9 @@
   ],
   "news": [
     {
-      "date": "2026-09-15",
-      "title": "決算説明会開催予告",
-      "summary": "アクセンチュアは10月1日に第4四半期・通期決算の説明会を開催予定。収益ガイダンスを含める。",
+      "date": "2026-10-13",
+      "title": "Workdayと共同で生成AI展開プログラム立ち上げ",
+      "summary": "アクセンチュアとWorkdayが「Forward Deployed Engineering」プログラムを発表。エンジニアをクライアントHR・財務チーム内に配置し、Workdayエージェント導入を迅速化。",
       "confidence": "公式発表",
       "companies": [
         {
@@ -137,43 +137,70 @@
         }
       ],
       "tags": [
-        "決算"
+        "提携",
+        "AI",
+        "サービス"
       ],
       "sources": [
         {
-          "title": "Accenture Newsroom（2026年9月15日）",
-          "url": "https://newsroom.accenture.com/news/2026/accenture-to-announce-fourth-quarter-and-full-year-fiscal-2026-results"
+          "title": "Yahoo Finance（2026年10月14日）",
+          "url": "https://finance.yahoo.com/technology/ai/articles/accenture-workday-promise-faster-path-164200492.html"
         }
       ],
-      "id": "20260923-1"
+      "id": "20261018-1"
     },
     {
-      "date": "2026-09-16",
-      "title": "三菱重工とAI活用で共同検討",
-      "summary": "野村総合研究所は三菱重工業と、AIをはじめとするデジタル技術を活用した業務プロセス改革に関する共同検討と実践活動を開始する。",
+      "date": "2026-10-13",
+      "title": "英国顧客インテリジェンス企業Sagacityを買収",
+      "summary": "アクセンチュアが英国のデータ・顧客インテリジェンス企業Sagacity Solutionsを買収。140人以上の専門家を獲得し、Accenture Songのカスタマー・リインベンション能力を強化。",
       "confidence": "公式発表",
       "companies": [
         {
-          "id": "nri",
+          "id": "acn",
           "dir": 1
         }
       ],
       "tags": [
-        "提携",
+        "M&A",
+        "英国",
         "AI"
       ],
       "sources": [
         {
-          "title": "NRI公式ページ（2026年9月16日）",
-          "url": "https://www.nri.com/jp/index.html"
+          "title": "Accenture Newsroom（2026年10月13日）",
+          "url": "https://newsroom.accenture.com/news/2026/accenture-acquires-sagacity-solutions-to-scale-ai-driven-customer-intelligence-across-accenture-song-s-uk-ireland-operations"
         }
       ],
-      "id": "20260923-2"
+      "id": "20261018-2"
     },
     {
-      "date": "2026-09-17",
-      "title": "NRIセキュアがAI対応診断強化",
-      "summary": "NRIセキュアは「フロンティアAI対応プロアクティブ脆弱性診断」におけるデータ取り扱い体制を強化。AI時代のセキュリティ対応を加速。",
+      "date": "2026-10-14",
+      "title": "インベスターデイ開催、FY2029までの成長戦略を提示",
+      "summary": "アクセンチュアがインベスターデイを開催し、FY2027-2029の成長見通しを発表。FY2029の売上・営業利益率改善目標、年80億ドル規模の買収計画、AI関連需要が供給置換需要を上回ることを強調。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "acn",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "投資家",
+        "戦略",
+        "M&A"
+      ],
+      "sources": [
+        {
+          "title": "Accenture IR（2026年10月14日）",
+          "url": "https://kalkinemedia.com/us/news/announcements/accenture-announces-investor-day-event-and-files-financial-presentation-on-october-14-2026"
+        }
+      ],
+      "id": "20261018-3"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "NRIセキュア、AI駆動開発セキュリティサービス提供開始",
+      "summary": "NRIセキュアテクノロジーズがAI駆動開発のセキュリティ対策を支援する新サービスを提供開始。生成AIの安全利用と開発効率化を両立させる支援を行う。",
       "confidence": "公式発表",
       "companies": [
         {
@@ -182,21 +209,22 @@
         }
       ],
       "tags": [
-        "新サービス",
+        "サービス",
+        "AI",
         "セキュリティ"
       ],
       "sources": [
         {
-          "title": "NRI公式ページ（2026年9月17日）",
+          "title": "NRI（2026年10月15日）",
           "url": "https://www.nri.com/jp/index.html"
         }
       ],
-      "id": "20260923-3"
+      "id": "20261018-4"
     },
     {
-      "date": "2026-09-17",
-      "title": "SMBC日興が投資評価開始",
-      "summary": "SMBC日興証券がベイカレントの投資評価を新規カバレッジ開始。AI導入支援やサイバーセキュリティが成長分野と位置づけ、目標株価9500円。",
+      "date": "2026-10-15",
+      "title": "2027年2月期上期決算発表、営業益28.5%増で新中計発表",
+      "summary": "ベイカレントが2027年2月期上期（2026年3-8月）決算を発表。営業利益299億円で前年同期比28.5%増。2031年2月期売上5000億円、2036年2月期売上1兆円を目指す新中期経営計画を策定。",
       "confidence": "報道",
       "companies": [
         {
@@ -205,87 +233,259 @@
         }
       ],
       "tags": [
-        "投資評価",
-        "AI"
+        "決算",
+        "日本",
+        "成長"
       ],
       "sources": [
         {
-          "title": "財経新聞（2026年9月17日）",
-          "url": "https://www.zaikei.co.jp/article/20260917/870474.html"
+          "title": "Yahoo!ニュース/ビジネス＋IT（2026年10月17日）",
+          "url": "https://news.yahoo.co.jp/articles/1fa462a1155cf5b19519253c3e2dd0f2553678fa"
+        },
+        {
+          "title": "Investing.com（2026年10月16日）",
+          "url": "https://jp.investing.com/news/stock-market-news/article-93CH-1713937"
         }
       ],
-      "id": "20260923-4"
+      "id": "20261018-5"
     },
     {
-      "date": "2026-09-21",
-      "title": "Anthropicと1億ドルの投資で合意",
-      "summary": "アクセンチュアとAnthropicは5年間でそれぞれ最低1億ドルを投資し、AI安全性評価に関する共同プログラムを開発する。",
+      "date": "2026-10-16",
+      "title": "上期決算好調を受けストップ高、17%超の株価上昇",
+      "summary": "ベイカレント株がストップ高で17%以上上昇。上期好決算と新中期経営計画発表が評価され、日経平均構成銘柄中で最大上昇率を記録。キャピタルアロケーション方針も変更。",
       "confidence": "報道",
       "companies": [
         {
-          "id": "acn",
-          "dir": 1
-        }
-      ],
-      "tags": [
-        "提携",
-        "AI"
-      ],
-      "sources": [
-        {
-          "title": "AD HOC NEWS（2026年9月22日）",
-          "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/accenture-plc-stock-heads-into-the-open-after-a-3-2-percent-gain/70152052"
-        }
-      ],
-      "id": "20260923-5"
-    },
-    {
-      "date": "2026-09-16",
-      "title": "環境省ナッジ実証9年分の知見を総括",
-      "summary": "EYストラテジー・アンド・コンサルティングが、環境省による9年間135件のナッジ実証事業の初総括を支援。行動変容を実現するための「効く条件」を体系化し、新たな政策アプローチ「本音の正当化」を提示した。",
-      "confidence": "公式発表",
-      "companies": [
-        {
-          "id": "ey",
+          "id": "baycurrent",
           "dir": 1
         }
       ],
       "tags": [
         "日本",
-        "政策支援",
-        "行動科学"
+        "株価"
       ],
       "sources": [
         {
-          "title": "共同通信PRワイヤー（2026年9月16日）",
-          "url": "https://kyodonewsprwire.jp/release/202609155945"
+          "title": "ザイ・オンライン/フィスコ（2026年10月16日）",
+          "url": "https://diamond.jp/zai/articles/-/1074199"
         }
       ],
-      "id": "20260923-6"
+      "id": "20261018-6"
     },
     {
-      "date": "2026-09-19",
-      "title": "AI競争戦略の書籍を出版",
-      "summary": "EYストラテジー・アンド・コンサルティングが、AI時代に企業が持続的な競争優位を築くための考え方と5つのモート（競争防御要素）を解説する書籍を出版。",
+      "date": "2026-10-16",
+      "title": "船井総研サプライチェーン、ZOHO Creatorコース新規",
+      "summary": "船井総合研究所がZOHO Japan公認の日本語e-Learningプログラムにアプリ開発スキルを習得できる「Zoho Creator」コースを新規追加。デジタル人材育成を強化。",
       "confidence": "公式発表",
       "companies": [
         {
-          "id": "ey",
+          "id": "funai",
           "dir": 1
         }
       ],
       "tags": [
         "日本",
+        "サービス",
+        "デジタル"
+      ],
+      "sources": [
+        {
+          "title": "船井総合研究所（2026年10月16日）",
+          "url": "https://www.funaisoken.co.jp/news"
+        }
+      ],
+      "id": "20261018-7"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "ライズ・コンサル 2Q中間決算は最終利益53%減",
+      "summary": "2027年2月期第2四半期（3-8月）の連結最終利益は前年同期比53.0%減の3.3億円となった。売上高は4.3%増加したものの、利益面で大きく落ち込み、営業利益率も低下した。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "rise",
+          "dir": -1
+        }
+      ],
+      "tags": [
+        "決算"
+      ],
+      "sources": [
+        {
+          "title": "株探（2026年10月14日）",
+          "url": "https://kabutan.jp/news/?b=k202610140078"
+        },
+        {
+          "title": "Yahoo!ファイナンス（2026年10月14日）",
+          "url": "https://finance.yahoo.co.jp/quote/9168.T"
+        }
+      ],
+      "id": "20261018-8"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "企業のAI活用が拡大、価値創出段階へ移行",
+      "summary": "BCGが1330人の経営層を対象に実施したグローバル調査「Applied AI Index 2026」を発表。企業のAI活用成熟度が向上し、約半数がAIから価値を生み出しており、リーダー企業の収益性が非リーダー企業と比べて大幅に上回っている。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "bcg",
+          "dir": 1
+        }
+      ],
+      "tags": [
         "AI",
-        "経営戦略"
+        "グローバル調査"
       ],
       "sources": [
         {
-          "title": "EY Japan（2026年9月19日）",
-          "url": "https://www.ey.com/ja_jp"
+          "title": "PR TIMES（2026年10月15日）",
+          "url": "https://prtimes.jp/main/html/rd/p/000000049.000145445.html"
+        },
+        {
+          "title": "ProductZine（2026年10月16日）",
+          "url": "https://codezine.jp/news/detail/30040"
         }
       ],
-      "id": "20260923-7"
+      "id": "20261018-9"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "AI事業が急成長、1万人の雇用を増加",
+      "summary": "EYは2026会計年度に世界全体で約1万人の雇用を増やし、AI関連サービスの売上高がほぼ50％増加したと発表。AI投資が事業成長に貢献している。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "ey",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "AI",
+        "採用"
+      ],
+      "sources": [
+        {
+          "title": "Business Insider Japan（2026年10月15日）",
+          "url": "https://www.businessinsider.jp/article/2610-ey-ai-business-growth-hiring/"
+        }
+      ],
+      "id": "20261018-10"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "金融会計基準改正に対応、支援体制を強化",
+      "summary": "KPMGジャパンは金融商品会計基準の改正に伴い、予想信用損失モデルへの移行準備支援を強化。70名超のコンサルタントが会計論点の整理からシステム導入まで一貫支援する。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "kpmg",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "金融",
+        "会計"
+      ],
+      "sources": [
+        {
+          "title": "プレスリリース（2026年10月16日）",
+          "url": "https://prtimes.jp/main/html/rd/p/000000121.000141127.html"
+        }
+      ],
+      "id": "20261018-11"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "金融犯罪対策コンファレンスで登壇",
+      "summary": "アビームコンサルティングが金融犯罪対策コンファレンス2026に登壇し、金融機関のリスク管理について知見を提供。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "abeam",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "金融",
+        "セキュリティ"
+      ],
+      "sources": [
+        {
+          "title": "アビームコンサルティング（2026年10月16日）",
+          "url": "https://www.abeam.com/jp/ja/events/"
+        }
+      ],
+      "id": "20261018-12"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "AIネイティブへの移行支援ウェビナー開催",
+      "summary": "アビームコンサルティングが人的資本経営ウェビナーシリーズ第5回で、AIネイティブカンパニーへの移行を加速するオペレーティングモデル変革について講演。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "abeam",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "AI",
+        "人材"
+      ],
+      "sources": [
+        {
+          "title": "アビームコンサルティング（2026年10月15日）",
+          "url": "https://www.abeam.com/jp/ja/events/"
+        }
+      ],
+      "id": "20261018-13"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "新規事業創出支援セミナーを開催",
+      "summary": "KPMGコンサルティングが規制を事業機会に変えるためのルールメイキング実践セミナーを開催。政策・制度との対話を通じた成長戦略について解説。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "kpmg",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "新規事業",
+        "戦略"
+      ],
+      "sources": [
+        {
+          "title": "プレスリリース（2026年10月14日）",
+          "url": "https://prtimes.jp/main/html/rd/p/000000410.000088324.html"
+        }
+      ],
+      "id": "20261018-14"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "スポーツ・エンターテインメント分野で登壇",
+      "summary": "アビームコンサルティングがTheStadiumBusiness ASIA 2026（10月13日～15日）に登壇し、スポーツ・エンターテインメント業界の変革について知見を提供。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "abeam",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "スポーツ",
+        "戦略"
+      ],
+      "sources": [
+        {
+          "title": "アビームコンサルティング（2026年10月13日～15日）",
+          "url": "https://www.abeam.com/jp/ja/events/"
+        }
+      ],
+      "id": "20261018-15"
     }
   ]
 }

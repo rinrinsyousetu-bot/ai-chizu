@@ -2,8 +2,8 @@
   "id": "chip",
   "name": "半導体（チップ）",
   "tagline": "AIの頭脳をつくる、設計・製造・メモリの主役たち",
-  "period": "2026年9月16日〜9月22日",
-  "updated": "2026-09-23",
+  "period": "2026年10月11日〜10月17日",
+  "updated": "2026-10-18",
   "size": {
     "label": "時価総額",
     "unit": "兆円",
@@ -83,9 +83,373 @@
   ],
   "news": [
     {
-      "date": "2026-09-18",
-      "title": "SKハイニックス株、6％上昇",
-      "summary": "米国の半導体株高に追随してSKハイニックス株が6%上昇。メモリメーカーの好調な業績期待が相場を支えた。",
+      "date": "2026-10-15",
+      "title": "RTX Sparkノートパソコン販売開始",
+      "summary": "NVIDIAは10月16日、RTX SparkラップトップをASUS、Dell、HP、Lenovo、Microsoft、MSIから販売開始したことを発表。Blackwell GPUとNVIDIA AIプラットフォームを搭載し、ローカルAI実行を可能にした新カテゴリーのプレミアムWindowsPCとして、価格は2,399ドルから。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "nvda",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "GPU",
+        "ローカルAI"
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA news（2026年10月15日）",
+          "url": "https://nvidianews.nvidia.com/"
+        },
+        {
+          "title": "Insight on Nvidia（2026年10月17日）",
+          "url": "https://thisweekinnvidia.substack.com/p/insight-on-nvidia-17-october-2026"
+        }
+      ],
+      "id": "20261018-1"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Nemotron モデル群拡張発表",
+      "summary": "NVIDIAはNemotron 3.5 Super VLと Bolt モデルを発表。最高効率の120億パラメータモデルでタスク完了速度を実現し、Photoshop、Premiere、Frame.ioなどAdobeツールに統合。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "nvda",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "LLM",
+        "AI",
+        "開発ツール"
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA news（2026年10月17日）",
+          "url": "https://nvidianews.nvidia.com/"
+        }
+      ],
+      "id": "20261018-2"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "AdobeとのAI協業拡大",
+      "summary": "NVIDIAはAdobeとの協業を拡大し、RTX SparkとNemotronモデルをPhotoshop、Premiere、Substance 3D、Frame.io、Brand Conciergeに統合。AIワークフロー高速化とエンタープライズ向けパーソナライゼーション機能を提供。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "nvda",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "クラエイティブAI",
+        "協業"
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA news（2026年10月15日）",
+          "url": "https://nvidianews.nvidia.com/news/adobe-and-nvidia-expand-collaboration-to-speed-agentic-creation"
+        }
+      ],
+      "id": "20261018-3"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "メルセデス・ベンツとの自動運転提携拡大",
+      "summary": "NVIDIAはメルセデス・ベンツとの戦略的提携を拡大し、次世代自動運転技術の開発を共同推進。運転支援システムと自動運転機能の開発でNVIDIAのAIコンピューティング技術を活用。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "nvda",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "自動運転",
+        "自動車"
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA news（2026年10月15日）",
+          "url": "https://nvidianews.nvidia.com/"
+        }
+      ],
+      "id": "20261018-4"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "ボルボとの自動運転技術協業拡大",
+      "summary": "NVIDIAはボルボ・カーズとの提携を拡大。ボルボはHyperionセンサー、Alpamayo自動運転スタック、Halos安全性評価層を採用し、都市部と高速道路での自動運転システム開発を進める。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "nvda",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "自動運転",
+        "自動車"
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA news（2026年10月15日）",
+          "url": "https://nvidianews.nvidia.com/"
+        },
+        {
+          "title": "TechCrunch（2026年10月15日）",
+          "url": "https://techcrunch.com/2026/10/15/volvo-makes-a-bigger-bet-on-nvidia"
+        }
+      ],
+      "id": "20261018-5"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Q3決算発表、6期連続過去最高利益",
+      "summary": "TSMCは第3四半期に過去最高の利益を6期連続で達成。売上は466.7億ドル（予想超過）、EPS 4.60ドル（コンセンサス4.46ドルを上回る）。2ナノメートルプロセスが売上の8%、3ナノメートルが33%を占める。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "決算",
+        "AI需要"
+      ],
+      "sources": [
+        {
+          "title": "Bloomberg（2026年10月15日）",
+          "url": "https://www.bloomberg.com/news/articles/2026-10-15/tsmc-s-profit-surpasses-expectations-after-ai-orders-rush-in"
+        },
+        {
+          "title": "TradingKey（2026年10月17日）",
+          "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262220899-tsmc-stock-forecast-q3-beat-margin-capex-412-support-october-17-2026-tradingkey"
+        }
+      ],
+      "id": "20261018-6"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "Q4ガイダンス大幅上方修正",
+      "summary": "TSMCは第4四半期売上予想を523億～543億ドルに引き上げ。2026年通年成長率も約44%（従来予想から上方修正）。AI需要が売上の68%を占める。資本支出は60～64億ドルに増加予定。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "ガイダンス",
+        "成長率",
+        "設備投資"
+      ],
+      "sources": [
+        {
+          "title": "TSMC Q3 2026 earnings call（2026年10月15日）",
+          "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf"
+        }
+      ],
+      "id": "20261018-7"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "インテル新パッケージ技術への対抗姿勢表明",
+      "summary": "TSMCのC.C.ウェイCEOは決算説明会でインテルのEMIB-T技術への対抗を示唆。CoWoS先端パッケージ技術を5倍レティクルサイズで量産を開始し、顧客が不足時には支援する用意があると言及。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "パッケージング",
+        "競争戦略"
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Finance（2026年10月15日）",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/tsmc-ceo-hints-company-could-151911042.html"
+        }
+      ],
+      "id": "20261018-8"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "先端パッケージング進化継続",
+      "summary": "TSMCは5倍レティクルサイズの先端パッケージを量産開始、収率は「優秀」レベル。9倍レティクルサイズの開発中、2029年までに14倍レティクルへ拡大計画。他社にはこのスケール達成不可と述べた。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "パッケージング",
+        "技術革新"
+      ],
+      "sources": [
+        {
+          "title": "TSMC Q3 2026 earnings call（2026年10月15日）",
+          "url": "https://investor.tsmc.com/english/encrypt/files/encrypt_file/reports/2026-10/eba4fac72873bf546b669bd2b5d973df5c93215d/TSMC%203Q26%20Transcript.pdf"
+        },
+        {
+          "title": "KuCoin News（2026年10月16日）",
+          "url": "https://www.kucoin.com/news/flash/tsmc-mass-produces-5x-reticle-size-advanced-packaging-with-excellent-yield"
+        }
+      ],
+      "id": "20261018-9"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "容量転売規制とAI需要取り込み方針",
+      "summary": "TSMCのウェイCEOは顧客による容量転売・オークション禁止を決定。AI需要がまだ供給を大幅上回る状況で、「食卓に金銭を残さない」戦略で最大限の生産と利益を追求。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "tsmc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "容量管理",
+        "ビジネス戦略"
+      ],
+      "sources": [
+        {
+          "title": "DIGITIMES（2026年10月15日）",
+          "url": "https://www.digitimes.com/news/a20261015PD244/tsmc-capacity-demand-wafer-technology.html"
+        }
+      ],
+      "id": "20261018-10"
+    },
+    {
+      "date": "2026-10-12",
+      "title": "OCP Global Summitで先端AI基盤技術展示",
+      "summary": "ブロードコムは2026年OCP Global Summit（10月12～15日、サンノゼ）でAIインフラ向けネットワーク革新を展示。Tomahawk 6スイッチ、NIC、PCIeコンポーネント、統合光学部品でAIクラスタスケーリング対応。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "avgo",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "AIネットワーク",
+        "イベント"
+      ],
+      "sources": [
+        {
+          "title": "Broadcom投資家向けニュース（2026年10月8日）",
+          "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-redefines-ai-infrastructure-industry-leading-networking"
+        }
+      ],
+      "id": "20261018-11"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "テキサス州第2工場着工予定を発表",
+      "summary": "サムスン電子はテキサス州テイラー市に第2の半導体工場の建設を2026年11月に開始予定。第1工場が年末に操業開始予定の中、米国での受託製造能力の拡大を継続。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "samsung",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "設備投資",
+        "米国展開"
+      ],
+      "sources": [
+        {
+          "title": "DIGITIMES（2026年10月16日）",
+          "url": "https://digitimes.com/news/a20261016VL214/samsung-texas-fab-expansion-production.html"
+        }
+      ],
+      "id": "20261018-12"
+    },
+    {
+      "date": "2026-10-17",
+      "title": "サムスン電子機の設備調達が制約直面",
+      "summary": "サムスン電子傘下のSemcoが推し進める510億ドルのAIサーバー向け基板生産拡張計画が、機械メーカーの部品不足と納期遅延による設備調達の制約に直面。同社は計画通り進行中と表明し、生産遅延は未確認。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "samsung",
+          "dir": -1
+        }
+      ],
+      "tags": [
+        "サプライチェーン",
+        "設備投資"
+      ],
+      "sources": [
+        {
+          "title": "DIGITIMES（2026年10月17日）",
+          "url": "https://www.digitimes.com/news/a20261016VL216/equipment-semco-expansion-production-substrate.html"
+        }
+      ],
+      "id": "20261018-13"
+    },
+    {
+      "date": "2026-10-12",
+      "title": "インテルがAI推論向けGPU「GPU D270」を発表",
+      "summary": "3,000億パラメータの大規模言語モデルに対応したデータセンター向けGPU。最大480GBのLPDDR5Xメモリと最大1.5TB/sのメモリ帯域幅を搭載し、FP8演算性能は1.3PFLOPSに達する。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "intc",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "米国",
+        "AI",
+        "製品"
+      ],
+      "sources": [
+        {
+          "title": "エルミタージュ秋葉原（2026年10月13日）",
+          "url": "https://www.gdm.or.jp/pressrelease/2026/1013/655935"
+        }
+      ],
+      "id": "20261018-14"
+    },
+    {
+      "date": "2026-10-12",
+      "title": "AMD、Helion AI基盤をOCP 2026で発表",
+      "summary": "ラックスケールのエージェンティックAI向けコンピュート基盤「AMD Helion」を発表。オープンインフラストラクチャを活用した企業向けのAIソリューション。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "amd",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "米国",
+        "AI"
+      ],
+      "sources": [
+        {
+          "title": "AMD Newsroom（2026年10月12日）",
+          "url": "https://newsroom.amd.com/"
+        }
+      ],
+      "id": "20261018-15"
+    },
+    {
+      "date": "2026-10-14",
+      "title": "SKハイニックス、SEDEX 2026で次世代AIメモリ技術",
+      "summary": "韓国のSEDEX 2026展示会でSK hynixは、HBM4EやHBF（高帯域幅フラッシュ）、プロセッサ上にDRAMを積む3D積層DRAM技術などAI向けメモリ階層の拡張戦略を発表。",
       "confidence": "報道",
       "companies": [
         {
@@ -95,21 +459,69 @@
       ],
       "tags": [
         "韓国",
-        "株価"
+        "AI",
+        "技術"
       ],
       "sources": [
         {
-          "title": "日本経済新聞（2026年09月18日）",
-          "url": "https://www.nikkei.com/nkd/company/us/SKHY/"
+          "title": "財経新聞（2026年10月16日）",
+          "url": "https://www.zaikei.co.jp/article/20261016/873737.html"
         }
       ],
-      "id": "20260923-1"
+      "id": "20261018-16"
     },
     {
-      "date": "2026-09-15",
-      "title": "インテル、AI Infra Summit 2026に参加",
-      "summary": "インテルがAI Infra Summit 2026で、AI基盤構造の進展を展示。CEO Lip-Bu Tan氏がエッジ、エンタープライズ、クラウド、物理AI環境全体にわたるAIインフラのビジョンについて議論した。",
-      "confidence": "公式発表",
+      "date": "2026-10-15",
+      "title": "マイクロンが台湾・台中にHBM新施設を開所",
+      "summary": "マイクロンが台湾・台中でHBM向けの先端組み立て・検査施設「AATT2」を開所。2027年の計画生産能力はすべて売約済みで、HBM市場の強需要を示唆。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "mu",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "台湾",
+        "HBM"
+      ],
+      "sources": [
+        {
+          "title": "財経新聞（2026年10月17日）",
+          "url": "https://www.zaikei.co.jp/article/20261017/873899.html"
+        }
+      ],
+      "id": "20261018-17"
+    },
+    {
+      "date": "2026-10-15",
+      "title": "SKハイニックス、米国製装置の中国輸出許可を申請",
+      "summary": "SKハイニックスが米工場建設の条件として、中国・大連の拠点での生産拡大に向け米国製半導体製造装置の輸出承認を米政府に申請。地政学的制約による対中政策の影響を受ける。",
+      "confidence": "報道",
+      "companies": [
+        {
+          "id": "skh",
+          "dir": -1
+        }
+      ],
+      "tags": [
+        "韓国",
+        "米国",
+        "政治"
+      ],
+      "sources": [
+        {
+          "title": "Bloomberg（2026年10月15日）",
+          "url": "https://www.bloomberg.com/jp/news/articles/2026-10-15/TMXGZ3KGIFPM00?srnd=jp-markets"
+        }
+      ],
+      "id": "20261018-18"
+    },
+    {
+      "date": "2026-10-16",
+      "title": "インテルがロボット向けAI基盤を韓国で披露",
+      "summary": "インテル、Core Ultraシリーズ3プロセッサーとロボティクスAIスイートを組み合わせた制御とAI推論を統合する構成を韓国で実演展示。",
+      "confidence": "報道",
       "companies": [
         {
           "id": "intc",
@@ -117,17 +529,84 @@
         }
       ],
       "tags": [
-        "イベント",
-        "AI",
-        "インフラ"
+        "米国",
+        "ロボット",
+        "AI"
       ],
       "sources": [
         {
-          "title": "Intel Newsroom（2026年09月15日）",
-          "url": "https://newsroom.intel.com/artificial-intelligence/intel-at-ai-infra-summit-2026"
+          "title": "財経新聞（2026年10月16日）",
+          "url": "https://www.zaikei.co.jp/article/20261016/873734.html"
         }
       ],
-      "id": "20260923-2"
+      "id": "20261018-19"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "CEATEC 2026で最新技術展示",
+      "summary": "キオクシアは、10月13日から16日に幕張メッセで開催されるCEATEC 2026において、JEITA半導体フォーラムのブースに出展。AIシステム向けの大容量・高性能SSD製品および最新の3次元フラッシュメモリ技術を展示する。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "kioxia",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "日本",
+        "展示会"
+      ],
+      "sources": [
+        {
+          "title": "キオクシア公式ニュースリリース（2026年10月9日）",
+          "url": "https://www.kioxia.com/ja-jp/about/news/2026/20261009-1.html"
+        }
+      ],
+      "id": "20261018-20"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "S&P格付けをBBBに格上げ",
+      "summary": "S&Pグローバル・レーティングがキオクシアホールディングスの長期発行体格付けをBBB-からBBBに引き上げた。AI向けデータセンター市場の強い需要に支えられた強固な収益力、および負債を上回るネットキャッシュ状態の財務改善が評価された。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "kioxia",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "格付け"
+      ],
+      "sources": [
+        {
+          "title": "キオクシア公式ニュースリリース（2026年10月13日）",
+          "url": "https://www.kioxia-holdings.com/ja-jp/news/2026/20261013-1.html"
+        }
+      ],
+      "id": "20261018-21"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Direct Liquid Cooling対応エンタープライ",
+      "summary": "キオクシアはCM9シリーズエンタープライズSSDにDirect Liquid Cooling対応の新型E3.Sモデルを追加。コールドプレート冷却と従来型空冷環境の両方に対応し、データセンターの冷却ニーズに対応する。",
+      "confidence": "公式発表",
+      "companies": [
+        {
+          "id": "kioxia",
+          "dir": 1
+        }
+      ],
+      "tags": [
+        "データセンター"
+      ],
+      "sources": [
+        {
+          "title": "KIOXIA公式ニュースリリース（2026年10月13日）",
+          "url": "https://www.kioxia.com/en-jp/news.html"
+        }
+      ],
+      "id": "20261018-22"
     }
   ]
 }
